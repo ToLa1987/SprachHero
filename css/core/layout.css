@@ -1,0 +1,205 @@
+/* =========================================================
+CORE / LAYOUT – V14 + Verbesserungen (A2)
+Grid, Flex, Container, Abstände, Responsive Utilities
+========================================================= */
+
+/* ---------------------------------------------------------
+1) Container
+--------------------------------------------------------- */
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.container-small {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+/* ---------------------------------------------------------
+2) Flex Utilities
+--------------------------------------------------------- */
+
+.flex { display: flex; }
+.flex-col { display: flex; flex-direction: column; }
+.flex-center { display: flex; align-items: center; justify-content: center; }
+.flex-between { display: flex; justify-content: space-between; align-items: center; }
+.flex-wrap { display: flex; flex-wrap: wrap; }
+
+.gap-4 { gap: 4px; }
+.gap-6 { gap: 6px; }
+.gap-8 { gap: 8px; }
+.gap-10 { gap: 10px; }
+.gap-12 { gap: 12px; }
+.gap-16 { gap: 16px; }
+
+/* ---------------------------------------------------------
+3) Grid Utilities
+--------------------------------------------------------- */
+
+.grid { display: grid; }
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.grid-auto {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+}
+
+/* ---------------------------------------------------------
+4) Spacing Utilities
+--------------------------------------------------------- */
+
+.mt-4 { margin-top: 4px; }
+.mt-6 { margin-top: 6px; }
+.mt-8 { margin-top: 8px; }
+.mt-10 { margin-top: 10px; }
+.mt-12 { margin-top: 12px; }
+.mt-16 { margin-top: 16px; }
+.mt-20 { margin-top: 20px; }
+.mt-24 { margin-top: 24px; }
+
+.mb-4 { margin-bottom: 4px; }
+.mb-6 { margin-bottom: 6px; }
+.mb-8 { margin-bottom: 8px; }
+.mb-10 { margin-bottom: 10px; }
+.mb-12 { margin-bottom: 12px; }
+.mb-16 { margin-bottom: 16px; }
+.mb-20 { margin-bottom: 20px; }
+.mb-24 { margin-bottom: 24px; }
+
+.p-4 { padding: 4px; }
+.p-6 { padding: 6px; }
+.p-8 { padding: 8px; }
+.p-10 { padding: 10px; }
+.p-12 { padding: 12px; }
+.p-16 { padding: 16px; }
+.p-20 { padding: 20px; }
+
+/* ---------------------------------------------------------
+5) Width Utilities
+--------------------------------------------------------- */
+
+.w-100 { width: 100%; }
+.w-50 { width: 50%; }
+.w-33 { width: 33%; }
+.w-25 { width: 25%; }
+
+/* ---------------------------------------------------------
+6) Responsive Utilities
+--------------------------------------------------------- */
+
+@media (max-width: 900px) {
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .grid-2,
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .flex-between {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* ---------------------------------------------------------
+7) HeaderBar Fixes (bestehend)
+--------------------------------------------------------- */
+
+@media (max-width: 700px) {
+    #headerBar {
+        padding: 4px 8px;
+        height: 40px;
+    }
+
+    #xpDisplay {
+        font-size: 0.75rem;
+        max-width: 55%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    #themeToggle,
+    #langToggle {
+        font-size: 0.8rem;
+        padding: 4px 6px;
+    }
+}
+
+/* =========================================================
+8) NEUE VERBESSERUNGEN (A2)
+========================================================= */
+
+/* Mobile Padding Utility */
+.mobile-padding {
+    padding: var(--mobile-padding);
+}
+
+/* LearningPath – Mobile Tile Gap */
+.lp-mobile-gap {
+    margin-bottom: var(--tile-gap-mobile);
+}
+
+/* Scroll-Indikator Container */
+.scroll-indicator-container {
+    position: fixed;
+    right: 12px;
+    top: calc(var(--mobile-nav-height) + 20px);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* Scroll-Indikator Linie */
+.scroll-indicator-line {
+    width: 3px;
+    height: 40px;
+    background: var(--scroll-indicator-color);
+    border-radius: 2px;
+}
+
+/* Scroll-Indikator Punkt */
+.scroll-indicator-dot {
+    width: 10px;
+    height: 10px;
+    background: var(--scroll-indicator-color);
+    border-radius: 50%;
+    transition: background 0.2s ease;
+}
+
+.scroll-indicator-dot.active {
+    background: var(--scroll-indicator-active);
+}
+
+/* Mobile: Scroll-Indikator kleiner */
+@media (max-width: 700px) {
+    .scroll-indicator-line {
+        height: 28px;
+    }
+    .scroll-indicator-dot {
+        width: 8px;
+        height: 8px;
+    }
+}

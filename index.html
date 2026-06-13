@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SprachHero</title>
+
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#4a90e2">
+
+  <!-- CORE CSS -->
+  <link rel="stylesheet" href="css/core/base.css">
+  <link rel="stylesheet" href="css/core/components.css">
+  <link rel="stylesheet" href="css/core/layout.css">
+  <link rel="stylesheet" href="css/core/theme.css">
+  <link rel="stylesheet" href="css/core/typography.css">
+  <link rel="stylesheet" href="css/core/spacing.css">
+  <link rel="stylesheet" href="css/core/animations.css">
+
+  <!-- SECTION CSS -->
+  <link rel="stylesheet" href="css/sections/nav.css">
+  <link rel="stylesheet" href="css/sections/start.css">
+  <link rel="stylesheet" href="css/sections/learn.css">
+  <link rel="stylesheet" href="css/sections/trainer.css">
+  <link rel="stylesheet" href="css/sections/dashboard.css">
+  <link rel="stylesheet" href="css/sections/story.css">
+  <link rel="stylesheet" href="css/sections/learningpath.css">
+  <link rel="stylesheet" href="css/sections/quests.css">
+  <link rel="stylesheet" href="css/sections/badges.css">
+  <link rel="stylesheet" href="css/sections/settings.css">
+
+  <!-- MOBILE OVERRIDES (MUSS GANZ ZUM SCHLUSS STEHEN) -->
+  <link rel="stylesheet" href="css/core/mobile.css">
+
+</head>
+
+<body>
+
+    
+  <!-- Overlays -->
+  <div id="story-overlay-root"></div>
+  <div id="learn-progress-root"></div>
+
+
+<!-- Top Bar -->
+<header id="topBar">
+    <div id="xpDisplay">Kein Nutzer ausgewählt</div>
+
+    <div id="topBar-right">
+        <!-- Dark Mode -->
+        <div id="themeToggle" class="theme-toggle">🌙</div>
+
+        <!-- Language -->
+        <div id="langToggle" class="lang-toggle">[ 🇬🇧 EN ]</div>
+    </div>
+</header>
+
+
+  <!-- Navigation -->
+  <nav id="mainNav" class="main-nav">
+      <div class="nav-inner">
+          <button data-page="start">🏠 Start</button>
+          <button data-page="learn">📚 Lernen</button>
+          <button data-page="trainer">🎓 Trainer</button>
+          <button data-page="learningpath">🧭 Lernpfad</button>
+          <button data-page="quests">🎯 Missionen</button>
+          <button data-page="story">📖 Story</button>
+          <button data-page="badges">🏅 Badges</button>
+          <button data-page="dashboard">📊 Dashboard</button>
+          <button data-page="settings">⚙️ Einstellungen</button>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div id="mobileNavToggle">☰ Menü</div>
+      <div id="mobileNavDropdown"></div>
+  </nav>
+
+  <!-- Main App Container -->
+  <main id="app"></main>
+
+  <!-- App Entry -->
+  <script type="module" src="app.js"></script>
+
+  <!-- Service Worker -->
+  <script>
+  if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("/service-worker.js")
+          .then(() => console.log("Service Worker registered"))
+          .catch(err => console.error("SW registration failed:", err));
+  }
+  </script>
+
+  <!-- Language + Theme System -->
+  <script type="module">
+  import { getGlobal, setGlobal } from "./src/core/storage.js";
+  import { navigate } from "./src/core/navigation.js";
+
+  const FLAG_MAP = {
+    en: "🇬🇧 EN",
+    fr: "🇫🇷 FR",
+    es: "🇪🇸 ES",
+    it: "🇮🇹 IT",
+    la: "🏛️ LA"
+  };
+
+  document.addEventListener("DOMContentLoaded", () => {
+
+      /* Dark Mode */
+      const toggle = document.getElementById("themeToggle");
+      if (toggle) {
+          toggle.onclick = () => {
+              document.body.classList.toggle("dark");
+              toggle.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+          };
+      }
+
+      /* Language Switch */
+      const langToggle = document.getElementById("langToggle");
+      if (langToggle) {
+
+          const g = getGlobal();
+          langToggle.textContent = `[ ${FLAG_MAP[g.language]} ]`;
+
+          const popup = document.createElement("div");
+          popup.className = "lang-popup-header";
+          popup.style.display = "none";
+
+          const langs = [
+              { code: "en", label: "🇬🇧 EN – Englisch" },
+              { code: "fr", label: "🇫🇷 FR – Französisch" },
+              { code: "es", label: "🇪🇸 ES – Spanisch" },
+              { code: "it", label: "🇮🇹 IT – Italienisch" },
+              { code: "la", label: "🏛️ LA – Latein" }
+          ];
+
+          langs.forEach(l => {
+              const btn = document.createElement("button");
+              btn.textContent = l.label;
+
+              btn.onclick = () => {
+                  const gg = getGlobal();
+                  gg.language = l.code;
+                  setGlobal(gg);
+
+                  langToggle.textContent = `[ ${FLAG_MAP[l.code]} ]`;
+                  popup.style.display = "none";
+
+                  navigate("learn");
+              };
+
+              popup.appendChild(btn);
+          });
+
+          document.body.appendChild(popup);
+
+          langToggle.onclick = (e) => {
+              e.stopPropagation();
+              popup.style.display = popup.style.display === "block" ? "none" : "block";
+          };
+
+          document.addEventListener("click", (e) => {
+              if (!popup.contains(e.target) && e.target !== langToggle) {
+                  popup.style.display = "none";
+              }
+          });
+      }
+  });
+  </script>
+
+
+</body>
+
+<!-- SprachHero Intro -->
+<div id="hero-intro">
+  
+  <!-- Glow -->
+  <div class="hero-glow"></div>
+
+  <!-- Partikel -->
+  <div class="hero-particles"></div>
+
+  <!-- Held -->
+  <img src="assets/hero.png" alt="SprachHero" id="hero-intro-img">
+
+  <!-- Schriftzug -->
+  <div id="hero-title">SprachHero</div>
+
+
+</html>

@@ -1,0 +1,292 @@
+/* =========================================================
+LEARN – V20 (modularisiert) + Verbesserungen (A2)
+Tabelle, Highlighting, Progressbar, Controls, Sticky Header
+========================================================= */
+
+/* ---------------------------------------------------------
+1) Sticky-Wrapper (oben)
+--------------------------------------------------------- */
+
+.learn-page .learn-sticky-wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--bg);
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+}
+
+/* ---------------------------------------------------------
+2) Header
+--------------------------------------------------------- */
+
+.learn-page .learn-sticky-wrapper .card h2 {
+    margin-bottom: 4px;
+}
+
+/* ---------------------------------------------------------
+3) Filter-Accordion
+--------------------------------------------------------- */
+
+.learn-page .trainer-filter-card {
+    margin-top: 10px;
+}
+
+.learn-page .accordion {
+    width: 100%;
+}
+
+.learn-page .accordion-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 6px 0;
+    color: var(--text);
+}
+
+.learn-page .accordion-body {
+    display: none;
+    margin-top: 8px;
+    max-height: 55vh;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+/* ---------------------------------------------------------
+4) Top-Bar (Buttons + Progress)
+--------------------------------------------------------- */
+
+.learn-page .learn-topbar {
+    margin-top: 10px;
+    padding: 10px;
+    background: var(--bg-card);
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    box-shadow: var(--shadow-soft);
+}
+
+.learn-page .learn-progress-wrapper {
+    width: 100%;
+    margin: 0;
+}
+
+.learn-page .learn-progress-text {
+    font-size: 14px;
+    margin-bottom: 4px;
+    text-align: left;
+    padding-left: 8px;
+    color: var(--text);
+}
+
+.learn-page .learn-progress-bar {
+    width: 100%;
+    height: 10px;
+    background: var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.learn-page .learn-progress-bar-inner {
+    height: 100%;
+    background: var(--primary);
+    border-radius: 6px;
+    transition: width 0.3s ease;
+}
+
+/* ---------------------------------------------------------
+5) Tabelle
+--------------------------------------------------------- */
+
+.learn-page .learn-table-card {
+    margin-top: 16px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0;
+    box-shadow: var(--shadow-soft);
+}
+
+.learn-page .learn-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.learn-page .learn-table th,
+.learn-page .learn-table td {
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--table-row-border);
+    vertical-align: top;
+    color: var(--text);
+}
+
+.learn-page .learn-table th {
+    background: var(--table-header-bg);
+    font-weight: 600;
+}
+
+.learn-page .learn-table th:nth-child(1),
+.learn-page .learn-table td:nth-child(1) { width: 28%; }
+
+.learn-page .learn-table th:nth-child(2),
+.learn-page .learn-table td:nth-child(2) { width: 28%; }
+
+.learn-page .learn-table th:nth-child(3),
+.learn-page .learn-table td:nth-child(3) { width: 34%; }
+
+.learn-page .learn-table th:nth-child(4),
+.learn-page .learn-table td:nth-child(4) {
+    width: 10%;
+    text-align: right;
+}
+
+/* ---------------------------------------------------------
+6) Row States
+--------------------------------------------------------- */
+
+.learn-page .hidden-row {
+    display: none !important;
+}
+
+.learn-page .active-row {
+    background: var(--primary-soft);
+    transition: background 0.3s ease;
+}
+
+/* ---------------------------------------------------------
+7) Word Highlighting
+--------------------------------------------------------- */
+
+.learn-page .word {
+    cursor: default;
+    display: inline-block;
+    margin-right: 2px;
+}
+
+.learn-page .highlight-blue {
+    background: var(--highlight);
+    color: var(--highlight-text);
+    border-radius: 4px;
+    padding: 2px 4px;
+    transition: background 0.3s ease;
+}
+
+/* ---------------------------------------------------------
+8) Action Buttons (Details, Audio)
+--------------------------------------------------------- */
+
+.learn-page .cell-actions {
+    text-align: right;
+}
+
+.learn-page .cell-actions button {
+    padding: 4px 8px;
+    font-size: 16px;
+}
+
+/* ---------------------------------------------------------
+9) Finished Screen
+--------------------------------------------------------- */
+
+.learn-page .learn-finished {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.learn-page .learn-finished h3 {
+    margin-bottom: 10px;
+}
+
+.learn-page .learn-finished-text {
+    margin-bottom: 16px;
+    font-size: 16px;
+}
+
+.learn-page .learn-finished-table td {
+    padding: 6px 8px;
+}
+
+.learn-page .learn-finished-restart {
+    margin-top: 16px;
+    padding: 10px 16px;
+    font-size: 16px;
+}
+
+/* ---------------------------------------------------------
+10) Controls (Richtig / Falsch / Weiter)
+--------------------------------------------------------- */
+
+.learn-page .learn-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 6px;
+}
+
+.learn-page .learn-controls button {
+    min-width: 130px;
+    padding: 10px 16px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* ---------------------------------------------------------
+11) Responsive
+--------------------------------------------------------- */
+
+@media (max-width: 700px) {
+
+    .learn-page .learn-topbar {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .learn-page .learn-progress-text {
+        text-align: center;
+    }
+
+    .learn-page .cell-actions {
+        text-align: center;
+    }
+}
+
+/* =========================================================
+12) NEUE VERBESSERUNGEN (A2)
+========================================================= */
+
+/* Mobile Kompakt */
+@media (max-width: 700px) {
+
+    .learn-page .learn-table th,
+    .learn-page .learn-table td {
+        padding: 6px 6px;
+        font-size: 13px;
+    }
+
+    /* Spaltenbreiten entfernen → Mobile darf umbrechen */
+    .learn-page .learn-table th:nth-child(1),
+    .learn-page .learn-table td:nth-child(1),
+    .learn-page .learn-table th:nth-child(2),
+    .learn-page .learn-table td:nth-child(2),
+    .learn-page .learn-table th:nth-child(3),
+    .learn-page .learn-table td:nth-child(3),
+    .learn-page .learn-table th:nth-child(4),
+    .learn-page .learn-table td:nth-child(4) {
+        width: auto !important;
+    }
+}
+
+
+.accordion-header,
+.filter-header,
+.learn-filter-header {
+    position: relative !important;
+    z-index: 1 !important;
+}
+

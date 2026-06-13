@@ -1,0 +1,75 @@
+/* =========================================================
+ANIMATIONS – V20 (komplett neu) + Ergänzungen
+Globale Animationen + Preview-Unterstützung
+========================================================= */
+
+/* ---------------------------------------------------------
+Global Animation Toggle
+--------------------------------------------------------- */
+
+body.animations-off *,
+.ui-preview.animations-off * {
+    transition: none !important;
+    animation: none !important;
+}
+
+/* ---------------------------------------------------------
+Smooth Theme Transition
+--------------------------------------------------------- */
+
+body,
+.ui-preview {
+    transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+/* ---------------------------------------------------------
+Modal Fade-In + Slide-Up
+--------------------------------------------------------- */
+
+.story-modal-overlay:not(.hidden) .story-modal-card {
+    animation: modalFade 0.25s ease, modalSlide 0.25s ease;
+}
+
+@keyframes modalFade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes modalSlide {
+    from { transform: translateY(20px); }
+    to { transform: translateY(0); }
+}
+
+/* ---------------------------------------------------------
+Button Hover Glow
+--------------------------------------------------------- */
+
+button:hover:not(:disabled),
+.ui-preview .preview-button:hover {
+    filter: brightness(1.05);
+    transform: translateY(-2px);
+    transition: 0.2s ease;
+}
+
+/* ---------------------------------------------------------
+Card Hover Lift
+--------------------------------------------------------- */
+
+.preview-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+    transition: 0.25s ease;
+}
+
+/* ---------------------------------------------------------
+XP Fly Animation
+--------------------------------------------------------- */
+
+@keyframes xpFly {
+    0% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-40px); }
+}
+
+.xp-fly-anim {
+    animation: xpFly 0.8s ease forwards;
+}

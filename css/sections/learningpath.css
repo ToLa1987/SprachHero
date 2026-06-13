@@ -1,0 +1,612 @@
+/* =========================================================
+LEARNING PATH – V20 (modularisiert) + Verbesserungen (A2)
+Struktur, Tiles, Scrollspy, Details-Panel, Heatmap
+========================================================= */
+
+/* ---------------------------------------------------------
+0) Global Overrides (nur innerhalb LearningPath)
+--------------------------------------------------------- */
+
+.learningpath-page html,
+.learningpath-page body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.learningpath-page body {
+    overflow-y: auto;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.learningpath-page #app {
+    overflow: visible !important;
+}
+
+/* ---------------------------------------------------------
+1) Container
+--------------------------------------------------------- */
+
+.learningpath-page .lp-root {
+    padding: 16px;
+    position: relative;
+    z-index: 10;
+}
+
+.learningpath-page .lp-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--bg);
+    padding: 12px 0;
+    margin-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+}
+
+.learningpath-page .lp-main-area {
+    display: flex;
+    gap: 20px;
+    position: relative;
+    height: calc(100vh - 140px);
+    overflow-y: auto;
+}
+
+.learningpath-page .lp-path-container {
+    flex: 1;
+    position: relative;
+    padding-bottom: 200px;
+}
+
+/* Collapse Buttons */
+
+.learningpath-page .lp-collapse-bottom,
+.learningpath-page .lp-collapse-fixed {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.learningpath-page .lp-collapse-bottom {
+    margin-top: 12px;
+}
+
+.learningpath-page .lp-collapse-fixed {
+    margin-top: 10px;
+    padding-top: 2px;
+    border-top: 1px solid var(--border);
+}
+
+.learningpath-page .lp-collapse-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #eee;
+    border: 1px solid #ccc;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ---------------------------------------------------------
+2) Scrollspy rechts
+--------------------------------------------------------- */
+
+.learningpath-page .lp-scrollspy {
+    width: 220px;
+    overflow-y: auto;
+    max-height: 100%;
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+    border-left: 1px solid var(--border);
+    padding: 8px 6px;
+    background: var(--bg);
+}
+
+.learningpath-page .lp-spy-item {
+    padding: 6px 8px;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-bottom: 4px;
+    font-size: 0.9rem;
+    background: var(--bg-card);
+    color: var(--text);
+}
+
+.learningpath-page .lp-spy-item:hover {
+    background: var(--border);
+}
+
+.learningpath-page .lp-spy-item.active {
+    background: var(--primary);
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 0 6px rgba(0,0,0,0.15);
+}
+
+.learningpath-page .lp-spy-level-class { margin-left: 0; }
+.learningpath-page .lp-spy-level-unit { margin-left: 12px; }
+.learningpath-page .lp-spy-level-sub { margin-left: 24px; }
+
+/* ---------------------------------------------------------
+3) Tiles (zentriert + Einrückung + bündig rechts)
+--------------------------------------------------------- */
+
+.learningpath-page .lp-tile {
+    --lp-indent: 0px;
+    width: calc(70% - var(--lp-indent));
+    margin: 0 15% 48px auto;
+    padding: 16px 16px 16px 36px;
+    border-radius: 12px;
+    background: var(--bg-card);
+    box-shadow: var(--shadow-soft);
+    border-left: 12px solid var(--border);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.learningpath-page .lp-tile:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-medium);
+}
+
+/* Farben */
+
+.learningpath-page .lp-class-tile {
+    border-left-color: #4A90E2;
+    background: rgba(74,144,226,0.08);
+}
+
+.learningpath-page .lp-unit-tile {
+    border-left-color: #7B1FA2;
+    background: rgba(123,31,162,0.08);
+}
+
+.learningpath-page .lp-tile.danger { border-left-color: var(--danger); }
+.learningpath-page .lp-tile.warning { border-left-color: var(--warning); }
+.learningpath-page .lp-tile.success { border-left-color: var(--success); }
+
+/* Einrückung */
+
+.learningpath-page .lp-tile.lp-level-class { --lp-indent: 0px; }
+.learningpath-page .lp-tile.lp-level-unit { --lp-indent: 128px; }
+.learningpath-page .lp-tile.lp-level-sub { --lp-indent: 256px; }
+
+/* ---------------------------------------------------------
+4) Titel
+--------------------------------------------------------- */
+
+.learningpath-page .lp-title-line1 {
+    font-size: 1.45rem;
+    font-weight: 700;
+    display: flex;
+    gap: 6px;
+}
+
+.learningpath-page .lp-title-line2 {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--text-soft);
+}
+
+/* ---------------------------------------------------------
+5) Collapse (+ / -)
+--------------------------------------------------------- */
+
+.learningpath-page .lp-tile.collapsed .lp-extra {
+    display: none;
+}
+
+.learningpath-page .lp-collapse-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #eee;
+    border: 1px solid #ccc;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.learningpath-page .lp-collapse-btn:hover {
+    background: #ddd;
+    transform: scale(1.05);
+}
+
+.learningpath-page .lp-collapse-btn:active {
+    transform: scale(0.95);
+}
+
+/* ---------------------------------------------------------
+6) Progress
+--------------------------------------------------------- */
+
+.learningpath-page .lp-progressbar {
+    width: 100%;
+    height: 10px;
+    background: var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 4px 0;
+}
+
+.learningpath-page .lp-progress-fill {
+    height: 100%;
+    background: var(--primary);
+    transition: width 0.3s ease;
+}
+
+.learningpath-page .lp-progress-text {
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+}
+
+/* ---------------------------------------------------------
+7) Boxen + Heatmap
+--------------------------------------------------------- */
+
+.learningpath-page .lp-lasttrain {
+    margin: 0 0 4px 0;
+    color: #000;
+    font-size: 1.05rem;
+    font-weight: 400;
+}
+
+.learningpath-page .lp-box-status-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 0;
+}
+
+.learningpath-page .lp-mini-heat {
+    display: flex;
+    gap: 6px;
+    margin: 2px 0 0 0;
+    height: 34px;
+    align-items: flex-end;
+}
+
+.learningpath-page .mh {
+    width: 18%;
+    background: var(--border);
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+}
+
+.learningpath-page .mh-fill {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    transition: height 0.3s ease;
+}
+
+.learningpath-page .mh-1 .mh-fill { background: var(--danger); }
+.learningpath-page .mh-2 .mh-fill { background: #fb8c00; }
+.learningpath-page .mh-3 .mh-fill { background: #fdd835; }
+.learningpath-page .mh-4 .mh-fill { background: var(--success); }
+.learningpath-page .mh-5 .mh-fill { background: #1e88e5; }
+
+/* ---------------------------------------------------------
+8) Boxen links, Buttons rechts
+--------------------------------------------------------- */
+
+.learningpath-page .lp-row-flex {
+    display: flex;
+    width: 100%;
+    margin-top: 8px;
+    align-items: flex-start;
+}
+
+.learningpath-page .lp-box-column {
+    flex: 1;
+}
+
+.learningpath-page .lp-button-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.learningpath-page .lp-train-btn {
+    margin-top: 1px;
+}
+
+/* ---------------------------------------------------------
+9) Buttons
+--------------------------------------------------------- */
+
+.learningpath-page .btn-primary {
+    width: 100%;
+    height: 42px;
+    border-radius: 8px;
+    background: var(--primary);
+    color: white;
+    border: 1px solid var(--primary);
+    font-size: 0.95rem;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.learningpath-page .btn-secondary {
+    width: 100%;
+    height: 42px;
+    border-radius: 8px;
+    border: 2px solid #ded6d6;
+    background: #f5f5f5;
+    color: #222;
+    font-size: 0.95rem;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.learningpath-page .lp-actions-row-split {
+    display: flex;
+    width: 100%;
+    gap: 8px;
+}
+
+.learningpath-page .lp-details-btn {
+    flex: 3;
+}
+
+.learningpath-page .lp-struct-inline-btn {
+    flex: 2;
+    transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.learningpath-page .lp-struct-inline-btn:hover {
+    background: #e8e8e8;
+    transform: scale(1.03);
+}
+
+/* ---------------------------------------------------------
+10) View-Switch
+--------------------------------------------------------- */
+
+.learningpath-page .lp-view-switch {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.learningpath-page .lp-view-switch button {
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: #eee;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.learningpath-page .lp-view-switch button.active {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+/* ---------------------------------------------------------
+11) Pfeile
+--------------------------------------------------------- */
+
+.learningpath-page .lp-arrow-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 200px;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.learningpath-page .lp-arrow {
+    position: absolute;
+    height: 3px;
+    background: linear-gradient(90deg, #4a90e2, #6bb3ff);
+    box-shadow: 0 0 6px rgba(74,144,226,0.6);
+    border-radius: 2px;
+    opacity: 0.9;
+    transform-origin: 0 50%;
+}
+
+/* ---------------------------------------------------------
+12) Details-Overlay
+--------------------------------------------------------- */
+
+.learningpath-page .lp-details-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 999;
+}
+
+.learningpath-page .lp-details-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.learningpath-page .lp-details-panel {
+    width: 100%;
+    max-width: 900px;
+    max-height: 80vh;
+    margin-top: 160px;
+    background: var(--bg-card);
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+    padding: 12px 16px;
+}
+
+.learningpath-page .lp-details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.learningpath-page #lp-details-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.learningpath-page #lp-details-close {
+    border: none;
+    background: transparent;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.learningpath-page .lp-details-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.learningpath-page .lp-details-tabs button {
+    flex: 1;
+    border: none;
+    padding: 6px 0;
+    border-radius: 999px;
+    background: #ddd;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.learningpath-page .lp-details-tabs button.active {
+    background: #bbb;
+}
+
+.learningpath-page .lp-details-body {
+    overflow-y: auto;
+    max-height: 60vh;
+    padding-right: 4px;
+}
+
+.learningpath-page .lp-word-header,
+.learningpath-page .lp-word-row {
+    display: grid;
+    grid-template-columns: 1.2fr 1.2fr 2fr 0.4fr;
+    gap: 8px;
+    align-items: center;
+}
+
+.learningpath-page .lp-word-header {
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+}
+
+.learningpath-page .lp-word-row {
+    padding: 6px 8px;
+    border-radius: 8px;
+    background: #f7f7f7;
+    font-size: 0.95rem;
+}
+
+.learningpath-page .lp-word-row > div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.learningpath-page .lp-word-audio {
+    border: none;
+    border-radius: 6px;
+    padding: 2px 6px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    background: #eee;
+}
+
+/* ---------------------------------------------------------
+13) Responsive
+--------------------------------------------------------- */
+
+@media (max-width: 900px) {
+    .learningpath-page .lp-scrollspy {
+        display: none;
+    }
+    .learningpath-page .lp-arrow-layer {
+        right: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .learningpath-page .lp-tile {
+        margin-left: 0 !important;
+        width: 100%;
+    }
+    .learningpath-page .lp-details-panel {
+        margin-top: 80px;
+        border-radius: 12px;
+    }
+    .learningpath-page .lp-word-header,
+    .learningpath-page .lp-word-row {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+    }
+    .learningpath-page .lp-word-row > div:nth-child(3) {
+        grid-column: 1 / span 2;
+    }
+}
+
+/* =========================================================
+14) NEUE VERBESSERUNGEN (A2)
+========================================================= */
+
+/* Scroll-Indikator (rechts) */
+.learningpath-page .lp-scroll-indicator {
+    position: fixed;
+    right: 12px;
+    top: calc(var(--mobile-nav-height) + 20px);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.learningpath-page .lp-scroll-line {
+    width: 3px;
+    height: 40px;
+    background: var(--scroll-indicator-color);
+    border-radius: 2px;
+}
+
+.learningpath-page .lp-scroll-dot {
+    width: 10px;
+    height: 10px;
+    background: var(--scroll-indicator-color);
+    border-radius: 50%;
+    transition: background 0.2s ease;
+}
+
+.learningpath-page .lp-scroll-dot.active {
+    background: var(--scroll-indicator-active);
+}
+
+/* Mobile kleiner */
+@media (max-width: 700px) {
+    .learningpath-page .lp-scroll-line {
+        height: 28px;
+    }
+    .learningpath-page .lp-scroll-dot {
+        width: 8px;
+        height: 8px;
+    }
+}

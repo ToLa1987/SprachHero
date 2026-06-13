@@ -1,0 +1,249 @@
+/* =========================================================
+NAVIGATION / HEADER – V21 (komplett neu, stabil)
+Fixiert, Dark-Mode-ready, Mobile sauber getrennt
+========================================================= */
+
+/* ---------------------------------------------------------
+0) Desktop: Mobile-Navigation ausblenden
+--------------------------------------------------------- */
+
+#mobileNavToggle,
+#mobileNavDropdown {
+    display: none;
+}
+
+
+/* ---------------------------------------------------------
+1) Top-Bar (XP / Level / Streak)
+--------------------------------------------------------- */
+
+#topBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--bg-card);
+    color: var(--text);
+    padding: 10px 16px;
+    font-size: 15px;
+    z-index: 3000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow-soft);
+}
+
+#xpDisplay {
+    flex: 1;
+}
+
+/* Theme Toggle */
+#themeToggle {
+    margin-right: 10px;
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: var(--text);
+    transition: 0.15s ease;
+}
+
+#themeToggle:hover {
+    background: var(--border);
+}
+
+/* ---------------------------------------------------------
+2) Navigation – Desktop
+--------------------------------------------------------- */
+
+.main-nav {
+    position: fixed;
+    top: 48px;
+    left: 0;
+    right: 0;
+    background: var(--bg-card);
+    border-bottom: 2px solid var(--border);
+    z-index: 2500;
+    box-shadow: var(--shadow-soft);
+}
+
+.nav-inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 12px 16px;
+}
+
+/* ============================================
+   Desktop: Tabs gleich breit
+   ============================================ */
+@media (min-width: 700px) {
+    .nav-inner {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .main-nav button {
+        flex: 1;                 /* alle Tabs gleich breit */
+        text-align: center;      /* Text zentriert */
+        justify-content: center; /* Icon + Text zentriert */
+        padding: 10px 0;         /* einheitliche Höhe */
+    }
+}
+
+/* Buttons */
+.main-nav button {
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    font-size: 18px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: 0.2s ease;
+    color: var(--text);
+}
+
+.main-nav button:hover {
+    background: var(--border);
+    transform: scale(1.05);
+}
+
+.main-nav button.active {
+    background: var(--primary-soft);
+    border-color: var(--primary);
+    font-weight: 700;
+}
+
+/* ---------------------------------------------------------
+3) Sprachwechsel
+--------------------------------------------------------- */
+
+.lang-toggle {
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    font-size: 15px;
+    user-select: none;
+    color: var(--text);
+    transition: 0.15s ease;
+}
+
+.lang-toggle:hover {
+    background: var(--border);
+}
+
+/* Popup */
+.lang-popup-header {
+    position: fixed;
+    top: 60px;
+    right: 12px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px;
+    display: none;
+    box-shadow: var(--shadow-medium);
+    z-index: 9999;
+}
+
+.lang-popup-header button {
+    display: block;
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 16px;
+    text-align: left;
+    border: none;
+    background: none;
+    cursor: pointer;
+    border-radius: 6px;
+    color: var(--text);
+    transition: 0.15s ease;
+}
+
+.lang-popup-header button:hover {
+    background: var(--bg-soft);
+}
+
+/* ---------------------------------------------------------
+4) Mobile Navigation
+--------------------------------------------------------- */
+
+@media (max-width: 700px) {
+
+    /* Desktop-Tabs ausblenden */
+    #mainNav .nav-inner {
+        display: none !important;
+    }
+
+    /* Toggle sichtbar */
+    #mobileNavToggle {
+        display: block !important;
+        background: var(--primary);
+        color: #fff;
+        padding: 12px;
+        text-align: center;
+        font-weight: 600;
+        cursor: pointer;
+        border-radius: 0;
+        z-index: 3000;
+    }
+
+    /* Dropdown */
+    #mobileNavDropdown {
+        display: none;
+        background: var(--bg-card);
+        border-bottom: 1px solid var(--border);
+        position: absolute;
+        top: 48px;
+        left: 0;
+        right: 0;
+        z-index: 3000;
+    }
+
+    #mobileNavDropdown button {
+        width: 100%;
+        padding: 14px;
+        border: none;
+        background: var(--bg);
+        text-align: left;
+        font-size: 1rem;
+        border-bottom: 1px solid var(--border);
+    }
+
+    #mobileNavDropdown button.active {
+        background: var(--primary-soft);
+        color: var(--primary);
+    }
+}
+
+/* ---------------------------------------------------------
+5) Mobile Header Fixes
+--------------------------------------------------------- */
+
+@media (max-width: 700px) {
+    .main-nav {
+        top: 42px;
+    }
+    #topBar {
+        height: 42px;
+        padding: 6px 10px;
+    }
+}
+
+/* ---------------------------------------------------------
+6) Z-Index Fix (wichtig!)
+--------------------------------------------------------- */
+
+#mainNav {
+    position: fixed;
+    z-index: 99999 !important;
+}
+
+

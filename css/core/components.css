@@ -1,0 +1,365 @@
+/* =========================================================
+COMPONENTS – V20 + Verbesserungen (A2)
+Buttons, Inputs, Cards, Modals, Progress, Accordions
+========================================================= */
+
+/* ---------------------------------------------------------
+1) Buttons – global
+--------------------------------------------------------- */
+
+button {
+    font-family: inherit;
+    font-size: var(--font-size-base);
+    cursor: pointer;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    padding: 8px 14px;
+    transition: 0.15s ease;
+}
+
+/* Primär-Button */
+.btn-primary {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
+.btn-primary:hover {
+    background: var(--primary-hover);
+}
+
+/* Sekundär-Button */
+.btn-secondary {
+    background: var(--bg-soft);
+    color: var(--text);
+    border-color: var(--border);
+}
+.btn-secondary:hover {
+    background: var(--border);
+}
+
+/* Kleine Buttons */
+.btn-small {
+    font-size: var(--font-size-sm);
+    padding: 6px 10px;
+}
+
+/* Korrekt / Falsch */
+.correct-btn {
+    background: var(--success);
+    color: #fff;
+    border-color: var(--success);
+}
+.wrong-btn {
+    background: var(--danger);
+    color: #fff;
+    border-color: var(--danger);
+}
+
+/* LP-Train-Button */
+.lp-train-btn {
+    margin-top: 10px;
+    width: 100%;
+}
+
+/* Disabled-State */
+button:disabled,
+.btn-primary:disabled,
+.btn-secondary:disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+
+/* ---------------------------------------------------------
+2) Inputs – global
+--------------------------------------------------------- */
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid var(--input-border);
+    background: var(--input-bg);
+    color: var(--input-text);
+    margin-top: 6px;
+    font-size: var(--font-size-base);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(74,144,226,0.25);
+}
+
+/* Trainer-Input */
+.trainer-input {
+    width: 100%;
+    padding: 10px;
+    font-size: var(--font-size-base);
+    margin-top: 16px;
+    border-radius: 6px;
+    border: 1px solid var(--input-border);
+    background: var(--input-bg);
+    color: var(--input-text);
+}
+
+/* ---------------------------------------------------------
+3) Cards – global
+--------------------------------------------------------- */
+
+.card,
+.dashboard-card,
+.learn-table-card,
+.trainer-table-wrapper,
+.trainer-inspector {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: var(--shadow-soft);
+
+    /* Wichtig: Kein Stacking-Context */
+    position: static !important;
+    z-index: auto !important;
+    overflow: visible !important;
+}
+
+/* User-Cards */
+.user-card {
+    background: var(--bg-card);
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text);
+    box-shadow: var(--shadow-soft);
+}
+.user-card:hover {
+    background: var(--bg-soft);
+}
+
+/* ---------------------------------------------------------
+4) Modals – global
+--------------------------------------------------------- */
+
+.dashboard-details-modal,
+.lang-popup-start {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.modal-content,
+.lang-popup-box {
+    background: var(--bg-card);
+    color: var(--text);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-medium);
+}
+
+/* Close-Button */
+.modal-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    font-size: 22px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: var(--text);
+}
+
+/* ---------------------------------------------------------
+5) Badges & kleine UI-Elemente
+--------------------------------------------------------- */
+
+.badge-box,
+.badge-success {
+    padding: 4px 8px;
+    border-radius: 999px;
+    font-size: 12px;
+}
+
+.badge-box {
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    color: var(--text);
+}
+
+.badge-success {
+    background: var(--primary);
+    color: #fff;
+}
+
+/* Filter-Badges */
+.filter-badge {
+    background: var(--primary);
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+}
+.filter-badge-empty {
+    opacity: 0.6;
+    font-size: 13px;
+}
+
+/* ---------------------------------------------------------
+6) Progressbars – global
+--------------------------------------------------------- */
+
+.xp-bar-bg,
+.learn-progress-bar,
+.trainer-timer-bar,
+.trainer-box-bar,
+.lp-progressbar {
+    width: 100%;
+    height: 10px;
+    background: var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+#xpBarFill,
+.learn-progress-bar-inner,
+.trainer-timer-fill,
+.lp-progress-fill {
+    height: 100%;
+    background: var(--primary);
+    border-radius: 6px;
+    transition: width 0.3s ease;
+}
+
+/* Box-Fortschritt (Trainer) */
+.trainer-box-bar div {
+    height: 100%;
+}
+
+/* ---------------------------------------------------------
+7) Accordions – global Basis
+--------------------------------------------------------- */
+
+.accordion,
+.accordion-block {
+    width: 100%;
+}
+
+.accordion-header,
+.lp-filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px 0;
+    color: var(--text);
+}
+
+.accordion-body,
+.lp-filter-card {
+    margin-top: 8px;
+}
+
+/* Sticky Header */
+.accordion-header.lernanalyse-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--bg-soft);
+}
+
+/* ---------------------------------------------------------
+8) Tabellen-Wrapper – global
+--------------------------------------------------------- */
+
+.table-wrapper,
+.trainer-table-wrapper,
+.learn-table-card {
+    overflow-x: auto;
+}
+
+/* ---------------------------------------------------------
+9) Utility-Klassen
+--------------------------------------------------------- */
+
+.hidden-row {
+    display: none !important;
+}
+
+.active-row {
+    background: var(--primary-soft);
+    transition: background 0.3s ease;
+}
+
+/* ---------------------------------------------------------
+10) GROSSE PRIMARY-BUTTONS (Lernen + Trainer)
+--------------------------------------------------------- */
+
+.big-primary-btn {
+    min-width: 130px;
+    padding: 10px 16px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 6px;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.15s ease;
+    display: inline-block;
+}
+
+.big-primary-btn:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.22);
+}
+
+.big-primary-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+/* ---------------------------------------------------------
+11) NEUE VERBESSERUNGEN (A2)
+--------------------------------------------------------- */
+
+/* Highlight (Learn) */
+.highlight-blue {
+    background: var(--highlight);
+    color: var(--highlight-text);
+    border-radius: 4px;
+    padding: 2px 4px;
+}
+
+/* Scroll-Indikator (LearningPath) */
+.scroll-indicator-line {
+    background: var(--scroll-indicator-color);
+}
+.scroll-indicator-dot.active {
+    background: var(--scroll-indicator-active);
+}
+
+/* Mobile Kompakt */
+@media (max-width: 700px) {
+    .mobile-compact {
+        padding: var(--mobile-padding);
+    }
+}

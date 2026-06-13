@@ -1,0 +1,321 @@
+/* =========================================================
+STORY-MODUS – V20 (modularisiert) + Verbesserungen (A2)
+Accordion-Version, kompakte Story-Kacheln, Kapitel
+========================================================= */
+
+/* ---------------------------------------------------------
+1) Story-Accordion
+--------------------------------------------------------- */
+
+.story-page .story-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+/* ---------------------------------------------------------
+2) Story-Kachel (kompakt)
+--------------------------------------------------------- */
+
+.story-page .story-header {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 16px;
+    cursor: pointer;
+    box-shadow: var(--shadow-soft);
+    transition: 0.2s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.story-page .story-header:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-medium);
+    background: var(--bg-soft);
+}
+
+.story-page .story-header-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.story-page .story-header-desc {
+    font-size: 0.85rem;
+    color: var(--text-soft);
+    margin-top: 2px;
+}
+
+.story-page .story-header-progress {
+    font-size: 0.85rem;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* ---------------------------------------------------------
+3) Kapitel-Liste (Accordion-Content)
+--------------------------------------------------------- */
+
+.story-page .story-chapter-list {
+    margin-top: 6px;
+    margin-left: 24px;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.story-page .story-chapter-list.open {
+    display: flex;
+}
+
+/* ---------------------------------------------------------
+4) Kapitel-Karten
+--------------------------------------------------------- */
+
+.story-page .story-chapter-card {
+    padding: 12px;
+    border-radius: 10px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-soft);
+}
+
+.story-page .story-chapter-card strong {
+    font-size: 1rem;
+}
+
+.story-page .story-lock-info {
+    margin-top: 6px;
+    padding: 6px 8px;
+    border-radius: 6px;
+    background: var(--bg-soft);
+    font-size: 0.85rem;
+    color: var(--text-soft);
+}
+
+/* ---------------------------------------------------------
+5) Modal (Popup)
+--------------------------------------------------------- */
+
+.story-page .story-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.story-page .story-modal-card {
+    background: var(--bg-card);
+    border-radius: 12px;
+    max-width: 800px;
+    width: 90%;
+    max-height: 80vh;
+    padding: 16px 20px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.35);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.story-page .story-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.story-page .story-modal-close {
+    border: none;
+    background: transparent;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.story-page .story-modal-body {
+    overflow-y: auto;
+    max-height: 55vh;
+}
+
+.story-page .story-modal-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+.story-page .story-progress {
+    height: 6px;
+    background: var(--primary);
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+
+/* ---------------------------------------------------------
+6) Modal – Bild links, Text rechts
+--------------------------------------------------------- */
+
+.story-page .story-modal-content {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+.story-page .story-modal-image {
+    width: 45%;
+    border-radius: 10px;
+    box-shadow: var(--shadow-soft);
+}
+
+.story-page .story-text-block {
+    width: 55%;
+    background: var(--bg-soft);
+    padding: 16px 18px;
+    border-radius: 10px;
+    line-height: 1.55;
+    font-size: 1rem;
+    color: var(--text);
+    box-shadow: var(--shadow-soft);
+}
+
+/* Handy: untereinander */
+
+@media (max-width: 700px) {
+    .story-page .story-modal-content {
+        flex-direction: column;
+    }
+    .story-page .story-modal-image,
+    .story-page .story-text-block {
+        width: 100%;
+    }
+}
+
+/* ---------------------------------------------------------
+7) Utility
+--------------------------------------------------------- */
+
+.story-page .hidden {
+    display: none !important;
+}
+
+.story-page body.no-scroll {
+    overflow: hidden;
+}
+
+/* =========================================================
+STORY MODAL – V20 (zweite Version, unverändert)
+========================================================= */
+
+.story-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    padding: 20px;
+}
+
+.story-modal-overlay.hidden {
+    display: none !important;
+}
+
+.story-modal-card {
+    width: 100%;
+    max-width: 700px;
+    background: var(--bg-card);
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: var(--shadow-medium);
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.story-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.story-modal-close {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--text);
+}
+
+.story-progress {
+    height: 6px;
+    background: var(--primary);
+    border-radius: 4px;
+    margin-bottom: 16px;
+}
+
+.story-modal-body {
+    font-size: var(--font-size-base);
+    color: var(--text);
+}
+
+.story-modal-content {
+    display: flex;
+    gap: 16px;
+    margin-top: 10px;
+}
+
+.story-modal-image {
+    width: 40%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.story-text-block {
+    flex: 1;
+    white-space: pre-line;
+}
+
+.story-modal-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+    .story-modal-content {
+        flex-direction: column;
+    }
+    .story-modal-image {
+        width: 100%;
+    }
+}
+
+/* =========================================================
+8) NEUE VERBESSERUNGEN (A2)
+========================================================= */
+
+/* Highlight (Story) */
+.story-page .highlight-blue {
+    background: var(--highlight);
+    color: var(--highlight-text);
+    border-radius: 4px;
+    padding: 2px 4px;
+}
+
+/* Mobile Kompakt */
+@media (max-width: 700px) {
+    .story-page .story-header {
+        padding: 12px;
+    }
+    .story-page .story-chapter-card {
+        padding: 10px;
+    }
+}

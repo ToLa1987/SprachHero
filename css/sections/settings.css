@@ -1,0 +1,314 @@
+/* =========================================================
+SETTINGS – V21 (komplett, variablenbasiert) + Verbesserungen (A2)
+inkl. UI-Personalisierung + Preview-Panel
+========================================================= */
+
+#settings-page {
+    padding: 10px;
+}
+
+/* =========================================================
+AVATAR-BEREICH
+========================================================= */
+
+#settings-page .avatar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(48px, 1fr));
+    gap: 8px;
+    margin: 10px 0 20px 0;
+}
+
+#settings-page .avatar-option {
+    font-size: 26px;
+    padding: 6px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    color: var(--text);
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+#settings-page .avatar-option:hover {
+    background: var(--bg);
+}
+
+#settings-page .avatar-option.active {
+    border: 2px solid var(--primary);
+    background: var(--bg-soft);
+}
+
+/* =========================================================
+CSV-BUTTONS
+========================================================= */
+
+#settings-page .btn-row {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-start;
+}
+
+#settings-page .secondary-btn.secondary-small {
+    background: var(--bg-card);
+    color: var(--text);
+    padding: 10px 14px;
+    font-size: 13px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    min-width: 120px;
+    text-align: center;
+}
+
+#settings-page .secondary-btn.secondary-small:hover {
+    background: var(--bg);
+}
+
+/* =========================================================
+VOKABEL-EDITOR
+========================================================= */
+
+#settings-page .vocab-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#settings-page .vocab-table th,
+#settings-page .vocab-table td {
+    padding: 6px;
+    border: 1px solid var(--border);
+    color: var(--text);
+    background: var(--bg-card);
+}
+
+#settings-page .vocab-table input {
+    width: 100%;
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* =========================================================
+ACCORDION
+========================================================= */
+
+#settings-page .accordion {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 14px;
+    overflow: hidden;
+}
+
+#settings-page .accordion-header {
+    background: var(--bg-card);
+    padding: 12px 14px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    color: var(--text);
+}
+
+#settings-page .accordion-body {
+    padding: 14px;
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* =========================================================
+UI-PERSONALISIERUNG
+========================================================= */
+
+#settings-page .ui-layout {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin-top: 10px;
+}
+
+#settings-page .ui-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+#settings-page .ui-section {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 16px 18px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-soft);
+}
+
+#settings-page .ui-section h4 {
+    margin: 0 0 12px 0;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+/* GRID für Buttons */
+
+#settings-page .ui-btn-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 10px;
+}
+
+/* Einheitliche Buttons */
+
+#settings-page .ui-btn-grid button {
+    height: 42px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    color: var(--text);
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+#settings-page .ui-btn-grid button:hover {
+    background: var(--bg);
+}
+
+/* Active Button */
+
+#settings-page .ui-btn-active {
+    background: var(--primary) !important;
+    color: #fff !important;
+    border-color: var(--primary) !important;
+}
+
+/* Apply Button */
+
+#settings-page .ui-apply-btn {
+    margin-top: 10px;
+    width: 100%;
+    height: 48px;
+    font-size: 1rem;
+    border-radius: 10px;
+}
+
+/* =========================================================
+PREVIEW PANEL
+========================================================= */
+
+#settings-page .ui-preview {
+    width: 260px;
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    box-shadow: var(--shadow-soft);
+    position: sticky;
+    top: 80px;
+    height: fit-content;
+}
+
+#settings-page .ui-preview h4 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+/* Mini-Komponenten */
+
+#settings-page .preview-card {
+    padding: 12px;
+    border-radius: 8px;
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    margin-bottom: 12px;
+    box-shadow: var(--shadow-soft);
+    color: var(--text);
+}
+
+/* Titel */
+
+#settings-page .preview-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+/* Button */
+
+#settings-page .preview-button {
+    background: var(--primary);
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#settings-page .preview-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Karte */
+
+#settings-page .preview-cardbox {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 14px;
+    color: var(--text);
+}
+
+/* =========================================================
+RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+    #settings-page .ui-layout {
+        flex-direction: column;
+    }
+    #settings-page .ui-preview {
+        width: 100%;
+        position: relative;
+        top: 0;
+    }
+}
+
+@media (max-width: 800px) {
+    #settings-page .ui-flex {
+        flex-direction: column;
+    }
+    #settings-page .ui-preview {
+        width: 100%;
+        position: relative;
+        top: 0;
+    }
+}
+
+/* =========================================================
+NEUE VERBESSERUNGEN (A2)
+========================================================= */
+
+/* Highlight (Settings) */
+#settings-page .highlight-blue {
+    background: var(--highlight);
+    color: var(--highlight-text);
+    border-radius: 4px;
+    padding: 2px 4px;
+}
+
+/* Mobile kompakter */
+@media (max-width: 700px) {
+    #settings-page .ui-section {
+        padding: 14px;
+    }
+    #settings-page .ui-btn-grid button {
+        height: 38px;
+        font-size: 0.9rem;
+    }
+}

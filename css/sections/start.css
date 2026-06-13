@@ -1,0 +1,274 @@
+/* =========================================================
+STARTSEITE – V20 (modularisiert) + Verbesserungen (A2)
+Profilwahl, Avatar-Grid, Buttons, Dark-Mode-ready
+========================================================= */
+
+/* ---------------------------------------------------------
+1) Grundlayout
+--------------------------------------------------------- */
+
+.start-page #app {
+    padding-top: 6px;
+    color: var(--text);
+}
+
+.start-page h2 {
+    margin-bottom: 10px;
+}
+
+.start-page p {
+    margin-bottom: 12px;
+}
+
+.start-page label {
+    font-weight: 600;
+    display: block;
+    margin: 12px 0 6px;
+    color: var(--text);
+}
+
+/* ---------------------------------------------------------
+2) Button-Row (Startseite)
+--------------------------------------------------------- */
+
+.start-page .btn-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 14px;
+    margin: 14px 0 24px;
+}
+
+.start-page .btn-row button {
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1.5px solid var(--border);
+    background: var(--bg-card);
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.15s ease;
+    color: var(--text);
+}
+
+.start-page .btn-row button:hover {
+    background: var(--bg-soft);
+    box-shadow: var(--shadow-soft);
+}
+
+.start-page .btn-row button.active {
+    background: var(--primary-soft);
+    border-color: var(--primary);
+    font-weight: 600;
+}
+
+/* Primärbutton (bestehende Klasse) */
+
+.start-page #app .btn-primary {
+    background: var(--primary);
+    color: #fff;
+    border: 1px solid var(--primary);
+    font-size: 17px;
+    font-weight: 600;
+    padding: 12px 18px;
+}
+
+.start-page #app .btn-primary:hover {
+    background: var(--primary-hover);
+}
+
+/* ---------------------------------------------------------
+3) Profilwahl – User Cards
+--------------------------------------------------------- */
+
+.start-page .user-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 16px;
+    margin-top: 26px;
+}
+
+.start-page .user-card {
+    background: var(--bg-soft);
+    padding: 16px 18px;
+    border-radius: 12px;
+    border: 2px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+    transition: 0.15s ease;
+    box-shadow: var(--shadow-soft);
+    color: var(--text);
+}
+
+.start-page .user-card:hover {
+    background: var(--bg-card);
+    box-shadow: var(--shadow-medium);
+    transform: translateY(-2px);
+}
+
+.start-page .avatar {
+    font-size: 52px;
+    line-height: 1;
+}
+
+.start-page .user-card div:first-of-type {
+    display: flex;
+    flex-direction: column;
+}
+
+.start-page .user-lang {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+/* ---------------------------------------------------------
+4) Avatar-Auswahl
+--------------------------------------------------------- */
+
+.start-page .avatar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(52px, 1fr));
+    gap: 12px;
+    margin-top: 10px;
+    background: var(--bg-soft);
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.start-page .avatar-choice {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--bg-card);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: 0.15s ease;
+    color: var(--text);
+}
+
+.start-page .avatar-choice:hover {
+    background: var(--bg-soft);
+    box-shadow: var(--shadow-soft);
+    transform: translateY(-1px);
+}
+
+.start-page .avatar-choice.selected {
+    border-color: var(--primary);
+    background: var(--primary-soft);
+}
+
+/* ---------------------------------------------------------
+5) Popup nach Profilwahl
+--------------------------------------------------------- */
+
+.start-page .lang-popup-start {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.start-page .lang-popup-box {
+    background: var(--bg-card);
+    padding: 20px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 320px;
+    text-align: center;
+    color: var(--text);
+    box-shadow: var(--shadow-medium);
+}
+
+.start-page .lang-popup-box .btn-row button {
+    margin: 4px;
+}
+
+/* ---------------------------------------------------------
+6) Mobile Header Fixes
+--------------------------------------------------------- */
+
+@media (max-width: 700px) {
+
+    #headerBar {
+        padding: 6px 10px;
+        height: 42px;
+    }
+
+    #xpDisplay {
+        font-size: 0.75rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 55%;
+    }
+
+    .header-right {
+        gap: 6px;
+    }
+
+    #themeToggle,
+    #langToggle {
+        font-size: 0.8rem;
+        padding: 4px 6px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    #headerBar {
+        padding: 4px 8px;
+        height: 40px;
+    }
+
+    #xpDisplay {
+        font-size: 0.75rem;
+        max-width: 55%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    #themeToggle,
+    #langToggle {
+        font-size: 0.8rem;
+        padding: 4px 6px;
+    }
+}
+
+/* =========================================================
+7) NEUE VERBESSERUNGEN (A2)
+========================================================= */
+
+/* Highlight (Startseite) */
+.start-page .highlight-blue {
+    background: var(--highlight);
+    color: var(--highlight-text);
+    border-radius: 4px;
+    padding: 2px 4px;
+}
+
+/* Mobile kompakter */
+@media (max-width: 700px) {
+
+    .start-page .btn-row button {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+
+    .start-page .user-card {
+        padding: 14px;
+    }
+
+    .start-page .avatar-choice {
+        width: 48px;
+        height: 48px;
+        font-size: 26px;
+    }
+}

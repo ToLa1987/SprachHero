@@ -1,0 +1,64 @@
+/* =========================================================
+THEMES – V20 (erweitert für Preview-Panel)
+========================================================= */
+
+/* ---------------------------------------------------------
+1) Standard (Blue) – Basis kommt aus base.css
+--------------------------------------------------------- */
+/* Keine Änderungen nötig – Preview nutzt dieselben Variablen */
+
+/* ---------------------------------------------------------
+2) Green Theme
+--------------------------------------------------------- */
+
+body.theme-green,
+.ui-preview.theme-green {
+    --primary: #4caf50;
+    --primary-hover: #3e8e41;
+    --primary-soft: #e8f5e9;
+    --bg: #f7fff7;
+    --bg-card: #ffffff;
+    --bg-soft: #eef7ee;
+    --text: #1b3d1b;
+    --text-soft: #3f6b3f;
+    --border: #bcdcbc;
+}
+
+/* ---------------------------------------------------------
+3) Purple Theme
+--------------------------------------------------------- */
+
+body.theme-purple,
+.ui-preview.theme-purple {
+    --primary: #7b1fa2;
+    --primary-hover: #6a1b9a;
+    --primary-soft: #f3e5f5;
+    --bg: #faf5ff;
+    --bg-card: #ffffff;
+    --bg-soft: #f4e8ff;
+    --text: #2d0a3a;
+    --text-soft: #5a2a6e;
+    --border: #d8c4e8;
+}
+
+/* ---------------------------------------------------------
+4) High Contrast Theme
+--------------------------------------------------------- */
+
+body.theme-highcontrast,
+.ui-preview.theme-highcontrast {
+    --bg: #000;
+    --bg-card: #111;
+    --bg-soft: #222;
+    --text: #fff;
+    --text-soft: #ddd;
+    --border: #fff;
+    --primary: #ffea00;
+    --primary-hover: #fff600;
+    --primary-soft: #665;
+    --table-header-bg: #333;
+    --table-row-border: #555;
+    --input-bg: #111;
+    --input-border: #fff;
+    --input-text: #fff;
+}

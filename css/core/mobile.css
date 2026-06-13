@@ -1,0 +1,284 @@
+/* =========================================================
+   MOBILE.CSS V4 – SprachHero
+   Ultra-optimierte Mobile Experience
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* 0) iOS Safe Area Insets */
+    body {
+        padding-top: env(safe-area-inset-top);
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    /* 1) Header / TopBar */
+    #topBar {
+        height: 42px;
+        padding: 6px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.35rem;
+        font-size: clamp(0.85rem, 2vw, 0.95rem);
+    }
+
+    #topBar-right {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    #themeToggle,
+    #langToggle {
+        height: 32px !important;
+        padding: 0 10px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        font-size: 1rem !important;
+        line-height: 1 !important;
+        margin: 0 !important;
+    }
+
+    /* 2) Navigation */
+    #mobileNavToggle {
+        display: block;
+        padding: 0.55rem;
+        font-size: 1.05rem;
+        background: #4a90e2;
+        color: white;
+        border-radius: 6px;
+        margin: 4px 0.4rem 16px !important;
+        text-align: center;
+        position: relative;
+        top: 0;
+    }
+
+    #mobileNavDropdown {
+        margin: 0.4rem;
+        border-radius: 6px;
+        overflow: hidden;
+        background: #fff;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    #mobileNavDropdown button {
+        padding: 0.65rem 0.8rem;
+        font-size: 0.95rem;
+        border-bottom: 1px solid #eee;
+    }
+
+    #mobileNavDropdown button:last-child {
+        border-bottom: none;
+    }
+
+    /* Sprachwahl-Popup */
+    .lang-popup-header {
+        z-index: 999999 !important;
+        position: relative;
+    }
+
+    /* 3) Page Titles */
+    .page-description {
+        display: none !important;
+    }
+
+    .page-title {
+        font-size: clamp(1.2rem, 4vw, 1.45rem);
+        margin-top: 8px !important;
+        margin-bottom: 0.55rem;
+        font-weight: 600;
+    }
+
+    /* 4) Trainer & Lernen */
+    .trainer-header,
+    .learn-header {
+        padding: 0.55rem;
+        font-size: 0.9rem;
+    }
+
+    .trainer-header button,
+    .learn-header button {
+        padding: 0.45rem 0.65rem;
+        font-size: 0.85rem;
+    }
+
+    .vocab-table td,
+    .vocab-table th {
+        padding: 0.35rem 0.45rem;
+        font-size: 0.8rem;
+    }
+
+    .vocab-table audio,
+    .vocab-table .audio-btn {
+        transform: scale(0.85);
+    }
+
+    /* 5) Lernpfad */
+    .lp-root {
+        margin-top: 48px !important;
+    }
+
+    .learningpath-tile {
+        padding: 0.55rem 0.75rem;
+        margin-bottom: 0.55rem;
+        border-radius: 10px;
+        font-size: 0.85rem;
+        background: linear-gradient(135deg, #f7f9fc, #eef2f7);
+        border: 1px solid #dce3ee;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        position: relative;
+    }
+
+    .learningpath-tile::before {
+        content: "";
+        position: absolute;
+        left: -12px;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        background: #4a90e2;
+        border-radius: 4px;
+    }
+
+    .learningpath-tile h3 {
+        font-size: 1rem;
+        margin-bottom: 0.25rem;
+        font-weight: 600;
+    }
+
+    .learningpath-tile .stats {
+        font-size: 0.75rem;
+        opacity: 0.8;
+    }
+
+    .learningpath-buttons {
+        display: flex;
+        gap: 0.4rem;
+        margin-top: 0.4rem;
+    }
+
+    .learningpath-buttons button {
+        padding: 0.35rem 0.55rem;
+        font-size: 0.8rem;
+        border-radius: 6px;
+    }
+
+    /* 6) Story */
+    .story-popup {
+        max-height: 65vh;
+        padding: 0.9rem;
+        font-size: 0.95rem;
+        border-radius: 12px;
+        background: #fff;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+
+    .story-popup h2 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+    }
+
+    .story-popup p {
+        font-size: 0.9rem;
+        line-height: 1.3;
+    }
+
+    .story-popup button {
+        padding: 0.45rem 0.7rem;
+        font-size: 0.85rem;
+        border-radius: 6px;
+    }
+
+    /* 7) Dashboard */
+    .dashboard-page {
+        margin-top: 48px !important;
+    }
+
+    .dashboard-section {
+        padding: 0.7rem;
+        margin-bottom: 0.7rem;
+        border-radius: 10px;
+    }
+
+    .dashboard-section h2 {
+        font-size: 1.15rem;
+        margin-bottom: 0.35rem;
+    }
+
+    .dashboard-table td,
+    .dashboard-table th {
+        padding: 0.35rem 0.45rem;
+        font-size: 0.8rem;
+    }
+
+    /* 8) Einstellungen */
+    .settings-page {
+        margin-top: 48px !important;
+    }
+
+    .settings-section {
+        padding: 0.7rem;
+        margin-bottom: 0.7rem;
+        border-radius: 10px;
+    }
+
+    .settings-section h3 {
+        font-size: 1.05rem;
+        margin-bottom: 0.35rem;
+    }
+
+    .settings-section p,
+    .settings-section label {
+        font-size: 0.85rem;
+    }
+
+    .settings-section button {
+        padding: 0.45rem 0.7rem;
+        font-size: 0.85rem;
+        border-radius: 6px;
+    }
+
+    /* =========================================================
+   🔥 Flying Hero – Mobile Version (korrekt)
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* Startgröße + Startposition (KEIN rotate, KEIN transform!) */
+    #hero-intro-img {
+        width: 320px !important;     /* größer */
+        height: auto !important;
+        /* transform NICHT setzen – Animation übernimmt das */
+    }
+
+    #hero-title {
+        margin-top: 10px !important;
+        font-size: 3.4rem !important;   /* etwas größer */
+        transform: translateY(20px) !important;
+    }
+
+    /* Mobile Animation – dreht sich rein & endet gerade */
+    @keyframes heroLandingMobile {
+        0% {
+            opacity: 0;
+            transform: scale(0.2) translateY(-80px) rotate(-8deg);
+        }
+        40% {
+            opacity: 1;
+            transform: scale(1.25) translateY(0) rotate(0deg);
+        }
+        60% {
+            transform: scale(0.95) translateY(10px) rotate(0deg);
+        }
+        100% {
+            transform: scale(1) translateY(0) rotate(0deg);
+        }
+    }
+
+    #hero-intro-img {
+        animation: heroLandingMobile 9.4s cubic-bezier(.17,.67,.32,1.27) forwards !important;
+    }
+}
+}
