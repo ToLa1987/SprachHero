@@ -55,39 +55,26 @@ function mapCsvLineToWord(line) {
 
 export async function loadWords(lang) {
   const key = cacheKey(lang);
-  const hashKey = `sprachhero_words_hash_${lang}`;
 
   const cached = localStorage.getItem(key);
-  const cachedHash = localStorage.getItem(hashKey);
-
-  const url = `${BASE_URL}/sprachhero_${lang}.csv?v=${Date.now()}`;
-
-  let text = "";
-  let newHash = "";
-
-  try {
-    const res = await fetch(url, { cache: "no-store" });
-    if (!res.ok) throw new Error("GitHub offline");
-
-    text = await res.text();
-    newHash = hashText(text);
-
-    // Wenn Datei leer → NICHT speichern
-    if (text.trim().length < 10) throw new Error("Empty CSV");
-  } catch {
-    // Fallback: Nur wenn Cache existiert
-    return cached ? JSON.parse(cached) : [];
-  }
-
-  // Wenn Hash identisch → Cache verwenden
-  if (cached && cachedHash === newHash) {
+  if (cached) {
     try {
       const arr = JSON.parse(cached);
       if (Array.isArray(arr)) return arr;
     } catch {}
   }
 
-  // CSV neu parsen
+  const url = `${BASE_URL}/sprachhero_${lang}.csv?v=${Date.now()}`;
+
+  let text = "";
+  try {
+    const res = await fetch(url, { cache: "no-store" });
+    if (!res.ok) throw new Error("GitHub offline");
+    text = await res.text();
+  } catch {
+    return cached ? JSON.parse(cached) : [];
+  }
+
   const lines = text
     .split(/\r?\n/)
     .map(l => l.trim())
@@ -99,9 +86,7 @@ export async function loadWords(lang) {
 
   const words = lines.map(mapCsvLineToWord);
 
-  // Cache + Hash speichern
   localStorage.setItem(key, JSON.stringify(words));
-  localStorage.setItem(hashKey, newHash);
 
   return words;
 }
