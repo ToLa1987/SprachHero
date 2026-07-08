@@ -53,28 +53,50 @@ function mapCsvLineToWord(line) {
   };
 }
 
+function hashText(text) {
+  let hash = 0;
+  for (let i = 0; i < text.length; i++) {
+    hash = (hash << 5) - hash + text.charCodeAt(i);
+    hash |= 0;
+  }
+  return hash.toString();
+}
+
 export async function loadWords(lang) {
   const key = cacheKey(lang);
+  const hashKey = `sprachhero_words_hash_${lang}`;
 
   const cached = localStorage.getItem(key);
-  if (cached) {
+  const cachedHash = localStorage.getItem(hashKey);
+
+  const url = `${BASE_URL}/sprachhero_${lang}.csv?v=${Date.now()}`;
+
+  let text = "";
+  let newHash = "";
+
+  try {
+    const res = await fetch(url, { cache: "no-store" });
+    if (!res.ok) throw new Error("GitHub offline");
+
+    text = await res.text();
+    newHash = hashText(text);
+
+    // Wenn Datei leer → NICHT cachen
+    if (text.trim().length < 10) throw new Error("Empty CSV");
+  } catch {
+    // Fallback: Nur wenn Cache existiert
+    return cached ? JSON.parse(cached) : [];
+  }
+
+  // Wenn Hash identisch → Cache verwenden
+  if (cached && cachedHash === newHash) {
     try {
       const arr = JSON.parse(cached);
       if (Array.isArray(arr)) return arr;
     } catch {}
   }
 
-  const url = `${BASE_URL}/sprachhero_${lang}.csv?v=${Date.now()}`;
-
-  let text = "";
-  try {
-    const res = await fetch(url, { cache: "no-store" });
-    if (!res.ok) throw new Error("GitHub offline");
-    text = await res.text();
-  } catch {
-    return cached ? JSON.parse(cached) : [];
-  }
-
+  // CSV neu parsen
   const lines = text
     .split(/\r?\n/)
     .map(l => l.trim())
@@ -86,7 +108,10 @@ export async function loadWords(lang) {
 
   const words = lines.map(mapCsvLineToWord);
 
+  // Cache + Hash speichern
   localStorage.setItem(key, JSON.stringify(words));
+  localStorage.setItem(hashKey, newHash);
 
   return words;
 }
+
