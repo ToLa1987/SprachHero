@@ -1,3 +1,4 @@
+
 // =========================================================
 // storage_words.js – Robust CSV Loader (UTF‑8 + Excel‑safe)
 // =========================================================
@@ -55,14 +56,10 @@ function mapCsvLineToWord(line) {
 
 export async function loadWords(lang) {
   const key = cacheKey(lang);
+  const hashKey = `sprachhero_words_hash_${lang}`;
 
   const cached = localStorage.getItem(key);
-  if (cached) {
-    try {
-      const arr = JSON.parse(cached);
-      if (Array.isArray(arr)) return arr;
-    } catch {}
-  }
+  const cachedHash = localStorage.getItem(hashKey);
 
   const url = `${BASE_URL}/sprachhero_${lang}.csv?v=${Date.now()}`;
 
@@ -75,6 +72,18 @@ export async function loadWords(lang) {
     return cached ? JSON.parse(cached) : [];
   }
 
+  // Neuen Hash berechnen
+  const newHash = hashText(text);
+
+  // Wenn Hash identisch → Cache verwenden
+  if (cached && cachedHash === newHash) {
+    try {
+      const arr = JSON.parse(cached);
+      if (Array.isArray(arr)) return arr;
+    } catch {}
+  }
+
+  // CSV neu parsen
   const lines = text
     .split(/\r?\n/)
     .map(l => l.trim())
@@ -86,7 +95,9 @@ export async function loadWords(lang) {
 
   const words = lines.map(mapCsvLineToWord);
 
+  // Cache + Hash speichern
   localStorage.setItem(key, JSON.stringify(words));
+  localStorage.setItem(hashKey, newHash);
 
   return words;
 }
