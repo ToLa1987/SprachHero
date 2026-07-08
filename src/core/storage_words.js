@@ -1,4 +1,3 @@
-
 // =========================================================
 // storage_words.js – Robust CSV Loader (UTF‑8 + Excel‑safe)
 // =========================================================
@@ -64,16 +63,21 @@ export async function loadWords(lang) {
   const url = `${BASE_URL}/sprachhero_${lang}.csv?v=${Date.now()}`;
 
   let text = "";
+  let newHash = "";
+
   try {
     const res = await fetch(url, { cache: "no-store" });
     if (!res.ok) throw new Error("GitHub offline");
+
     text = await res.text();
+    newHash = hashText(text);
+
+    // Wenn Datei leer → NICHT speichern
+    if (text.trim().length < 10) throw new Error("Empty CSV");
   } catch {
+    // Fallback: Nur wenn Cache existiert
     return cached ? JSON.parse(cached) : [];
   }
-
-  // Neuen Hash berechnen
-  const newHash = hashText(text);
 
   // Wenn Hash identisch → Cache verwenden
   if (cached && cachedHash === newHash) {
