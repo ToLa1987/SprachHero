@@ -22,9 +22,9 @@ export function getLangCodeForLanguage(lang) {
         case "fr":
             return "fr-FR";
 
-        // Latein -> Italienisch
+        // Latein -> Italienisch funktioniert nicht gut, daher deutsch
         case "la":
-            return "it-IT";
+            return "de-DE";
 
         case "es":
             return "es-ES";
@@ -230,7 +230,7 @@ export function speakAsync(
         // Latein optimieren
         // =====================================
 
-        if (utter.lang === "it-IT") {
+        if (utter.lang === "de-DE") {
 
             utter.rate *= 0.92;
             utter.pitch *= 0.95;
