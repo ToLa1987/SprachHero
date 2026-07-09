@@ -13,12 +13,14 @@ let voices = [];
 // =========================================================
 
 function latinLengthFix(text) {
+    const ZWJ = "\u200D"; // Zero-Width-Joiner
+
     return text
-        .replace(/ā/g, "aaa")
-        .replace(/ē/g, "eee")
-        .replace(/ī/g, "iii")
-        .replace(/ō/g, "ooo")
-        .replace(/ū/g, "uuu");
+        .replace(/ā/g, "a" + ZWJ + "aaa")
+        .replace(/ē/g, "e" + ZWJ + "eee")
+        .replace(/ī/g, "i" + ZWJ + "iii")
+        .replace(/ō/g, "o" + ZWJ + "ooo")
+        .replace(/ū/g, "u" + ZWJ + "uuu");
 }
 
 // =========================================================
