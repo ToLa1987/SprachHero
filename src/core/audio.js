@@ -9,6 +9,19 @@ import { getGlobal } from "./storage.js";
 let voices = [];
 
 // =========================================================
+// Latein – Vokallängen optimieren
+// =========================================================
+
+function latinLengthFix(text) {
+    return text
+        .replace(/ā/g, "aaa")
+        .replace(/ē/g, "eee")
+        .replace(/ī/g, "iii")
+        .replace(/ō/g, "ooo")
+        .replace(/ū/g, "uuu");
+}
+
+// =========================================================
 // Sprachcodes
 // =========================================================
 
@@ -22,7 +35,7 @@ export function getLangCodeForLanguage(lang) {
         case "fr":
             return "fr-FR";
 
-        // Latein -> Italienisch funktioniert nicht gut, daher deutsch
+        // Latein -> Deutsch (bessere Aussprache)
         case "la":
             return "de-DE";
 
@@ -86,10 +99,6 @@ function getBestVoice(langCode) {
             speechSynthesis.getVoices();
     }
 
-    // =====================================
-    // Bevorzugte Stimmen
-    // =====================================
-
     const preferredVoices = {
 
         "de-DE": [
@@ -119,10 +128,6 @@ function getBestVoice(langCode) {
         ]
     };
 
-    // =====================================
-    // Wunschstimmen prüfen
-    // =====================================
-
     const preferred =
         preferredVoices[langCode];
 
@@ -140,12 +145,7 @@ function getBestVoice(langCode) {
         }
     }
 
-    // =====================================
-    // Exakte Sprache
-    // =====================================
-
     let match = voices.find(v =>
-
         v.lang.toLowerCase() ===
         langCode.toLowerCase()
     );
@@ -154,12 +154,7 @@ function getBestVoice(langCode) {
         return match;
     }
 
-    // =====================================
-    // Sprachpräfix
-    // =====================================
-
     match = voices.find(v =>
-
         v.lang
             .toLowerCase()
             .startsWith(
@@ -172,10 +167,6 @@ function getBestVoice(langCode) {
     if (match) {
         return match;
     }
-
-    // =====================================
-    // Browser-Standard
-    // =====================================
 
     return null;
 }
@@ -214,6 +205,17 @@ export function speakAsync(
             getLangCodeForGlobalLanguage();
 
         // =====================================
+        // Latein – Vokallängen optimieren
+        // =====================================
+
+        const g = getGlobal();
+
+        if (g.language === "la" && utter.lang === "de-DE") {
+            text = latinLengthFix(text);
+            utter.text = text;
+        }
+
+        // =====================================
         // Standardwerte
         // =====================================
 
@@ -227,11 +229,10 @@ export function speakAsync(
             options.volume || 1.0;
 
         // =====================================
-        // Latein optimieren
+        // Latein optimieren (Tempo & Pitch)
         // =====================================
 
-        if (utter.lang === "de-DE") {
-
+        if (utter.lang === "de-DE" && g.language === "la") {
             utter.rate *= 0.92;
             utter.pitch *= 0.95;
         }
@@ -244,7 +245,6 @@ export function speakAsync(
             getBestVoice(utter.lang);
 
         if (voice) {
-
             utter.voice = voice;
         }
 
@@ -253,7 +253,6 @@ export function speakAsync(
         // =====================================
 
         if (options.onBoundary) {
-
             utter.onboundary =
                 options.onBoundary;
         }
@@ -263,12 +262,10 @@ export function speakAsync(
         // =====================================
 
         utter.onend = () => {
-
             resolve();
         };
 
         utter.onerror = () => {
-
             resolve();
         };
 
@@ -331,4 +328,3 @@ export function playSfx(name) {
         );
     }
 }
-
