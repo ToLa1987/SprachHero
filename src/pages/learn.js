@@ -67,7 +67,7 @@ const allWords = await getWordsForLang(lang);
 
   const storedRate = Number(localStorage.getItem("learn_speech_rate") || "0");
 
-  if (!storedRate) {
+if (!storedRate) {
     if (lang === "en") speechRate = 0.95;
     else if (lang === "fr") speechRate = 0.90;
     else if (lang === "es") speechRate = 0.95;
@@ -75,8 +75,10 @@ const allWords = await getWordsForLang(lang);
     else if (lang === "de") speechRate = 1.00;
     else if (lang === "tr") speechRate = 0.95;
     else if (lang === "pl") speechRate = 0.90;
+    else if (lang === "pt") speechRate = 0.95;   // Portugiesisch Portugal
     else speechRate = 1.0;
-  } else if (!isNaN(storedRate) && storedRate >= 0.6 && storedRate <= 1.4) {
+}
+ else if (!isNaN(storedRate) && storedRate >= 0.6 && storedRate <= 1.4) {
     speechRate = storedRate;
   }
 
