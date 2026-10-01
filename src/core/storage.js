@@ -16,7 +16,8 @@ export const WORDS_KEYS = {
   fr: "sprachhero_words_fr",
   la: "sprachhero_words_la",
   es: "sprachhero_words_es",
-  it: "sprachhero_words_it"
+  it: "sprachhero_words_it",
+  pt: "sprachhero_words_pt"
 };
 
 const STORAGE_KEY_USERS = "sprachhero_users";
