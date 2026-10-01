@@ -24,7 +24,8 @@ function updateHeaderLanguage() {
     fr: "🇫🇷 FR",
     es: "🇪🇸 ES",
     it: "🇮🇹 IT",
-    la: "🏛️ LA"
+    la: "🏛️ LA",
+    pt: "🇵🇹 PT"   // <‑‑ NEU
   };
 
   const g = getGlobal();
@@ -53,7 +54,8 @@ function showLanguagePopup(onSelect) {
     { code: "fr", label: "🇫🇷 FR – Französisch" },
     { code: "es", label: "🇪🇸 ES – Spanisch" },
     { code: "it", label: "🇮🇹 IT – Italienisch" },
-    { code: "la", label: "🏛️ LA – Latein" }
+    { code: "la", label: "🏛️ LA – Latein" },
+    { code: "pt", label: "🇵🇹 PT – Portugiesisch" }
   ];
 
   const btnRow = document.createElement("div");
