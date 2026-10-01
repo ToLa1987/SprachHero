@@ -34,6 +34,9 @@ export function getLangCodeForLanguage(lang) {
         case "en":
             return "en-GB";
 
+        case "pt":
+            return "pt-PT";
+
         case "fr":
             return "fr-FR";
 
@@ -117,6 +120,12 @@ function getBestVoice(langCode) {
         "fr-FR": [
             "Microsoft Denise Online",
             "Microsoft Denise"
+        ],
+
+        "pt-PT": [
+            "Microsoft Raquel Online",
+            "Microsoft Raquel",
+            "Google Portuguese Female"
         ],
 
         "es-ES": [
