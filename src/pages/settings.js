@@ -27,14 +27,15 @@ const avatarSets = {
   animals: ["🦊","🐺","🐯","🦁","🐵","🐸","🐙","🦉","🦄","🐨","🐰","🐻","🐢","🐬","🦕"]
 };
 
-const ALL_LANGS = ["en", "fr", "es", "it", "la"];
+const ALL_LANGS = ["en", "fr", "es", "it", "la", "pt"];
 
 const LANG_LABELS = {
   en: "EN – Englisch 🇬🇧",
   fr: "FR – Französisch 🇫🇷",
   es: "ES – Spanisch 🇪🇸",
   it: "IT – Italienisch 🇮🇹",
-  la: "LA – Latein 🏛️"
+  la: "LA – Latein 🏛️",
+  pt: "PT – Portugiesisch 🇵🇹"   // <‑‑ NEU
 };
 
 // =========================================================
