@@ -1,0 +1,380 @@
+/* =========================================================
+BASE / CORE – V20 + Verbesserungen (A2)
+Zentrales Designsystem: Farben, Typo, Grundlayout
+========================================================= */
+
+/* ---------------------------------------------------------
+1) Design-Variablen – Light Mode
+--------------------------------------------------------- */
+
+:root {
+
+    /* Flächen */
+    --bg: #f5f7fa;
+    --bg-card: #ffffff;
+    --bg-soft: #eef1f5;
+
+    /* Text */
+    --text: #222;
+    --text-soft: #555;
+    --text-muted: #777;
+
+    /* Rahmen */
+    --border: #dcdcdc;
+
+    /* Primärfarbe */
+    --primary: #4a90e2;
+    --primary-soft: #e8f1ff;
+    --primary-hover: #3b7ad6;
+
+    /* Status */
+    --success: #4caf50;
+    --danger: #e53935;
+    --warning: #fbc02d;
+
+    /* Tabellen */
+    --table-header-bg: #f0f0f0;
+    --table-row-border: #e0e0e0;
+
+    /* Inputs */
+    --input-bg: #ffffff;
+    --input-border: #ccc;
+    --input-text: #222;
+
+    /* Typografie */
+    --font-family: "Segoe UI", sans-serif;
+    --font-size-base: 16px;
+    --font-size-sm: 14px;
+    --font-size-lg: 18px;
+
+    /* Schatten */
+    --shadow-soft: 0 2px 6px rgba(0,0,0,0.06);
+    --shadow-medium: 0 4px 12px rgba(0,0,0,0.12);
+
+    /* -----------------------------------------------------
+       NEUE VARIABLEN (A2 – keine optische Änderung)
+       ----------------------------------------------------- */
+
+    /* Highlighting (Learn) */
+    --highlight: #d0e6ff;
+    --highlight-text: #003366;
+
+    /* Scroll-Indikator (LearningPath) */
+    --scroll-indicator-color: #c7d7ef;
+    --scroll-indicator-active: #4a90e2;
+
+    /* Mobile Navigation Höhe */
+    --mobile-nav-height: 90px;
+
+    /* Mobile Tile Gap (LearningPath) */
+    --tile-gap-mobile: 14px;
+
+    /* Mobile Kompakt-Spacing */
+    --mobile-padding: 10px;
+}
+
+/* ---------------------------------------------------------
+2) Design-Variablen – Dark Mode
+--------------------------------------------------------- */
+
+body.dark {
+
+    --bg: #1a1a1a;
+    --bg-card: #242424;
+    --bg-soft: #1f1f1f;
+
+    --text: #e5e5e5;
+    --text-soft: #bbbbbb;
+    --text-muted: #999;
+
+    --border: #333;
+
+    --primary: #4a90e2;
+    --primary-soft: #1f3a55;
+    --primary-hover: #1f6fbf;
+
+    --table-header-bg: #2a2a2a;
+    --table-row-border: #333;
+
+    --input-bg: #2a2a2a;
+    --input-border: #444;
+    --input-text: #fff;
+
+    --shadow-soft: 0 2px 6px rgba(0,0,0,0.25);
+    --shadow-medium: 0 4px 12px rgba(0,0,0,0.35);
+
+    /* Neue Variablen auch im Dark Mode */
+    --highlight: #2a3d55;
+    --highlight-text: #d0e6ff;
+
+    --scroll-indicator-color: #444;
+    --scroll-indicator-active: #4a90e2;
+}
+
+/* ---------------------------------------------------------
+3) Reset + Grundlayout
+--------------------------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    padding-top: 110px; /* Desktop */
+    overflow-y: auto;
+    line-height: 1.5;
+    font-size: var(--font-size-base);
+}
+
+/* Mobile überschreibt Desktop-Offset */
+@media (max-width: 768px) {
+    body {
+        padding-top: var(--mobile-nav-height) !important; /* Top-Bar + Menü */
+    }
+}
+
+
+
+/* ---------------------------------------------------------
+4) Globale Grundelemente
+--------------------------------------------------------- */
+
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: var(--shadow-soft);
+    position: static !important;
+    z-index: auto !important;
+    overflow: visible !important;
+}
+
+input,
+select,
+textarea {
+    background: var(--input-bg);
+    color: var(--input-text);
+    border: 1px solid var(--input-border);
+    border-radius: 6px;
+    padding: 10px;
+    font-size: var(--font-size-base);
+}
+
+/* ---------------------------------------------------------
+5) Tabellen – globales Grundlayout
+--------------------------------------------------------- */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: var(--table-header-bg);
+    color: var(--text);
+    font-weight: 700;
+    padding: 10px;
+    text-align: left;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid var(--table-row-border);
+    color: var(--text);
+}
+
+tr:hover {
+    background: var(--bg-soft);
+}
+
+/* ---------------------------------------------------------
+6) Scrollbars
+--------------------------------------------------------- */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-soft);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+/* ---------------------------------------------------------
+7) Hero Intro (unverändert)
+--------------------------------------------------------- */
+
+#hero-intro {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg);
+  z-index: 999999;
+  animation: introFadeOut 1s ease forwards;
+  animation-delay: 5.0s; /* LOGO BLEIBT LÄNGER */
+  pointer-events: none;
+}
+
+/* -------------------------------
+   Glow (riesig)
+-------------------------------- */
+
+.hero-glow {
+  position: absolute;
+  width: 750px;
+  height: 750px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,200,0,0.7), rgba(255,200,0,0));
+  filter: blur(110px);
+  animation: glowPulse 2.6s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%   { transform: scale(0.9); opacity: 0.7; }
+  50%  { transform: scale(1.25); opacity: 1; }
+  100% { transform: scale(0.9); opacity: 0.7; }
+}
+
+/* -------------------------------
+   G) Mehr Partikel
+-------------------------------- */
+
+.hero-particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero-particles span {
+  position: absolute;
+  display: block;
+  background: gold;
+  border-radius: 50%;
+  opacity: 0;
+  animation: particleFly 2.8s linear infinite;
+}
+
+/* 6 Partikel */
+.hero-particles span:nth-child(1) { width: 8px; height: 8px; left: 20%; animation-delay: 0.1s; }
+.hero-particles span:nth-child(2) { width: 6px; height: 6px; left: 40%; animation-delay: 0.4s; }
+.hero-particles span:nth-child(3) { width: 10px; height: 10px; left: 60%; animation-delay: 0.7s; }
+.hero-particles span:nth-child(4) { width: 5px; height: 5px; left: 75%; animation-delay: 1.0s; }
+.hero-particles span:nth-child(5) { width: 7px; height: 7px; left: 50%; animation-delay: 1.3s; }
+.hero-particles span:nth-child(6) { width: 9px; height: 9px; left: 30%; animation-delay: 1.6s; }
+
+@keyframes particleFly {
+  0%   { transform: translateY(120px) scale(0.4); opacity: 0; }
+  20%  { opacity: 1; }
+  100% { transform: translateY(-380px) scale(1.4); opacity: 0; }
+}
+
+/* -------------------------------
+   J) Hero Landing Effekt
+-------------------------------- */
+
+#hero-intro-img {
+  width: 650px; /* RIESIG */
+  height: auto;
+  opacity: 0;
+  transform: scale(0.2) translateY(-200px) rotate(-8deg);
+  animation: heroLanding 9.4s cubic-bezier(.17,.67,.32,1.27) forwards;
+}
+
+@keyframes heroLanding {
+    0% {
+        opacity: 0;
+        transform: scale(0.2) translateY(-200px) rotate(-8deg);
+    }
+    40% {
+        opacity: 1;
+        transform: scale(1.3) translateY(0) rotate(0deg);
+    }
+    60% {
+        transform: scale(0.95) translateY(10px) rotate(0deg);
+    }
+    100% {
+        transform: scale(1) translateY(0) rotate(0deg);
+    }
+}
+
+/* -------------------------------
+   I) Schriftzug mit Shine + Glow
+-------------------------------- */
+
+#hero-title {
+  margin-top: -40px;
+  font-size: 4.4rem;
+  font-weight: 900;
+  color: var(--primary);
+  opacity: 0;
+  transform: translateY(60px);
+  animation: titleSlide 1.6s ease forwards;
+  animation-delay: 2.4s; /* erscheint später, bleibt nicht länger */
+
+  /* Glow + Outline */
+  text-shadow:
+    0 0 14px rgba(255,200,0,0.9),
+    0 0 28px rgba(255,200,0,0.6),
+    0 0 40px rgba(255,200,0,0.4),
+    3px 3px 0px #000;
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* Shine Effekt */
+#hero-title::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 80%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.7), transparent);
+  transform: skewX(-20deg);
+  animation: shineMove 2.2s ease-in-out infinite;
+  animation-delay: 2.8s;
+}
+
+@keyframes shineMove {
+  0% { left: -120%; }
+  100% { left: 140%; }
+}
+
+@keyframes titleSlide {
+  0%   { opacity: 0; transform: translateY(60px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* -------------------------------
+   Beide verschwinden gleichzeitig
+-------------------------------- */
+
+@keyframes introFadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; visibility: hidden; }
+}
+
+

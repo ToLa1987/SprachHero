@@ -1,0 +1,100 @@
+/* =========================================================
+TYPOGRAPHY – V20 (komplett neu)
+Schriftgrößen, Schriftarten, Preview-Unterstützung
+========================================================= */
+
+/* ---------------------------------------------------------
+Google Fonts
+--------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Roboto:wght@300;400;700&display=swap');
+
+/* Comic Sans (lokal) */
+@font-face {
+    font-family: "Comic Sans MS";
+    src: local("Comic Sans MS");
+}
+
+/* ---------------------------------------------------------
+Default Values
+--------------------------------------------------------- */
+
+:root {
+    --font-family: "Segoe UI", sans-serif;
+    --font-size-base: 16px;
+    --font-size-sm: 14px;
+    --font-size-lg: 18px;
+}
+
+/* ---------------------------------------------------------
+Font Size Scaling
+--------------------------------------------------------- */
+
+body.font-small,
+.ui-preview.font-small {
+    --font-size-base: 14px;
+    --font-size-sm: 12px;
+    --font-size-lg: 16px;
+}
+
+body.font-medium,
+.ui-preview.font-medium {
+    --font-size-base: 16px;
+    --font-size-sm: 14px;
+    --font-size-lg: 18px;
+}
+
+body.font-large,
+.ui-preview.font-large {
+    --font-size-base: 18px;
+    --font-size-sm: 16px;
+    --font-size-lg: 20px;
+}
+
+/* ---------------------------------------------------------
+Font Families
+--------------------------------------------------------- */
+
+body.font-segoe,
+.ui-preview.font-segoe {
+    --font-family: "Segoe UI", sans-serif;
+}
+
+body.font-inter,
+.ui-preview.font-inter {
+    --font-family: "Inter", sans-serif;
+}
+
+body.font-roboto,
+.ui-preview.font-roboto {
+    --font-family: "Roboto", sans-serif;
+}
+
+body.font-opensans,
+.ui-preview.font-opensans {
+    --font-family: "Open Sans", sans-serif;
+}
+
+body.font-comic,
+.ui-preview.font-comic {
+    --font-family: "Comic Sans MS", cursive;
+}
+
+/* ---------------------------------------------------------
+Apply to UI
+--------------------------------------------------------- */
+
+body,
+.ui-preview {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+}
+
+.ui-preview .preview-title {
+    font-size: var(--font-size-lg);
+}
+
+.ui-preview .preview-button,
+.ui-preview .preview-cardbox {
+    font-size: var(--font-size-base);
+}

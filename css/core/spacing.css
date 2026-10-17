@@ -1,0 +1,63 @@
+/* =========================================================
+SPACING – V20 (erweitert)
+UI-Dichte + Preview-Unterstützung
+========================================================= */
+
+/* ---------------------------------------------------------
+1) Compact
+--------------------------------------------------------- */
+
+body.space-compact,
+.ui-preview.space-compact {
+    --space-sm: 4px;
+    --space-md: 8px;
+    --space-lg: 12px;
+    --button-height: 34px;
+    --table-row-height: 32px;
+}
+
+/* ---------------------------------------------------------
+2) Comfortable (Standard)
+--------------------------------------------------------- */
+
+body.space-comfortable,
+.ui-preview.space-comfortable {
+    --space-sm: 6px;
+    --space-md: 12px;
+    --space-lg: 18px;
+    --button-height: 40px;
+    --table-row-height: 38px;
+}
+
+/* ---------------------------------------------------------
+3) Spacious
+--------------------------------------------------------- */
+
+body.space-spacious,
+.ui-preview.space-spacious {
+    --space-sm: 10px;
+    --space-md: 18px;
+    --space-lg: 26px;
+    --button-height: 48px;
+    --table-row-height: 46px;
+}
+
+/* ---------------------------------------------------------
+4) Anwendung auf UI
+--------------------------------------------------------- */
+
+button,
+.ui-preview .preview-button {
+    height: var(--button-height);
+    padding: var(--space-sm) var(--space-md);
+}
+
+.ui-preview .preview-card,
+.ui-preview .preview-cardbox {
+    padding: var(--space-md);
+    margin-bottom: var(--space-md);
+}
+
+.ui-preview .preview-title {
+    margin-bottom: var(--space-sm);
+}
