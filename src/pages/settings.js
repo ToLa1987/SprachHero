@@ -27,7 +27,7 @@ const avatarSets = {
   animals: ["🦊","🐺","🐯","🦁","🐵","🐸","🐙","🦉","🦄","🐨","🐰","🐻","🐢","🐬","🦕"]
 };
 
-const ALL_LANGS = ["en", "fr", "es", "it", "la", "pt"];
+const ALL_LANGS = ["en", "fr", "es", "it", "la", "pt", "ru"];
 
 const LANG_LABELS = {
   en: "EN – Englisch 🇬🇧",
@@ -35,7 +35,8 @@ const LANG_LABELS = {
   es: "ES – Spanisch 🇪🇸",
   it: "IT – Italienisch 🇮🇹",
   la: "LA – Latein 🏛️",
-  pt: "PT – Portugiesisch 🇵🇹"   // <‑‑ NEU
+  pt: "PT – Portugiesisch 🇵🇹",
+  ru: "RU – Russisch 🇷🇺"
 };
 
 const PROFILE_BACKUP_FORMAT = "sprachhero-profile-backup";

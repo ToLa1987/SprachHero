@@ -76,11 +76,12 @@ if (!storedRate) {
     else if (lang === "tr") speechRate = 0.95;
     else if (lang === "pl") speechRate = 0.90;
     else if (lang === "pt") speechRate = 0.95;   // Portugiesisch Portugal
+    else if (lang === "ru") speechRate = 0.90;   // Russisch
     else speechRate = 1.0;
 }
- else if (!isNaN(storedRate) && storedRate >= 0.6 && storedRate <= 1.4) {
+else if (!isNaN(storedRate) && storedRate >= 0.6 && storedRate <= 1.4) {
     speechRate = storedRate;
-  }
+}
 
   function syncGlobals() {
     window.globalAudioAbort = globalAudioAbort;

@@ -95,14 +95,15 @@
   import { getGlobal, setGlobal } from "./src/core/storage.js";
   import { navigate } from "./src/core/navigation.js";
 
-  const FLAG_MAP = {
+const FLAG_MAP = {
     pt: "\uD83C\uDDF5\uD83C\uDDF9 PT",
     en: "🇬🇧 EN",
     fr: "🇫🇷 FR",
     es: "🇪🇸 ES",
     it: "🇮🇹 IT",
-    la: "🏛️ LA"
-  };
+    la: "🏛️ LA",
+    ru: "🇷🇺 RU"
+};
 
   document.addEventListener("DOMContentLoaded", () => {
 
@@ -132,16 +133,17 @@
           popup.className = "lang-popup-header";
           popup.style.display = "none";
 
-          const langs = [
-              { code: "pt", label: "\uD83C\uDDF5\uD83C\uDDF9 PT - Portugiesisch" },
-              { code: "en", label: "🇬🇧 EN – Englisch" },
-              { code: "fr", label: "🇫🇷 FR – Französisch" },
-              { code: "es", label: "🇪🇸 ES – Spanisch" },
-              { code: "it", label: "🇮🇹 IT – Italienisch" },
-              { code: "la", label: "🏛️ LA – Latein" }
-          ];
+        const langs = [
+            { code: "pt", label: "\uD83C\uDDF5\uD83C\uDDF9 PT - Portugiesisch" },
+            { code: "en", label: "🇬🇧 EN – Englisch" },
+            { code: "fr", label: "🇫🇷 FR – Französisch" },
+            { code: "es", label: "🇪🇸 ES – Spanisch" },
+            { code: "it", label: "🇮🇹 IT – Italienisch" },
+            { code: "la", label: "🏛️ LA – Latein" },
+            { code: "ru", label: "🇷🇺 RU – Russisch" }
+        ];
 
-          const languageOrder = ["en", "fr", "es", "it", "la", "pt"];
+          const languageOrder = ["en", "fr", "es", "it", "la", "pt", "ru"];
           langs.sort((a, b) => languageOrder.indexOf(a.code) - languageOrder.indexOf(b.code));
 
           langs.forEach(l => {

@@ -1,0 +1,707 @@
+﻿d441867b-e80a-4741-b727-80df35d87d86;привет;Hallo;Привет, Маша!;1;1 – Знакомство и семья;Begrüßung
+96f2c00f-4fd2-4f5b-8894-3024cf0a270d;здравствуйте;"Guten Tag; Hallo (höflich)";Здравствуйте, Анна Ивановна!;1;1 – Знакомство и семья;Begrüßung
+aab88de0-e690-4eb0-a279-f59107861c5a;пока;Tschüss;Пока, до завтра!;1;1 – Знакомство и семья;Begrüßung
+8c9b243d-fbf0-40fb-ae31-ab6e07914829;до свидания;Auf Wiedersehen;До свидания, учитель!;1;1 – Знакомство и семья;Begrüßung
+23edb1d2-42da-4c4b-9afe-1108a1290b52;спасибо;Danke;Спасибо за помощь!;1;1 – Знакомство и семья;Begrüßung
+7d44e758-6375-47b2-852f-073b6ab5bf10;пожалуйста;"Bitte; gern geschehen";Воду, пожалуйста.;1;1 – Знакомство и семья;Begrüßung
+cd780327-9fbe-437a-a142-ab1fe996d5f5;извините;Entschuldigen Sie;Извините, пожалуйста.;1;1 – Знакомство и семья;Begrüßung
+28d025c2-fd9d-4934-a74b-4507fa5292b9;да;ja;Да, я дома.;1;1 – Знакомство и семья;Begrüßung
+4cbb328c-609a-4e78-aa24-e7220452bc50;нет;nein;Нет, меня зовут не Саша.;1;1 – Знакомство и семья;Begrüßung
+73b91a9d-8138-47c7-b233-27fd17588314;хорошо;"gut; in Ordnung";Хорошо, я понял.;1;1 – Знакомство и семья;Begrüßung
+fe6c3ee6-b9a6-473a-82c1-b9da789ddb5c;я;ich;Я здесь.;1;1 – Знакомство и семья;Ich und andere
+4e92005e-1678-4fc5-8c12-dffdd8d5a54a;ты;du;Ты мой друг.;1;1 – Знакомство и семья;Ich und andere
+c4497d50-154b-487a-aa76-39162505623b;он;er;Он дома.;1;1 – Знакомство и семья;Ich und andere
+b9e6a8d4-0a55-4b7f-96e5-e8afb14e28fe;она;sie;Она здесь.;1;1 – Знакомство и семья;Ich und andere
+643df9af-8309-4943-8df0-0c583a065015;мы;wir;Мы вместе.;1;1 – Знакомство и семья;Ich und andere
+fac34e69-324f-43ad-addb-b229aca54b3d;вы;"ihr; Sie";Вы готовы?;1;1 – Знакомство и семья;Ich und andere
+28da4cbc-ae0c-41de-816e-8883be66d84e;они;sie (Plural);Они уже здесь.;1;1 – Знакомство и семья;Ich und andere
+f92f31b3-5d8c-44a4-8438-583da2ef0dc6;имя;Name;Как твоё имя?;1;1 – Знакомство и семья;Ich und andere
+6f8b3983-fd66-4dc7-bd39-e08444dc4cf8;мальчик;Junge;Мальчик читает.;1;1 – Знакомство и семья;Ich und andere
+c322ec51-f6af-4252-984c-3136979ea801;девочка;Mädchen;Девочка улыбается.;1;1 – Знакомство и семья;Ich und andere
+da1353a0-0a52-4f34-ada4-4295c295497b;мама;"Mama; Mutter";Моя мама дома.;1;1 – Знакомство и семья;Familie
+52329842-9087-4f2f-9efc-5b7876893552;папа;"Papa; Vater";Мой папа работает.;1;1 – Знакомство и семья;Familie
+a21719d7-1035-40e9-bb1f-dd3ef4fff9fb;родители;Eltern;Мои родители дома.;1;1 – Знакомство и семья;Familie
+2815bf71-2986-4be7-aa27-2ec413e4ed92;брат;Bruder;Мой брат играет.;1;1 – Знакомство и семья;Familie
+54500fb1-4e7b-4173-8288-d2edcf1e5cc3;сестра;Schwester;Моя сестра поёт.;1;1 – Знакомство и семья;Familie
+4352241b-230a-4fa0-9fd0-871900f0195c;бабушка;"Oma; Großmutter";Бабушка любит чай.;1;1 – Знакомство и семья;Familie
+93e724e7-4cd6-49fe-92a5-8bfd58c1e542;дедушка;"Opa; Großvater";Дедушка читает газету.;1;1 – Знакомство и семья;Familie
+aa07823a-aa0f-4b2c-a12c-2589fefd8423;сын;Sohn;Их сын уже большой.;1;1 – Знакомство и семья;Familie
+5a069ac0-8aa7-4359-8b57-c1d7e3d50dde;дочь;Tochter;Его дочь учится.;1;1 – Знакомство и семья;Familie
+babf1264-8084-4bbc-872a-453467c5809a;семья;Familie;У меня большая семья.;1;1 – Знакомство и семья;Familie
+a2d0e704-f656-4b7a-90b1-b32d5d716760;дом;"Haus; Zuhause";Это мой дом.;1;1 – Знакомство и семья;Zuhause
+32a8e6ff-b8f6-4d27-bc4e-bfa481b48232;квартира;Wohnung;Наша квартира светлая.;1;1 – Знакомство и семья;Zuhause
+681075ae-44df-4725-9eff-e3fb161b11c9;комната;Zimmer;Моя комната маленькая.;1;1 – Знакомство и семья;Zuhause
+7479b3c9-b96f-4cef-8c00-8708ad40f2c2;кухня;Küche;Мама на кухне.;1;1 – Знакомство и семья;Zuhause
+2d244de9-6662-4bf9-94eb-ee4ea61d2d5e;ванная;Badezimmer;Ванная рядом.;1;1 – Знакомство и семья;Zuhause
+5961e868-fce4-4e31-9428-ac5c05f96a37;дверь;Tür;Закрой дверь, пожалуйста.;1;1 – Знакомство и семья;Zuhause
+bd0dba00-137e-4807-bfef-d69570137eb1;окно;Fenster;Окно открыто.;1;1 – Знакомство и семья;Zuhause
+a035c05f-faaf-4a34-882b-2267a5b6864b;стена;Wand;Стена белая.;1;1 – Знакомство и семья;Zuhause
+b4508840-058c-43c9-840c-aced5a27668c;пол;Fußboden;На полу лежит ковёр.;1;1 – Знакомство и семья;Zuhause
+1383ed3a-0e38-44ab-8ca5-13fa3fd8cdb4;потолок;Decke (Zimmerdecke);Потолок высокий.;1;1 – Знакомство и семья;Zuhause
+383efa80-0c4e-4f51-a81e-7ddea5c517db;стол;Tisch;Книга лежит на столе.;1;1 – Знакомство и семья;Dinge und Lage
+b8e36d41-da49-40e9-acda-845c61964cd4;стул;Stuhl;Поставь стул сюда.;1;1 – Знакомство и семья;Dinge und Lage
+cdd841bc-2d20-414c-909c-591d3ef4e4e2;кровать;Bett;Кровать у окна.;1;1 – Знакомство и семья;Dinge und Lage
+f6b8f9d6-45cc-4515-8baf-f5110a7e5899;диван;Sofa;Кот спит на диване.;1;1 – Знакомство и семья;Dinge und Lage
+37d3772b-d367-4931-8200-614c3c472ab5;лампа;Lampe;Лампа стоит на столе.;1;1 – Знакомство и семья;Dinge und Lage
+03623639-b6f1-4196-a93d-dd67a548ebec;ключ;Schlüssel;Где мой ключ?;1;1 – Знакомство и семья;Dinge und Lage
+159ef138-9855-4b07-8afe-363686ff44a8;сумка;Tasche;Моя сумка у двери.;1;1 – Знакомство и семья;Dinge und Lage
+cda44d9f-5352-4056-83c5-97de6630a524;телефон;"Telefon; Handy";Телефон лежит здесь.;1;1 – Знакомство и семья;Dinge und Lage
+5d4de0d9-90a1-44ae-869f-4085425f3620;часы;Uhr;Часы показывают время.;1;1 – Знакомство и семья;Dinge und Lage
+c6f87579-ac8a-4f8f-8e2b-8dcdd383f58a;зеркало;Spiegel;Зеркало в ванной.;1;1 – Знакомство и семья;Dinge und Lage
+6600902a-6e62-4c6f-aaf8-3f2d2bac1f71;быть;sein;Я хочу быть врачом.;1;1 – Знакомство и семья;Einfache Aussagen
+e6eb08d0-960e-4aad-a13e-b6e678327b04;жить;"wohnen; leben";Я живу в городе.;1;1 – Знакомство и семья;Einfache Aussagen
+621b3847-8324-44be-9749-b4767c4ce0fc;звать;"heißen; rufen";Меня зовут Миша.;1;1 – Знакомство и семья;Einfache Aussagen
+3e074e19-2a7c-44c7-a1bd-0f5ba0ed54f2;иметь;"haben; besitzen";Я хочу иметь собаку.;1;1 – Знакомство и семья;Einfache Aussagen
+66b9d27e-b921-400b-9f60-47062019743d;любить;"lieben; gernhaben";Я люблю свою семью.;1;1 – Знакомство и семья;Einfache Aussagen
+3046c756-f97a-4256-b2d7-1c817da5446e;хотеть;"wollen; möchten";Я хочу домой.;1;1 – Знакомство и семья;Einfache Aussagen
+bcb49431-d236-4124-8479-55a96c3aba7e;знать;"wissen; kennen";Я знаю ответ.;1;1 – Знакомство и семья;Einfache Aussagen
+a70e1c00-8e17-467e-acac-2785fa3240e4;понимать;verstehen;Я понимаю тебя.;1;1 – Знакомство и семья;Einfache Aussagen
+36c334da-90bc-4bde-8789-562078bd1b83;говорить;"sprechen; sagen";Мы говорим по-русски.;1;1 – Знакомство и семья;Einfache Aussagen
+01ceffbf-12f5-4e5f-b32a-6cae668607a8;здесь;hier;Мама здесь.;1;1 – Знакомство и семья;Einfache Aussagen
+97193106-6175-493f-a8b3-f7f28e5607e7;школа;Schule;Моя школа большая.;1;2 – Школа и учёба;Schulort und Menschen
+b595d78c-55fc-4f9e-9bb7-7b1141dfe509;класс;"Klasse; Klassenraum";Наш класс светлый.;1;2 – Школа и учёба;Schulort und Menschen
+d6ed98d0-d602-4fa8-bd1d-817f13c7723e;учитель;Lehrer;Учитель объясняет правило.;1;2 – Школа и учёба;Schulort und Menschen
+e8113594-a63b-410f-8d45-32e62e797068;учительница;Lehrerin;Учительница улыбается.;1;2 – Школа и учёба;Schulort und Menschen
+7cf61961-6690-43f6-a743-6bd26820d986;ученик;Schüler;Ученик отвечает.;1;2 – Школа и учёба;Schulort und Menschen
+fd7418c3-decd-4032-a346-5a5c38b4c4d7;ученица;Schülerin;Ученица пишет.;1;2 – Школа и учёба;Schulort und Menschen
+2b83f6ae-e1bf-4733-8916-b44c6bbf5636;директор;Schulleiter;Директор вошёл в класс.;1;2 – Школа и учёба;Schulort und Menschen
+88d41772-5b7e-43a0-ac47-3ba87f6f48c4;одноклассник;Mitschüler;Мой одноклассник сидит рядом.;1;2 – Школа и учёба;Schulort und Menschen
+2c1ae86d-edba-4e4c-b084-8c37b3778b93;друг;Freund;Мой друг учится со мной.;1;2 – Школа и учёба;Schulort und Menschen
+75f06f61-f716-49d8-bdf0-fc892fef2d68;подруга;Freundin;Моя подруга рисует.;1;2 – Школа и учёба;Schulort und Menschen
+47596f6e-74bd-44d7-b429-36022343bcc7;книга;Buch;Я читаю книгу.;1;2 – Школа и учёба;Schulsachen
+0bd7039f-562e-403d-b5ea-e94510786f30;тетрадь;Heft;Тетрадь лежит в сумке.;1;2 – Школа и учёба;Schulsachen
+3deeafd7-e1b0-4862-b66e-b8006e365ac6;ручка;"Kugelschreiber; Stift";У меня синяя ручка.;1;2 – Школа и учёба;Schulsachen
+f0fa35e5-e4ea-42b8-8d6c-dba5a04de375;карандаш;Bleistift;Возьми карандаш.;1;2 – Школа и учёба;Schulsachen
+86f558b6-07fb-48a8-8d9c-ae879240bcf5;ластик;Radiergummi;Ластик маленький.;1;2 – Школа и учёба;Schulsachen
+8110c006-74d0-4f20-8525-7c07863c4905;линейка;Lineal;Линейка на парте.;1;2 – Школа и учёба;Schulsachen
+0cb21b01-1420-46e5-b213-306856f35148;рюкзак;Rucksack;Мой рюкзак тяжёлый.;1;2 – Школа и учёба;Schulsachen
+d9cfcc12-6d35-47d7-9699-cde47d0e6201;пенал;Federmäppchen;Пенал полный.;1;2 – Школа и учёба;Schulsachen
+a58746e1-8cf0-4153-9f0e-5987481f087a;бумага;Papier;Мне нужна бумага.;1;2 – Школа и учёба;Schulsachen
+44232841-7e3d-48ee-a512-c1011fed7340;ножницы;Schere;Ножницы лежат на столе.;1;2 – Школа и учёба;Schulsachen
+9140e55e-523f-4d76-8538-d2fe83268986;математика;Mathematik;Сегодня у нас математика.;1;2 – Школа и учёба;Unterrichtsfächer
+7d72399d-6196-466d-a22d-d6b7ef3639df;русский язык;Russisch;Я учу русский язык.;1;2 – Школа и учёба;Unterrichtsfächer
+14be6e0b-750a-43a7-b7a4-a3763e02d631;английский язык;Englisch;Аня знает английский язык.;1;2 – Школа и учёба;Unterrichtsfächer
+3eaad354-779f-45d7-9a6f-fd16d7b32322;история;Geschichte;История начинается в девять.;1;2 – Школа и учёба;Unterrichtsfächer
+cfa3d2fd-6a6a-4fdc-9d58-acf78971ec8b;география;Geografie;На географии мы изучаем страны.;1;2 – Школа и учёба;Unterrichtsfächer
+bd45add3-c6c2-463b-9532-c8a3f9611001;биология;Biologie;Биология мне интересна.;1;2 – Школа и учёба;Unterrichtsfächer
+879922a2-417f-4041-b0a3-c3f5568e072d;музыка;Musik;После обеда у нас музыка.;1;2 – Школа и учёба;Unterrichtsfächer
+c77e139a-fd9b-42d7-a643-8efb769f0b9b;рисование;"Kunst; Zeichnen";Рисование мне нравится.;1;2 – Школа и учёба;Unterrichtsfächer
+a0ebba44-2521-4e9f-9284-46e64838e9cc;физкультура;Sportunterricht;На физкультуре мы бегаем.;1;2 – Школа и учёба;Unterrichtsfächer
+a6fc3453-3215-4bf7-ae60-140c72caa488;урок;"Unterrichtsstunde; Lektion";Урок начинается скоро.;1;2 – Школа и учёба;Unterrichtsfächer
+b008d457-732d-4a62-8497-1100e2365e19;читать;lesen;Я умею читать по-русски.;1;2 – Школа и учёба;Lernen und Aufgaben
+da4ca590-c409-4344-9caf-0578b74c57de;писать;schreiben;Мы пишем новые слова.;1;2 – Школа и учёба;Lernen und Aufgaben
+7f3e0855-d52e-49a3-bb64-72b551dc47d2;считать;"rechnen; zählen";Я умею считать до ста.;1;2 – Школа и учёба;Lernen und Aufgaben
+8a0a3cf1-97e0-474b-8dc7-9990f24db5ca;учить;"lernen; lehren";Я учу новые слова.;1;2 – Школа и учёба;Lernen und Aufgaben
+0fe8b003-1842-459b-89e0-4586131c48fd;учиться;"lernen; zur Schule gehen";Я учусь в пятом классе.;1;2 – Школа и учёба;Lernen und Aufgaben
+771744ea-8b42-4234-bbba-42f658ce8f91;объяснять;erklären;Учитель объясняет задачу.;1;2 – Школа и учёба;Lernen und Aufgaben
+f10e2e12-bfd7-4e3b-9219-e06cecf63feb;спрашивать;fragen;Можно спросить?;1;2 – Школа и учёба;Lernen und Aufgaben
+740b9a9e-805d-4202-bbf6-4a773a0c74b9;отвечать;antworten;Я отвечаю на вопрос.;1;2 – Школа и учёба;Lernen und Aufgaben
+712ec052-b80e-4718-b087-07b75443c044;повторять;wiederholen;Повтори это слово.;1;2 – Школа и учёба;Lernen und Aufgaben
+54db620e-1461-4acb-afca-d39e3ce5234f;решать;"lösen; entscheiden";Мы решаем задачу.;1;2 – Школа и учёба;Lernen und Aufgaben
+9f3ec9e6-a2ca-4c2e-aca6-5671d7397216;задание;Aufgabe;Это трудное задание.;1;2 – Школа и учёба;Zeit und Klassenraum
+075280e3-9f1c-4d68-8636-2f1f766067c2;домашнее задание;Hausaufgabe;Я делаю домашнее задание.;1;2 – Школа и учёба;Zeit und Klassenraum
+5226332e-03e6-4236-a6a2-211173d6407c;вопрос;Frage;У меня есть вопрос.;1;2 – Школа и учёба;Zeit und Klassenraum
+8f3fa34f-356a-4b1b-84d3-1a8d0f5ac0c9;ответ;Antwort;Твой ответ правильный.;1;2 – Школа и учёба;Zeit und Klassenraum
+874914bc-7090-46e4-ae1d-813c37fa3d98;слово;Wort;Это новое слово.;1;2 – Школа и учёба;Zeit und Klassenraum
+389c9ed2-86d8-4889-8a27-7ab6bc141c0e;предложение;Satz;Прочитай предложение.;1;2 – Школа и учёба;Zeit und Klassenraum
+a5bb3df4-a06f-4400-a3b7-1edc7cfc8829;ошибка;Fehler;Я нашёл ошибку.;1;2 – Школа и учёба;Zeit und Klassenraum
+ad227893-49b3-4ea2-92d5-352e3b5dbc02;перемена;Pause;На перемене мы разговариваем.;1;2 – Школа и учёба;Zeit und Klassenraum
+2c5148e5-5dc4-4fb2-9873-4748c5e1a224;доска;Tafel;На доске написано слово.;1;2 – Школа и учёба;Zeit und Klassenraum
+626b45d0-ed74-4ed7-bec1-678a85ba4aca;парта;"Schulbank; Tisch";Моя парта у окна.;1;2 – Школа и учёба;Zeit und Klassenraum
+d0591f2a-e20c-48eb-a562-ac97c3b09365;один;eins;У меня один карандаш.;1;2 – Школа и учёба;Zahlen und Eigenschaften
+6691d750-3480-4cab-bbd8-f757d0fdba87;два;zwei;У меня два учебника.;1;2 – Школа и учёба;Zahlen und Eigenschaften
+484d4122-0941-42a7-8736-bba7cf455c35;три;drei;В классе три окна.;1;2 – Школа и учёба;Zahlen und Eigenschaften
+935e72a0-44b4-4f40-a4c3-772a24c5a5ac;четыре;vier;Я написал четыре слова.;1;2 – Школа и учёба;Zahlen und Eigenschaften
+6265c47c-7491-42d2-8e46-e2522a861be1;пять;fünf;У меня пять тетрадей.;1;2 – Школа и учёба;Zahlen und Eigenschaften
+26cdaa20-4e34-4528-b355-a725c8eac8a2;первый;erste(r);Это мой первый урок.;1;2 – Школа и учёба;Zahlen und Eigenschaften
+2f7dc1a0-7799-430f-9e35-82c7bb62c657;последний;letzte(r);Сегодня последний урок.;1;2 – Школа и учёба;Zahlen und Eigenschaften
+e0b368a4-e3e0-4eba-89d9-0a4b6732e603;трудный;schwierig;Это трудный вопрос.;1;2 – Школа и учёба;Zahlen und Eigenschaften
+a33086da-6adf-4979-bf43-1aa11e68ac1d;лёгкий;"leicht; einfach";Это лёгкое задание.;1;2 – Школа и учёба;Zahlen und Eigenschaften
+a2f35318-08d3-4060-9b6e-3e235ac0f196;правильный;"richtig; korrekt";Это правильный ответ.;1;2 – Школа и учёба;Zahlen und Eigenschaften
+fca8ac92-dcb1-4bcc-b6fe-43637fc6b4cc;игра;Spiel;Эта игра очень интересная.;1;3 – Свободное время и спорт;Freizeit und Interessen
+ef26ce64-7ab1-4e9e-a7ac-3d4020eedf4b;играть;spielen;Мы играем после школы.;1;3 – Свободное время и спорт;Freizeit und Interessen
+999743ab-39de-48d6-8765-54c49ae2001a;спорт;Sport;Спорт полезен для здоровья.;1;3 – Свободное время и спорт;Freizeit und Interessen
+839a7d23-2ea2-4864-983e-b2e86d275725;футбол;Fußball;Я люблю футбол.;1;3 – Свободное время и спорт;Freizeit und Interessen
+bd67d080-40ca-4fd1-bb3b-5a31a0b60eb9;команда;"Mannschaft; Team";Наша команда готова.;1;3 – Свободное время и спорт;Freizeit und Interessen
+52aba189-7f19-4d08-a107-0528a4863292;тренер;Trainer;Тренер показывает упражнение.;1;3 – Свободное время и спорт;Freizeit und Interessen
+42a8cc01-dd07-4d56-8f1f-85e6363d8d6b;матч;"Spiel; Match";Матч начинается в шесть.;1;3 – Свободное время и спорт;Freizeit und Interessen
+8437083a-194b-41be-8d89-aad9812758db;мяч;Ball;Мяч лежит у ворот.;1;3 – Свободное время и спорт;Freizeit und Interessen
+a45aa9ed-3cf0-4ce8-9882-f7dffa1cbbb1;ворота;"Tor; Tore";Вратарь стоит у ворот.;1;3 – Свободное время и спорт;Freizeit und Interessen
+287dd74b-da33-4a7a-96c3-404b07a47b05;гол;Tor (Treffer);Он забил гол.;1;3 – Свободное время и спорт;Freizeit und Interessen
+373a69e1-1550-4d68-8e97-9dfce574746c;бежать;"laufen; rennen";Я могу быстро бежать.;1;3 – Свободное время и спорт;Bewegung und Sport
+3cda201b-9787-4f6c-87d8-a8c7dc137752;прыгать;springen;Дети любят прыгать.;1;3 – Свободное время и спорт;Bewegung und Sport
+adfb52fc-268a-4b41-bb5c-d561ec01a9fd;плавать;schwimmen;Летом я буду плавать.;1;3 – Свободное время и спорт;Bewegung und Sport
+9cbdd776-84ae-4643-8b43-b8c8a9cc9284;танцевать;tanzen;Мы умеем танцевать.;1;3 – Свободное время и спорт;Bewegung und Sport
+077ce02e-ed0a-4695-bcda-d1fe6ccf2c5f;кататься;"fahren; sich bewegen (z. B. Rad)";Я люблю кататься на велосипеде.;1;3 – Свободное время и спорт;Bewegung und Sport
+3f7c63b7-6dbb-4244-b26b-4ed9601bb5ed;тренироваться;trainieren;Команда тренируется вечером.;1;3 – Свободное время и спорт;Bewegung und Sport
+ef183598-306d-4cd1-890a-652fe32c4b7f;побеждать;"gewinnen; siegen";Мы хотим побеждать.;1;3 – Свободное время и спорт;Bewegung und Sport
+8c7e5119-e970-414a-9560-c07196378ea9;проигрывать;verlieren;Иногда команда может проигрывать.;1;3 – Свободное время и спорт;Bewegung und Sport
+49ddc261-b2f7-4c3d-a53f-cd0817018c51;бросать;werfen;Он бросает мяч.;1;3 – Свободное время и спорт;Bewegung und Sport
+bd9bd774-ff8e-4948-95ed-f45b1c1e8db8;ловить;fangen;Я ловлю мяч.;1;3 – Свободное время и спорт;Bewegung und Sport
+ae67024c-61d9-4db3-ba3b-5cf276ac0bc8;песня;Lied;Эта песня мне нравится.;1;3 – Свободное время и спорт;Hobbys und Kreativität
+4bb49dea-eda6-4534-b884-77714b34449d;петь;singen;Моя сестра любит петь.;1;3 – Свободное время и спорт;Hobbys und Kreativität
+858510ea-600d-4b2e-bb64-5c9cbbcf3fcb;рисовать;"zeichnen; malen";Я рисую дом.;1;3 – Свободное время и спорт;Hobbys und Kreativität
+228a66ae-ee54-4116-9f26-d83094293069;картина;"Bild; Gemälde";Картина висит на стене.;1;3 – Свободное время и спорт;Hobbys und Kreativität
+56986bc0-c864-4131-bff0-b2bc89608c30;фотография;"Fotografie; Foto";Это старая фотография.;1;3 – Свободное время и спорт;Hobbys und Kreativität
+85eeb6ba-bcb4-4554-bf7d-973869cce66f;фотографировать;fotografieren;Я люблю фотографировать природу.;1;3 – Свободное время и спорт;Hobbys und Kreativität
+7d070706-0484-4177-9f20-68edabe7448a;танец;Tanz;Этот танец красивый.;1;3 – Свободное время и спорт;Hobbys und Kreativität
+982d0d57-8e4d-437f-9e8c-679aa54b31de;гитара;Gitarre;Он играет на гитаре.;1;3 – Свободное время и спорт;Hobbys und Kreativität
+5bc9d954-b0c2-4c32-be84-4ee57b7f9ba1;кино;"Kino; Film";В субботу мы идём в кино.;1;3 – Свободное время и спорт;Hobbys und Kreativität
+eaf95af1-487e-4a52-ba77-1d127a02ecba;встречать;"treffen; begrüßen";Я встречаю друга после уроков.;1;3 – Свободное время и спорт;Freunde und Gefühle
+23391509-61d0-4a28-965f-0a4ce7d2e0fc;встречаться;sich treffen;Мы встречаемся в парке.;1;3 – Свободное время и спорт;Freunde und Gefühle
+b9a61fb9-0d73-4f2d-b0fb-ef18992cefb6;помогать;helfen;Я помогаю своему другу.;1;3 – Свободное время и спорт;Freunde und Gefühle
+2b663678-3b0c-4037-b3ea-85db76d91dfe;делиться;teilen;Нужно делиться игрушками.;1;3 – Свободное время и спорт;Freunde und Gefühle
+7f84c3c9-0c18-4385-99a9-d27c21f4df3f;смеяться;lachen;Дети громко смеются.;1;3 – Свободное время и спорт;Freunde und Gefühle
+28c0d17a-0649-4730-b98a-c9294724d191;улыбаться;lächeln;Она всегда улыбается.;1;3 – Свободное время и спорт;Freunde und Gefühle
+4987d4b7-e9c8-4556-b33e-d6b6be7dbc45;радоваться;sich freuen;Я радуюсь хорошим новостям.;1;3 – Свободное время и спорт;Freunde und Gefühle
+f7151873-6755-41ae-a3f7-ff340d4fab94;грустный;traurig;Сегодня он грустный.;1;3 – Свободное время и спорт;Freunde und Gefühle
+072efb9c-2ee7-4453-8c4b-31d2b85c5bbf;весёлый;"fröhlich; lustig";У нас весёлый праздник.;1;3 – Свободное время и спорт;Freunde und Gefühle
+88a0d5d1-e394-48e7-9dc6-121dc003fd83;сердиться;"sich ärgern; wütend sein";Не сердись на меня.;1;3 – Свободное время и спорт;Freunde und Gefühle
+a2bf9eb4-1f00-4d3a-8bca-ce866ad58767;парк;Park;Мы гуляем в парке.;1;3 – Свободное время и спорт;Orte und Verabredungen
+9a9da0b8-cac4-4822-8c2a-bdb216d76c79;площадка;"Spielplatz; Platz";Дети играют на площадке.;1;3 – Свободное время и спорт;Orte und Verabredungen
+3b3bd320-a7e1-4a45-b4db-e26a1f8625ff;стадион;Stadion;Стадион находится рядом.;1;3 – Свободное время и спорт;Orte und Verabredungen
+5d912642-2318-4fb2-a5aa-9d37901d92c7;бассейн;"Schwimmbad; Becken";Бассейн открыт летом.;1;3 – Свободное время и спорт;Orte und Verabredungen
+f5a0bb82-cfb9-49d4-b667-82f3e7f7bf95;велосипед;Fahrrad;Мой велосипед новый.;1;3 – Свободное время и спорт;Orte und Verabredungen
+b88c58ff-4353-4d9a-a4ad-56105800ddd4;самокат;Tretroller;Он едет на самокате.;1;3 – Свободное время и спорт;Orte und Verabredungen
+c90926fa-fef7-4e75-8247-61315418c85a;скейтборд;Skateboard;У него есть скейтборд.;1;3 – Свободное время и спорт;Orte und Verabredungen
+3dcd683c-f835-46d4-93d0-3b0453d60adf;приглашать;einladen;Я хочу пригласить тебя на праздник.;1;3 – Свободное время и спорт;Orte und Verabredungen
+9e4b0caf-71f4-4ef6-96a5-727a70f409c2;соглашаться;"zustimmen; einverstanden sein";Я согласен с тобой.;1;3 – Свободное время и спорт;Orte und Verabredungen
+40409999-2ab5-424c-be68-65c2cd82fe77;опаздывать;sich verspäten;Не опаздывай на тренировку.;1;3 – Свободное время и спорт;Orte und Verabredungen
+9e7ce3ab-f13d-4046-b8af-4c50224cea6d;быстрый;schnell;Это быстрый бегун.;1;3 – Свободное время и спорт;Adjektive und Handlungen
+57c68cea-1b6d-437e-91ab-a34f9755d61f;медленный;langsam;Черепаха медленная.;1;3 – Свободное время и спорт;Adjektive und Handlungen
+ab99c0d9-4c8e-4cc0-952e-93758104f6b0;сильный;stark;Он сильный игрок.;1;3 – Свободное время и спорт;Adjektive und Handlungen
+c7a4a503-95e8-4cc7-86a6-1890d896e875;слабый;schwach;После болезни я слабый.;1;3 – Свободное время и спорт;Adjektive und Handlungen
+6152a16f-574a-454b-b354-d76f918a2dbf;высокий;"hoch; groß";Это высокий прыжок.;1;3 – Свободное время и спорт;Adjektive und Handlungen
+c2343f93-4102-4e20-8c12-1c3faf22e323;низкий;niedrig;Этот стул низкий.;1;3 – Свободное время и спорт;Adjektive und Handlungen
+5409f8ee-d7d9-4944-9b86-7dbece51809d;вместе;zusammen;Мы делаем это вместе.;1;3 – Свободное время и спорт;Adjektive und Handlungen
+433c9eb5-7d97-48dd-87e3-a219ac6a1130;сначала;zuerst;Сначала мы разминаемся.;1;3 – Свободное время и спорт;Adjektive und Handlungen
+0cc96a02-ed23-4b8a-8657-3e74036289eb;потом;"danach; später";Потом начинается игра.;1;3 – Свободное время и спорт;Adjektive und Handlungen
+287152f7-fc1b-4548-a3dc-5b900b4ef415;отдыхать;sich ausruhen;После тренировки я отдыхаю.;1;3 – Свободное время и спорт;Adjektive und Handlungen
+c06f3225-10fc-4f90-bcb0-972948bf41c0;еда;"Essen; Nahrung";Еда уже готова.;1;4 – Еда и покупки;Lebensmittel
+83eab2de-f444-457b-b103-56e5431b6c52;завтрак;Frühstück;Завтрак готов.;1;4 – Еда и покупки;Lebensmittel
+75d39cf6-fc5c-4a7f-b45b-13e96ef6f10f;обед;Mittagessen;Мы едим обед в школе.;1;4 – Еда и покупки;Lebensmittel
+5cfb4bd1-b5b8-49e5-8977-a126e1531d8e;ужин;Abendessen;Ужин будет в семь.;1;4 – Еда и покупки;Lebensmittel
+d0a0c957-3bd7-4883-9af8-364814bc0d46;яблоко;Apfel;Я ем красное яблоко.;1;4 – Еда и покупки;Lebensmittel
+ecb7a1c2-404e-4d6b-a917-f5e95ff17100;груша;Birne;Груша сладкая.;1;4 – Еда и покупки;Lebensmittel
+4cb7104e-8db6-47fd-95d9-766b1b251691;банан;Banane;Я беру банан.;1;4 – Еда и покупки;Lebensmittel
+a8f08249-420f-4106-9cf6-500ec375bf51;апельсин;Orange;Апельсин сочный.;1;4 – Еда и покупки;Lebensmittel
+95398d74-7189-49a0-a95d-ee6e54545795;виноград;Weintrauben;Виноград на тарелке.;1;4 – Еда и покупки;Lebensmittel
+000f1409-96ec-4a2b-8b9b-b9e654dd05ca;клубника;Erdbeere;Клубника очень сладкая.;1;4 – Еда и покупки;Lebensmittel
+11ead445-90ca-46cc-92ec-6ef416b51450;хлеб;Brot;На столе свежий хлеб.;1;4 – Еда и покупки;Weitere Lebensmittel
+5aa2df5d-23c0-4c1e-b15f-e7248223f48f;сыр;Käse;Я люблю сыр.;1;4 – Еда и покупки;Weitere Lebensmittel
+f5bd533b-47d7-41d7-bd85-388e0ff2c0c6;масло;"Butter; Öl";Добавь немного масла.;1;4 – Еда и покупки;Weitere Lebensmittel
+640531c1-98a1-46af-b6bc-67227d4d8fd6;яйцо;Ei;Я варю яйцо.;1;4 – Еда и покупки;Weitere Lebensmittel
+f4820f5f-d6c3-4187-ac91-94dcde6e3d44;мясо;Fleisch;Мясо готово.;1;4 – Еда и покупки;Weitere Lebensmittel
+5ea630e3-3a1d-41e0-a03f-1e047dab54f4;рыба;Fisch;Сегодня у нас рыба.;1;4 – Еда и покупки;Weitere Lebensmittel
+08517acc-874b-4c14-9764-9e9718f1d3f7;курица;"Huhn; Hähnchen";Курица с рисом вкусная.;1;4 – Еда и покупки;Weitere Lebensmittel
+a2ab5b3f-51da-4adc-a2b4-55504c4ae9d9;рис;Reis;Рис уже сварился.;1;4 – Еда и покупки;Weitere Lebensmittel
+ff7493fe-b175-41c0-a3c0-ad3258d2e554;суп;Suppe;Суп горячий.;1;4 – Еда и покупки;Weitere Lebensmittel
+cda58244-b36b-40b2-ab2c-c700131aa596;салат;Salat;Я готовлю салат.;1;4 – Еда и покупки;Weitere Lebensmittel
+257b40e3-2a5c-4c21-a5ed-94f3883f861a;вода;Wasser;Можно стакан воды?;1;4 – Еда и покупки;Getränke und Geschmack
+b5837384-bd22-475f-a598-2a49fd2d9ab8;молоко;Milch;Молоко холодное.;1;4 – Еда и покупки;Getränke und Geschmack
+3a3a2f87-6347-4e8b-b949-278327d4c753;сок;Saft;Я пью яблочный сок.;1;4 – Еда и покупки;Getränke und Geschmack
+ca7739f2-5367-4447-b4d5-2ff503c62a61;чай;Tee;Бабушка пьёт чай.;1;4 – Еда и покупки;Getränke und Geschmack
+64327422-5b8d-4692-ac61-66acd40d30f7;кофе;Kaffee;Папа пьёт кофе утром.;1;4 – Еда и покупки;Getränke und Geschmack
+17ae6d90-dd5f-4ed9-b813-50d2ee839894;лимонад;Limonade;Лимонад холодный.;1;4 – Еда и покупки;Getränke und Geschmack
+37e29bd2-2b8e-4b8d-a9a7-912ed48ec54f;сладкий;süß;Этот торт сладкий.;1;4 – Еда и покупки;Getränke und Geschmack
+9cd61d8d-902c-4766-87f6-e2d717042cb8;кислый;sauer;Лимон кислый.;1;4 – Еда и покупки;Getränke und Geschmack
+c47f812d-a2b8-483a-95c1-085fe2d59d54;солёный;salzig;Суп слишком солёный.;1;4 – Еда и покупки;Getränke und Geschmack
+b3d6c587-0147-4367-8006-8daaedbe4365;вкусный;lecker;Обед очень вкусный.;1;4 – Еда и покупки;Getränke und Geschmack
+91851cc2-c1fa-44f4-bb01-9a00ab71affd;магазин;"Geschäft; Laden";Магазин открыт.;1;4 – Еда и покупки;Im Geschäft
+0393bf95-813d-4b68-bbf0-ab0731497ae5;рынок;Markt;Мы идём на рынок.;1;4 – Еда и покупки;Im Geschäft
+05f41235-ab3d-4287-8380-1e89d049850f;покупать;kaufen;Я хочу покупать фрукты.;1;4 – Еда и покупки;Im Geschäft
+78d8704f-4b69-4b36-9760-d07723fa913d;продавать;verkaufen;Здесь продают хлеб.;1;4 – Еда и покупки;Im Geschäft
+b961350d-9c75-4ddc-90b6-e8fd6e142c6d;цена;Preis;Какая цена?;1;4 – Еда и покупки;Im Geschäft
+005e7106-caac-4eb9-b89d-50382867bdff;деньги;Geld;У меня есть деньги.;1;4 – Еда и покупки;Im Geschäft
+36d57d96-f5e2-4174-8adf-3e60aedb5515;рубль;Rubel;Это стоит сто рублей.;1;4 – Еда и покупки;Im Geschäft
+1353c181-9ea6-4d2e-a787-5a8a284294ef;дорогой;teuer;Этот сыр дорогой.;1;4 – Еда и покупки;Im Geschäft
+bf44795e-42d1-47a1-beb4-e742253d1485;дешёвый;"billig; günstig";Здесь дешёвые яблоки.;1;4 – Еда и покупки;Im Geschäft
+1ca34007-24dc-4fcb-b708-87dfcdbb34b3;касса;Kasse;Касса находится у выхода.;1;4 – Еда и покупки;Im Geschäft
+486ddf89-851f-4ff5-9d3f-87520110fd86;меню;"Speisekarte; Menü";Можно меню, пожалуйста?;1;4 – Еда и покупки;Im Café und am Tisch
+e4c875bd-96d2-4154-ae21-bd4e82fd67cc;заказывать;bestellen;Я хочу заказать суп.;1;4 – Еда и покупки;Im Café und am Tisch
+97ee682f-435f-45f6-a837-e7db34b4dabc;платить;bezahlen;Мы платим картой.;1;4 – Еда и покупки;Im Café und am Tisch
+514c8c62-6443-442d-9e42-de433d981b4a;счёт;Rechnung;Принесите счёт, пожалуйста.;1;4 – Еда и покупки;Im Café und am Tisch
+4ee69a92-9b07-433c-aab7-8a14187e24e1;тарелка;Teller;Тарелка чистая.;1;4 – Еда и покупки;Im Café und am Tisch
+eb69773a-dbda-4b58-9064-6d42ab9a4bbf;чашка;Tasse;Чашка стоит на столе.;1;4 – Еда и покупки;Im Café und am Tisch
+292556c8-80bc-4a4c-b699-db5797f0bdef;стакан;Glas;Стакан полон воды.;1;4 – Еда и покупки;Im Café und am Tisch
+418f3206-8047-4823-a612-3cbd88277133;ложка;Löffel;Мне нужна ложка.;1;4 – Еда и покупки;Im Café und am Tisch
+9bbe24d9-eaa9-409d-a1e7-8fca2a7413e5;вилка;Gabel;Вилка рядом с тарелкой.;1;4 – Еда и покупки;Im Café und am Tisch
+963af8a3-c251-46ca-aa47-73b8319c3503;нож;Messer;Нож острый.;1;4 – Еда и покупки;Im Café und am Tisch
+f0d3e099-a071-4cb4-8f1d-96eb1b864d7b;готовить;"kochen; zubereiten";Я умею готовить суп.;1;4 – Еда и покупки;Kochen und Essen
+5787cd28-b35d-4e7a-a1d2-fc81834ef053;резать;schneiden;Папа режет хлеб.;1;4 – Еда и покупки;Kochen und Essen
+4b577d11-fde8-4008-a43a-266ff2a8f1f7;мыть;waschen;Я мою яблоко.;1;4 – Еда и покупки;Kochen und Essen
+af4e2e28-b67b-48a5-b040-076bdc7408f0;пробовать;"probieren; kosten";Попробуй этот пирог.;1;4 – Еда и покупки;Kochen und Essen
+9c997e34-b629-4616-bbab-76e37d58aa4a;есть;essen;Мы будем есть вместе.;1;4 – Еда и покупки;Kochen und Essen
+d56f07de-9c36-41ae-bc7b-6410756c5e0a;пить;trinken;Не забудь пить воду.;1;4 – Еда и покупки;Kochen und Essen
+db214b42-b74d-4386-8c72-e25d0c4c5603;голодный;hungrig;Я голодный после школы.;1;4 – Еда и покупки;Kochen und Essen
+b8fb4f5d-a8ed-447f-a421-ac883690852f;жажда;Durst;После бега у меня жажда.;1;4 – Еда и покупки;Kochen und Essen
+c8c82ca0-f4d9-47b7-86d0-2619a776ce00;сытый;satt;Я уже сытый.;1;4 – Еда и покупки;Kochen und Essen
+7a91c1c6-383e-4283-83a7-d5b671f2a6a1;кусок;"Stück; Scheibe";Мне нужен кусок хлеба.;1;4 – Еда и покупки;Kochen und Essen
+65e8ba0e-27eb-4685-9f25-8f6ab9862f94;лес;Wald;Мы идём в лес.;1;5 – Природа и приключения;Natur und Landschaft
+838e2188-de95-4819-aaa7-48e698bd69b3;дерево;Baum;Высокое дерево растёт у дома.;1;5 – Природа и приключения;Natur und Landschaft
+1e57abeb-b5fc-4279-b21a-687b78c840c4;лист;Blatt;Жёлтый лист падает.;1;5 – Природа и приключения;Natur und Landschaft
+a14a7789-764a-4daf-b085-85d699df2f14;цветок;Blume;Этот цветок красивый.;1;5 – Природа и приключения;Natur und Landschaft
+ec932052-bb06-4aba-b333-38f91bb4b7ab;трава;Gras;Трава зелёная.;1;5 – Природа и приключения;Natur und Landschaft
+1b871e8a-8019-42ed-a984-91a169b8edf3;гора;Berg;На горе лежит снег.;1;5 – Природа и приключения;Natur und Landschaft
+ba048207-92dd-4242-af60-1165b69df3f6;река;Fluss;Река течёт быстро.;1;5 – Природа и приключения;Natur und Landschaft
+491d37f1-810d-4e9a-a93e-36e3a26cc3d8;озеро;See;Озеро очень глубокое.;1;5 – Природа и приключения;Natur und Landschaft
+6a9a7e3e-f3fd-4a33-baa5-eafdb8b272c0;море;Meer;Летом мы едем к морю.;1;5 – Природа и приключения;Natur und Landschaft
+c99091b7-5ed0-4c8e-be4b-0a08d9dc893a;остров;Insel;На острове живут птицы.;1;5 – Природа и приключения;Natur und Landschaft
+d599b1e1-1b5f-4b79-a521-95b20b570d31;собака;Hund;Собака бежит во двор.;1;5 – Природа и приключения;Tiere
+c9b67cd1-8537-4610-84dc-1c3d0e39ad7f;кошка;Katze;Кошка спит на кресле.;1;5 – Природа и приключения;Tiere
+ac53ca00-d485-4863-875c-364b56806642;лошадь;Pferd;Лошадь ест траву.;1;5 – Природа и приключения;Tiere
+e1c33e41-83f2-4c31-b1f4-85dc9c8930b4;корова;Kuh;Корова даёт молоко.;1;5 – Природа и приключения;Tiere
+be3ca882-7065-417a-800e-7b2561cda482;овца;Schaf;Овца стоит на лугу.;1;5 – Природа и приключения;Tiere
+6b02fd2b-e8db-462d-b12b-13624f56ae22;свинья;Schwein;Свинья живёт на ферме.;1;5 – Природа и приключения;Tiere
+872f1651-c1df-4e6d-a348-ce757d64cb0b;кролик;Kaninchen;Кролик грызёт морковь.;1;5 – Природа и приключения;Tiere
+388a1532-3a99-4c41-a792-6c188e85e368;лиса;Fuchs;Лиса живёт в лесу.;1;5 – Природа и приключения;Tiere
+1fd4e323-60a6-43d9-b77d-a34d51207118;медведь;Bär;Медведь большой и сильный.;1;5 – Природа и приключения;Tiere
+65f67026-2b6f-41f6-b1bb-1f258e7761a7;волк;Wolf;Волк слышит шум.;1;5 – Природа и приключения;Tiere
+2fcad8f0-dd81-4a25-afde-c922c2938d82;птица;Vogel;Птица сидит на ветке.;1;5 – Природа и приключения;Vögel und kleine Tiere
+eaab1374-184d-43f1-8864-4ab83c66aaac;утка;Ente;Утка плывёт по пруду.;1;5 – Природа и приключения;Vögel und kleine Tiere
+327fb7d9-072f-4bfc-80ba-65f41aad3f75;гусь;Gans;Гусь идёт к воде.;1;5 – Природа и приключения;Vögel und kleine Tiere
+96c80477-67d4-4397-a59e-29ab35b2351d;орёл;Adler;Орёл летит высоко.;1;5 – Природа и приключения;Vögel und kleine Tiere
+3c7b6ab8-f2ed-4380-a6ae-9d7320528f76;сова;Eule;Сова охотится ночью.;1;5 – Природа и приключения;Vögel und kleine Tiere
+d6fb772a-66f0-41e4-a716-32a51dc4c07b;воробей;Spatz;Воробей прыгает по дорожке.;1;5 – Природа и приключения;Vögel und kleine Tiere
+e04d7790-96a9-45cd-99cb-38f39e245a61;бабочка;Schmetterling;Бабочка села на цветок.;1;5 – Природа и приключения;Vögel und kleine Tiere
+8e333772-34f7-4eca-bfa6-b6610eb04d51;пчела;Biene;Пчела собирает нектар.;1;5 – Природа и приключения;Vögel und kleine Tiere
+8e214824-924f-45b2-a62a-f2d54e86b514;муравей;Ameise;Муравей несёт крошку.;1;5 – Природа и приключения;Vögel und kleine Tiere
+f27286d7-ee10-4a10-9700-18687a1df808;лягушка;Frosch;Лягушка прыгает у воды.;1;5 – Природа и приключения;Vögel und kleine Tiere
+1885c8cf-0048-4334-9326-3f284ca28893;погода;Wetter;Сегодня хорошая погода.;1;5 – Природа и приключения;Wetter und Jahreszeiten
+4d7644ea-14a6-4898-ac62-484748978f07;солнце;Sonne;Солнце светит ярко.;1;5 – Природа и приключения;Wetter und Jahreszeiten
+ce67c581-6c74-4a7e-b56b-4209e5bc1065;дождь;Regen;Дождь начинается вечером.;1;5 – Природа и приключения;Wetter und Jahreszeiten
+919dec59-cb5f-469e-8a66-503cd9e73d95;снег;Schnee;Зимой идёт снег.;1;5 – Природа и приключения;Wetter und Jahreszeiten
+fdde0253-6bf1-4f85-a889-a06a999dbb73;ветер;Wind;Сильный ветер качает деревья.;1;5 – Природа и приключения;Wetter und Jahreszeiten
+49fd8ef5-5641-439d-bbde-b0f270390a7e;облако;Wolke;Белое облако плывёт по небу.;1;5 – Природа и приключения;Wetter und Jahreszeiten
+eed5f0da-70b2-4fdf-98b7-70dae4f61205;небо;Himmel;Небо сегодня голубое.;1;5 – Природа и приключения;Wetter und Jahreszeiten
+009e8b2a-cc5d-4232-bf76-d767b689b3ed;гроза;Gewitter;Ночью была гроза.;1;5 – Природа и приключения;Wetter und Jahreszeiten
+268c3649-ce81-4d25-8699-5b419df9a9e1;весна;Frühling;Весной всё цветёт.;1;5 – Природа и приключения;Wetter und Jahreszeiten
+efe8f669-43c1-40b1-8791-f3599249c905;лето;Sommer;Летом дни длинные.;1;5 – Природа и приключения;Wetter und Jahreszeiten
+269d0ba5-b25e-49d1-bd1b-7c800de9986a;осень;Herbst;Осенью листья желтеют.;1;5 – Природа и приключения;Draußen unterwegs
+7b3dbd41-1e13-4c67-9ad0-b70f3abc498d;зима;Winter;Зимой мы катаемся на санках.;1;5 – Природа и приключения;Draußen unterwegs
+fd190019-596a-4068-b359-005f203b9c78;утро;Morgen;Утром лес тихий.;1;5 – Природа и приключения;Draußen unterwegs
+8ccbd751-da09-4530-be27-981c3b438f1a;вечер;Abend;Вечером мы возвращаемся домой.;1;5 – Природа и приключения;Draußen unterwegs
+4451d240-de17-4508-9d71-59e08e01650d;тропа;"Pfad; Wanderweg";Тропа ведёт к реке.;1;5 – Природа и приключения;Draußen unterwegs
+a6ef5f16-88dc-41ad-bf8a-cb61e0a8acb0;мост;Brücke;Мы переходим мост.;1;5 – Природа и приключения;Draußen unterwegs
+55473f04-5efc-406f-80bb-b4b29323a2e8;палатка;Zelt;Наша палатка стоит у озера.;1;5 – Природа и приключения;Draußen unterwegs
+ff1de16a-2a37-462a-95b4-e356eede3c08;карта;"Karte; Landkarte";Посмотри на карту.;1;5 – Природа и приключения;Draußen unterwegs
+621265db-17e9-44c2-a812-5299b1b209ad;компас;Kompass;Компас показывает север.;1;5 – Природа и приключения;Draußen unterwegs
+9f091aec-605b-423d-9e05-68d2c8a547d5;искать;suchen;Мы ищем дорогу.;1;5 – Природа и приключения;Abenteuer und Entdecken
+aefd24f0-a417-44e4-a94e-b03de1c7cbf1;находить;finden;Я нахожу красивый камень.;1;5 – Природа и приключения;Abenteuer und Entdecken
+10beb408-ff93-4eca-b330-688de1a0f398;терять;verlieren;Не теряй ключи.;1;5 – Природа и приключения;Abenteuer und Entdecken
+1a4d0565-f7d8-44d3-9056-36f221d08048;прятаться;sich verstecken;Заяц прячется в траве.;1;5 – Природа и приключения;Abenteuer und Entdecken
+3847f95a-0508-412d-b302-c3cc2ef6a32d;наблюдать;beobachten;Мы наблюдаем за птицами.;1;5 – Природа и приключения;Abenteuer und Entdecken
+80bb83ed-5e00-4ae0-a8b2-c9a42066d6e1;слушать;"zuhören; hören";Послушай, как поёт птица.;1;5 – Природа и приключения;Abenteuer und Entdecken
+6b7a7cf4-b2a7-44a6-b679-6adc7fa81841;видеть;sehen;Я вижу гору.;1;5 – Природа и приключения;Abenteuer und Entdecken
+08aa7f82-4248-404f-8ab6-d63f12a49c69;слышать;hören;Мы слышим гром.;1;5 – Природа и приключения;Abenteuer und Entdecken
+62fa4198-8b60-45b0-8276-f582f1e7dd88;путешествие;Reise;Это наше первое путешествие.;1;5 – Природа и приключения;Abenteuer und Entdecken
+dac7373b-4735-49ce-ac58-1c09b414a354;приключение;Abenteuer;Сегодня начинается приключение.;1;5 – Природа и приключения;Abenteuer und Entdecken
+ebf14c15-15b1-4d97-bf99-69241c6f72fd;доброе утро;Guten Morgen;Доброе утро, папа!;1;1 – Знакомство и семья;Begrüßung
+bf16ab84-9601-4156-a5a8-f6cbd9cba50f;добрый вечер;Guten Abend;Добрый вечер, бабушка!;1;1 – Знакомство и семья;Begrüßung
+380c0125-9066-4cf3-a16a-f02ab084ab58;спокойной ночи;Gute Nacht;Спокойной ночи, мама!;1;1 – Знакомство и семья;Begrüßung
+cfa32a56-766c-495a-a123-0214eecf7b9c;кто;wer;Кто это?;1;1 – Знакомство и семья;Ich und andere
+302eeb36-56b7-453e-b053-7c00f9d4fdab;что;was;Что это такое?;1;1 – Знакомство и семья;Ich und andere
+ff3c8d02-da7c-44f8-b78a-088081ea5500;мой;mein;Это мой дом.;1;1 – Знакомство и семья;Ich und andere
+2a89ae09-377f-4e13-8361-afc44675cbbb;моя;meine;Это моя книга.;1;1 – Знакомство и семья;Ich und andere
+db86515d-4c0b-4ac9-8e0d-ff22a91e556e;полка;"Regal; Ablage";Книга стоит на полке.;1;1 – Знакомство и семья;Zuhause
+00ab2d76-6b22-40fd-9f52-9ed4c9a8a565;холодильник;Kühlschrank;Молоко в холодильнике.;1;1 – Знакомство и семья;Zuhause
+c1d1243e-7a3b-40d1-8064-7ff3448ac3f0;дивиться;sich wundern;Я не хочу удивляться.;1;1 – Знакомство и семья;Zuhause
+f1e3ab09-095a-4fb0-bc36-75636102a248;учебник;Schulbuch;Мой учебник на парте.;1;2 – Школа и учёба;Schulsachen
+1979a0ad-dff5-4db7-9555-465fd4345b18;мел;Kreide;Учитель пишет мелом.;1;2 – Школа и учёба;Schulsachen
+032890c2-b579-4924-9ceb-26974a114b3f;литература;Literatur;Мы читаем литературу.;1;2 – Школа и учёба;Unterrichtsfächer
+b4e3af66-a8b7-487b-93be-aa22e48821c4;информатика;Informatik;На информатике мы работаем за компьютером.;1;2 – Школа и учёба;Unterrichtsfächer
+493e1127-cdbb-4845-82d4-aef04e4198c3;изучать;"studieren; sich beschäftigen mit";Мы изучаем русский язык.;1;2 – Школа и учёба;Lernen und Aufgaben
+5919a931-7d0d-4f13-9403-415c57fdf010;запоминать;sich merken;Я стараюсь запоминать новые слова.;1;2 – Школа и учёба;Lernen und Aufgaben
+6e820eec-1bff-4b4f-9831-4fcd59508212;переводить;übersetzen;Помоги мне переводить текст.;1;2 – Школа и учёба;Lernen und Aufgaben
+db32dc43-5f3e-4ef8-a0e6-2992413dc753;расписание;Stundenplan;Моё расписание лежит в рюкзаке.;1;2 – Школа и учёба;Zeit und Klassenraum
+83d84568-9331-408f-9b65-f76dd63972bc;звонок;"Klingel; Schulgong";Звонок уже прозвенел.;1;2 – Школа и учёба;Zeit und Klassenraum
+3249a1be-ddb1-46d9-87d4-2d328ef5c1b7;много;"viel; viele";В библиотеке много книг.;1;2 – Школа и учёба;Zahlen und Eigenschaften
+23637529-0aa5-471b-aa1c-e21f130e61c5;хобби;Hobby;Моё хобби — рисование.;1;3 – Свободное время и спорт;Freizeit und Interessen
+f06b0bd8-2b5d-479f-89c3-90615a398879;разминка;Aufwärmen;Перед игрой нужна разминка.;1;3 – Свободное время и спорт;Bewegung und Sport
+65178aed-1d06-4984-82b0-8ed3e234417f;пас;Pass;Он делает точный пас.;1;3 – Свободное время и спорт;Bewegung und Sport
+d9224502-cd15-41bc-9e14-f2b48dd4245a;защитник;Verteidiger;Защитник играет хорошо.;1;3 – Свободное время и спорт;Bewegung und Sport
+dd5de9fd-0230-442d-b81d-b45c70fafa04;нападающий;Stürmer;Нападающий забил гол.;1;3 – Свободное время и спорт;Bewegung und Sport
+ee35baa7-8b23-4b21-bb06-4c0c34786a6a;вратарь;Torwart;Вратарь ловит мяч.;1;3 – Свободное время и спорт;Bewegung und Sport
+0493506e-922a-44f6-b9c0-d48898e4e6fa;книга-комикс;Comic;Я читаю книгу-комикс.;1;3 – Свободное время и спорт;Hobbys und Kreativität
+3e4754d5-2f45-4d10-8764-c7c852ca8308;шахматы;Schach;Мы играем в шахматы.;1;3 – Свободное время и спорт;Hobbys und Kreativität
+8ee62335-b8bc-49c9-8eb1-efa15e375362;доверять;vertrauen;Я могу доверять другу.;1;3 – Свободное время и спорт;Freunde und Gefühle
+33dad132-97fb-4758-8a34-41de464be784;встреча;"Treffen; Verabredung";Наша встреча в пять часов.;1;3 – Свободное время и спорт;Orte und Verabredungen
+9e1a46c4-96dc-443d-b741-5853c07339b3;командный;"Team-; Mannschafts-";Это командный спорт.;1;3 – Свободное время и спорт;Adjektive und Handlungen
+3b22e935-daf7-4037-9a56-b2e9a0b26205;картофель;Kartoffel;Картофель готов.;1;4 – Еда и покупки;Lebensmittel
+355bb582-ea9c-4fc6-8a92-65c296fa8dd5;морковь;Karotte;Морковь оранжевая.;1;4 – Еда и покупки;Lebensmittel
+5bef6935-52bc-4cc1-8a03-d7adc571076e;огурец;Gurke;Я режу огурец.;1;4 – Еда и покупки;Lebensmittel
+fe25b585-6d88-4600-a4b2-5b1216111f5d;макароны;Nudeln;На обед у нас макароны.;1;4 – Еда и покупки;Weitere Lebensmittel
+9987de78-0c06-48e9-ab93-4ffaa9f30fa6;торт;"Torte; Kuchen";На столе шоколадный торт.;1;4 – Еда и покупки;Weitere Lebensmittel
+cd8eb3e5-17dc-40d2-ae74-a4167bb75d53;газированный;mit Kohlensäure;Я не люблю газированный напиток.;1;4 – Еда и покупки;Getränke und Geschmack
+16df54df-5ee8-4064-8e42-ebb62ae75ed8;чек;Kassenbon;Возьми чек, пожалуйста.;1;4 – Еда и покупки;Im Geschäft
+8b853162-b8b1-4aec-9c9c-4f39de04eb72;салфетка;Serviette;Положи салфетку на стол.;1;4 – Еда и покупки;Im Café und am Tisch
+36a21710-faf3-4f3c-bcf1-9c7c826090e2;варить;kochen (in Wasser);Я умею варить яйца.;1;4 – Еда и покупки;Kochen und Essen
+5c8b626a-6d54-457b-a57f-51c5604b2558;печь;backen;Мы будем печь пирог.;1;4 – Еда и покупки;Kochen und Essen
+60ce4f46-bf63-4e69-b497-e156a0df4e26;пещера;Höhle;В пещере темно.;1;5 – Природа и приключения;Natur und Landschaft
+64d4c622-8947-4fb6-a6a8-a73eec212717;водопад;Wasserfall;Водопад очень высокий.;1;5 – Природа и приключения;Natur und Landschaft
+f381e126-cbfc-47f3-8175-241b54f4258f;камень;Stein;На дороге лежит камень.;1;5 – Природа и приключения;Natur und Landschaft
+0c947b36-d7d5-47d9-952c-6f185bca3b90;ёж;Igel;Ёж живёт в лесу.;1;5 – Природа и приключения;Tiere
+bec79ad3-017a-4316-a6c2-2f9207f3a470;белка;Eichhörnchen;Белка прыгает по деревьям.;1;5 – Природа и приключения;Tiere
+e53ed563-3c3f-4ea8-b6d6-f74d92d46f29;олень;Hirsch;Олень пьёт воду.;1;5 – Природа и приключения;Tiere
+158c4cff-1158-4c7a-8024-001a60001dcf;комар;Mücke;Комар летает у окна.;1;5 – Природа и приключения;Vögel und kleine Tiere
+72760d20-be5d-4eec-8598-b905fcaac096;мороз;Frost;Утром был сильный мороз.;1;5 – Природа и приключения;Wetter und Jahreszeiten
+37f9d2a8-e936-42af-a28a-26ec345d4c55;фонарь;"Laterne; Taschenlampe";Возьми фонарь в поход.;1;5 – Природа и приключения;Draußen unterwegs
+8dea0ee6-9c31-4244-850d-d3223bb21c83;исследовать;"erkunden; erforschen";Мы будем исследовать лес.;1;5 – Природа и приключения;Abenteuer und Entdecken
+229d3a16-2d4e-4583-8364-d39e352d73e4;спасать;retten;Мы помогаем спасать животных.;1;5 – Природа и приключения;Abenteuer und Entdecken
+9b06fb3d-840f-4306-8d01-6fe5d669bf61;голова;Kopf;У меня болит голова.;1;6 – Моё тело;Körperteile
+308d9305-ef78-408c-a698-00326c6e2f15;шея;Hals;У жирафа длинная шея.;1;6 – Моё тело;Körperteile
+4d0f9b62-bd10-4ba1-9ffb-51e3693ed3fa;плечо;Schulter;У меня болит плечо.;1;6 – Моё тело;Körperteile
+961e93ce-d06b-406b-bf4c-819d70a21de7;рука;"Arm; Hand";Подними правую руку.;1;6 – Моё тело;Körperteile
+793faeee-5489-4f97-ae1e-f53fff06cf1e;локоть;Ellbogen;Я ударился локтем.;1;6 – Моё тело;Körperteile
+1c5bcfb1-13c6-4ad1-ac98-3d0cdd558ea2;запястье;Handgelenk;На запястье у меня часы.;1;6 – Моё тело;Körperteile
+c3692848-c906-4812-8e48-7eca3f9db082;ладонь;Handfläche;Положи монету на ладонь.;1;6 – Моё тело;Körperteile
+3dc78fe2-3bf5-447f-8c0d-eb519aba1449;палец;"Finger; Zehe";Я порезал палец.;1;6 – Моё тело;Körperteile
+318a39f3-ebc0-4e05-a0f2-fb634f9990d0;ноготь;"Fingernagel; Nagel";Ноготь сломался.;1;6 – Моё тело;Körperteile
+75a081fc-5f03-49d2-a1ab-8ca2804e9a38;грудь;Brust;Он дышит полной грудью.;1;6 – Моё тело;Körperteile
+2b17136f-ea7c-4d6a-8933-86decaafd223;спина;Rücken;Держи спину прямо.;1;6 – Моё тело;Körperteile
+f69a9966-9843-490a-adae-08323d710eee;живот;Bauch;У малыша круглый живот.;1;6 – Моё тело;Körperteile
+c16e0505-d4f8-488f-b765-76c6f27ad53a;талия;Taille;У платья узкая талия.;1;6 – Моё тело;Körperteile
+7ce51da8-7f85-4416-831a-ecb77cbc6561;бедро;"Oberschenkel; Hüfte";Он ушиб бедро.;1;6 – Моё тело;Körperteile
+fc9567ad-ce07-4c1e-82ca-d836a11e1b8e;колено;Knie;Я согнул колено.;1;6 – Моё тело;Körperteile
+3132a14e-069f-47ee-92d7-868e30e94f0a;голень;Unterschenkel;На голени синяк.;1;6 – Моё тело;Körperteile
+97cc9897-fe2a-4047-9f9c-f8a63d42a6c7;щиколотка;Knöchel;Щиколотка немного опухла.;1;6 – Моё тело;Körperteile
+4f99e183-b41b-480b-8a5c-298a5a876154;пятка;Ferse;У туфли высокая пятка.;1;6 – Моё тело;Körperteile
+b96fff62-88c3-48e0-b663-f504213569d6;ступня;Fuß;Правая ступня устала.;1;6 – Моё тело;Körperteile
+da9ca711-45da-46ff-a46a-977d6f5e7e85;кожа;Haut;Кожа защищает тело.;1;6 – Моё тело;Körperteile
+ad379171-4ad9-41fa-b420-0b5e930a24ac;кость;Knochen;Эта кость очень крепкая.;1;6 – Моё тело;Körperteile
+b717156c-85bd-4fb6-bf52-fe8156aecf93;мышца;Muskel;После спорта мышца устала.;1;6 – Моё тело;Körperteile
+22b0a30a-c440-4fcc-b257-4f593ddf9ea3;мозг;Gehirn;Мозг помогает нам думать.;1;6 – Моё тело;Körperteile
+e145a1a8-4c0f-4c91-827b-903d41324ae8;сердце;Herz;Сердце бьётся быстро.;1;6 – Моё тело;Körperteile
+e18e0951-5251-4eda-86a0-37c1a8212b50;лёгкое;Lunge;Лёгкие помогают дышать.;1;6 – Моё тело;Körperteile
+f7999157-cd43-4e8b-a93c-6705fe9c64ee;лицо;Gesicht;У него доброе лицо.;1;6 – Моё тело;Gesicht und Sinne
+a7da5355-edd2-448e-8623-3c131c77b020;лоб;Stirn;У неё холодный лоб.;1;6 – Моё тело;Gesicht und Sinne
+45b24c19-3e65-431b-bd85-2e0e90871d9d;бровь;Augenbraue;Она подняла бровь.;1;6 – Моё тело;Gesicht und Sinne
+eaeca98f-7e68-451d-a06a-669d295701a5;ресница;Wimper;На щеке лежит ресница.;1;6 – Моё тело;Gesicht und Sinne
+117c1276-3105-47a8-85fb-f3c56b809f01;веко;Augenlid;Он закрыл веко.;1;6 – Моё тело;Gesicht und Sinne
+b1616dcb-8781-40cd-9f9c-7b2632dd6e5b;зрачок;Pupille;Зрачок меняется на свету.;1;6 – Моё тело;Gesicht und Sinne
+52b7117b-2a75-44cd-ae1a-f36b6fb6932e;щека;Wange;У ребёнка красная щека.;1;6 – Моё тело;Gesicht und Sinne
+92f9932a-d508-4d3b-a74c-1b5831d1cac4;подбородок;Kinn;Он почесал подбородок.;1;6 – Моё тело;Gesicht und Sinne
+e69771f1-414e-4623-81d2-ca0272f26c65;губа;Lippe;У неё сухая губа.;1;6 – Моё тело;Gesicht und Sinne
+a0b4b36f-492e-43b5-929b-88a6072b3457;язык;Zunge;Язык чувствует вкус.;1;6 – Моё тело;Gesicht und Sinne
+8c8d195c-d60a-4f16-84f9-40fb2fd28454;зуб;Zahn;У меня выпал молочный зуб.;1;6 – Моё тело;Gesicht und Sinne
+8858e773-8e48-4b01-812f-f22497ce6b27;дёсны;Zahnfleisch;Дёсны нужно чистить осторожно.;1;6 – Моё тело;Gesicht und Sinne
+15d8ad10-079b-4735-a21f-b94a616ab15f;нос;Nase;Нос чувствует запахи.;1;6 – Моё тело;Gesicht und Sinne
+c14addeb-fe77-46e0-a9c2-0b06ad9f5ae9;ухо;Ohr;Одно ухо замёрзло.;1;6 – Моё тело;Gesicht und Sinne
+45e13a5a-2a00-4c8f-91f5-231dd03dbf46;слух;Gehör;У совы хороший слух.;1;6 – Моё тело;Gesicht und Sinne
+9dd508e0-ee34-4fca-b0ad-a969a021ac5d;зрение;"Sehkraft; Sehvermögen";Зрение нужно беречь.;1;6 – Моё тело;Gesicht und Sinne
+85ca9184-ea69-4127-9ef3-4fe167d0d9d4;обоняние;Geruchssinn;Обоняние помогает узнавать запахи.;1;6 – Моё тело;Gesicht und Sinne
+859ab5a4-da7d-4a4e-b5be-bfbf48b3b8ed;вкус;"Geschmackssinn; Geschmack";У клубники сладкий вкус.;1;6 – Моё тело;Gesicht und Sinne
+f33ec747-310d-4028-bfaa-28c3bdb51bce;осязание;Tastsinn;Осязание помогает чувствовать тепло.;1;6 – Моё тело;Gesicht und Sinne
+bfb4157e-379e-4ef7-9c0e-30d1604f6a2f;дышать;atmen;Нужно спокойно дышать.;1;6 – Моё тело;Bewegung und Fähigkeiten
+7c2d00ba-32a9-4c25-b07a-ebf77bfbea0e;кашлять;husten;Не кашляй на других.;1;6 – Моё тело;Bewegung und Fähigkeiten
+72dc983f-c6aa-4254-b0e1-98f26811f289;чихать;niesen;Весной я часто чихаю.;1;6 – Моё тело;Bewegung und Fähigkeiten
+f4b5792e-699f-4f42-979a-56e28acdbb4d;наклоняться;"sich bücken; sich neigen";Наклонись и подними мяч.;1;6 – Моё тело;Bewegung und Fähigkeiten
+59ab74b6-cd1f-4a2c-be80-8b080bc6f689;поворачивать;"drehen; wenden";Поворачивай голову медленно.;1;6 – Моё тело;Bewegung und Fähigkeiten
+c44bd47d-b7e7-4b59-bdd6-4552b8645c6c;растягиваться;sich dehnen;Перед бегом нужно растягиваться.;1;6 – Моё тело;Bewegung und Fähigkeiten
+08764c22-3ef1-4326-9300-b25217f3643e;сгибать;beugen;Попробуй сгибать пальцы.;1;6 – Моё тело;Bewegung und Fähigkeiten
+fd24e930-85fc-4743-a38a-f23e0ec09eb2;выпрямлять;"strecken; gerade machen";Выпрями спину.;1;6 – Моё тело;Bewegung und Fähigkeiten
+d743a359-8606-42f0-867e-52bbf7a0471a;поднимать;heben;Я могу поднимать эту коробку.;1;6 – Моё тело;Bewegung und Fähigkeiten
+61d1b914-f6d6-4eea-a7c3-df48a0a6557d;опускать;senken;Опускай руки медленно.;1;6 – Моё тело;Bewegung und Fähigkeiten
+745da8bc-99a3-40a5-90bc-460acd280138;толкать;"schieben; stoßen";Не толкай дверь слишком сильно.;1;6 – Моё тело;Bewegung und Fähigkeiten
+43ee28e4-f7f8-48dc-8d03-82d3866ba0c6;тянуть;ziehen;Нужно тянуть верёвку вместе.;1;6 – Моё тело;Bewegung und Fähigkeiten
+56257071-2659-4650-9d89-c434cab137d3;равновесие;Gleichgewicht;Канатоходец держит равновесие.;1;6 – Моё тело;Bewegung und Fähigkeiten
+30e9a370-037d-4946-9e88-446dcfdda00c;гибкий;"beweglich; biegsam";Этот гимнаст очень гибкий.;1;6 – Моё тело;Bewegung und Fähigkeiten
+415ec7b4-03a0-4c1e-b8ca-3417a1fabbea;ловкий;geschickt;Она ловкая и быстрая.;1;6 – Моё тело;Bewegung und Fähigkeiten
+9b111bad-bf91-49b8-b3f6-489d884b8add;усталость;Müdigkeit;После похода я чувствую усталость.;1;6 – Моё тело;Pflege und Gesundheit
+49bb7cfb-ef0d-4791-825e-83afcca68ac4;здоровье;Gesundheit;Здоровье очень важно.;1;6 – Моё тело;Pflege und Gesundheit
+ac06e85b-45a3-4699-9dda-98aeabeac027;болезнь;Krankheit;Эта болезнь быстро проходит.;1;6 – Моё тело;Pflege und Gesundheit
+6e6246f5-e838-42fb-8ce7-65bb6291f9fc;температура;"Fieber; Temperatur";У ребёнка высокая температура.;1;6 – Моё тело;Pflege und Gesundheit
+acd8f32a-3fca-4c9a-abba-a2b69351dfb9;лекарство;Medikament;Принимай лекарство по инструкции.;1;6 – Моё тело;Pflege und Gesundheit
+afae82b6-ca84-45a6-ab4d-03560fcdd8f0;аптека;Apotheke;Аптека находится за углом.;1;6 – Моё тело;Pflege und Gesundheit
+444f6a4e-6125-41d4-a719-6e7157233c3c;зубная щётка;Zahnbürste;Моя зубная щётка новая.;1;6 – Моё тело;Pflege und Gesundheit
+910aef47-3d8f-40f9-baba-e11c32d77a09;зубная паста;Zahnpasta;Зубная паста стоит у раковины.;1;6 – Моё тело;Pflege und Gesundheit
+ae5aec3e-7ccd-48f7-aadf-085336462583;мыло;Seife;Мыло приятно пахнет.;1;6 – Моё тело;Pflege und Gesundheit
+df94d823-fb73-422f-9195-be44c9623b67;полотенце;Handtuch;Повесь полотенце сушиться.;1;6 – Моё тело;Pflege und Gesundheit
+5f308bd0-8860-475b-9df7-5e27442b9865;расчёска;"Kamm; Haarbürste";Расчёска лежит на полке.;1;6 – Моё тело;Pflege und Gesundheit
+a2dba87b-1b1d-4be0-9110-ea450aecb71a;шампунь;Shampoo;Этот шампунь пахнет яблоком.;1;6 – Моё тело;Pflege und Gesundheit
+c09e8fcf-bf83-4a1b-a834-b3d06f818b7e;рубашка;Hemd;На нём белая рубашка.;1;7 – Одежда и цвета;Kleidung
+831a2b7b-2de7-411f-b0bf-db766fa6740a;блузка;Bluse;Блузка висит в шкафу.;1;7 – Одежда и цвета;Kleidung
+c182de27-1c14-4ab3-abdf-7b9b52b6c9e2;свитер;Pullover;Зимой я надеваю тёплый свитер.;1;7 – Одежда и цвета;Kleidung
+3775c733-157a-4382-968f-010adcc29969;кофта;"Strickjacke; Oberteil";У Маши новая кофта.;1;7 – Одежда и цвета;Kleidung
+6c523171-f5f3-4ad6-8d9e-28afacb867dc;толстовка;"Sweatshirt; Hoodie";Моя толстовка очень мягкая.;1;7 – Одежда и цвета;Kleidung
+e1bc732e-3db0-43ce-8cb6-377a3bf1959c;куртка;Jacke;Возьми куртку на улицу.;1;7 – Одежда и цвета;Kleidung
+f35664bd-a511-463b-aa60-19090471f117;пальто;Mantel;Его пальто висит у входа.;1;7 – Одежда и цвета;Kleidung
+148f435f-0b1c-4358-a6a4-6f107c418e32;плащ;Regenmantel;Плащ защищает от дождя.;1;7 – Одежда и цвета;Kleidung
+b58a8e6c-e472-4e0e-b8c5-e7ab17f03f0c;жилет;Weste;Он надел жилет поверх рубашки.;1;7 – Одежда и цвета;Kleidung
+6d3447af-c7d3-400d-9f55-ef34b35a98e9;пиджак;"Jackett; Sakko";Для концерта нужен пиджак.;1;7 – Одежда и цвета;Kleidung
+717ff456-9c9c-4324-8b13-56c411fb6364;костюм;"Anzug; Kostüm";На праздник он надел костюм.;1;7 – Одежда и цвета;Kleidung
+7c3fb4c9-50c7-4b47-974d-4f15557bcabf;платье;Kleid;У неё красивое платье.;1;7 – Одежда и цвета;Kleidung
+b5b6fbe4-0094-4482-b3b7-5b62778826cc;юбка;Rock;Юбка до колен.;1;7 – Одежда и цвета;Kleidung
+ad0b451e-33ee-4785-84bc-9dcc034447d7;джинсы;Jeans;Мои джинсы синие.;1;7 – Одежда и цвета;Kleidung
+9383d838-68b8-449e-9652-d7241f6dfa1e;брюки;Hose;Брюки немного длинные.;1;7 – Одежда и цвета;Kleidung
+a061ab0b-1646-4670-944c-99ecdc61cf39;шорты;Shorts;Летом я ношу шорты.;1;7 – Одежда и цвета;Kleidung
+ae362f83-1db4-459c-9814-5c6158d7b9ff;легинсы;Leggings;Для танцев удобны легинсы.;1;7 – Одежда и цвета;Kleidung
+0948ffe2-95c3-422b-ac17-45e9ebb29fba;пижама;Schlafanzug;Пижама лежит на кровати.;1;7 – Одежда и цвета;Kleidung
+88b98193-46f0-4f50-b339-fcaea924e40c;халат;"Bademantel; Morgenmantel";После душа я надеваю халат.;1;7 – Одежда и цвета;Kleidung
+bb3de3e1-2443-4c9a-b221-35d10c7633d1;купальник;Badeanzug;Купальник нужен для бассейна.;1;7 – Одежда и цвета;Kleidung
+023e03d2-ecff-4890-abf8-afc37f51274c;плавки;Badehose;Он взял плавки в поездку.;1;7 – Одежда и цвета;Kleidung
+999af9aa-6dfd-4fc6-ba7b-45c47d00bc64;носки;Socken;Чистые носки лежат в ящике.;1;7 – Одежда и цвета;Kleidung
+3e2d5b7e-a0d2-44a7-b377-bca2f4d922de;колготки;Strumpfhose;Осенью она надевает колготки.;1;7 – Одежда и цвета;Kleidung
+c11b7fec-df5e-4b9f-8550-a69f02d3fbc0;перчатки;Handschuhe;Без перчаток пальцам холодно.;1;7 – Одежда и цвета;Kleidung
+c5751a01-fe22-4a18-91d7-9a501be90c52;варежки;Fäustlinge;Красные варежки очень тёплые.;1;7 – Одежда и цвета;Kleidung
+da894b0d-83b2-45a6-bba4-644898eab1fb;шарф;Schal;Обмотай шарф вокруг шеи.;1;7 – Одежда и цвета;Kleidung
+2431d06e-ec84-439e-b822-7954a2ca3559;шапка;Mütze;Шапка закрывает уши.;1;7 – Одежда и цвета;Kleidung
+e6dfb3f3-b635-463d-ae59-5ffc08d02140;кепка;Basecap;Он надел кепку козырьком назад.;1;7 – Одежда и цвета;Kleidung
+7996e860-1300-4860-95d3-3a98147898de;панама;Sonnenhut;Панама защищает голову от солнца.;1;7 – Одежда и цвета;Kleidung
+c2c983c5-b8cf-41f1-8556-a7db84ec5666;ремень;Gürtel;Ремень держит брюки.;1;7 – Одежда и цвета;Kleidung
+da5a7c4d-8ad0-46fc-b5cb-1b315471295c;галстук;Krawatte;Галстук подходит к рубашке.;1;7 – Одежда и цвета;Kleidung
+2d0f2774-2962-4fb2-b002-d8cfece09c60;кузнечик;Heuschrecke;Кузнечик прыгает по траве.;1;7 – Одежда и цвета;Kleidung
+7730db03-6213-467b-bc6d-856dd6e3825c;фартук;Schürze;Повар завязал фартук.;1;7 – Одежда и цвета;Kleidung
+c7dec4d7-169d-413f-96a7-4581b2b77baf;платок;"Tuch; Kopftuch";Она завязала платок на голове.;1;7 – Одежда и цвета;Kleidung
+4edd2801-8352-4206-81a1-00835dcd0b4c;пластрон;Plastron;На форме был праздничный пластрон.;1;7 – Одежда и цвета;Kleidung
+dec50f81-6520-42bc-8677-0d1ed91e238c;обувь;"Schuhe; Schuhwerk";Удобная обувь нужна для прогулки.;1;7 – Одежда и цвета;Schuhe und Accessoires
+756ee222-b522-4442-a521-f0b88bb4cfa1;ботинок;"Schuh; Stiefel";Один ботинок промок.;1;7 – Одежда и цвета;Schuhe und Accessoires
+4b261fc5-27cb-4830-9575-221cbe9f98ee;сапог;Stiefel;В сапогах удобно ходить по снегу.;1;7 – Одежда и цвета;Schuhe und Accessoires
+c40dbd9b-6876-4f82-8078-02ec4fb10888;кроссовки;"Turnschuhe; Sneakers";Для бега я выбрал кроссовки.;1;7 – Одежда и цвета;Schuhe und Accessoires
+5eb57f83-c528-4338-8300-328712586b09;туфля;"Schuh; Pumps";Туфля стоит под стулом.;1;7 – Одежда и цвета;Schuhe und Accessoires
+658ef076-7384-4d72-a41b-7e694fd9e6b5;сандалия;Sandale;Летом я ношу сандалии.;1;7 – Одежда и цвета;Schuhe und Accessoires
+60213f9a-be7e-4679-a5be-ce78a4ee59ec;тапочки;Hausschuhe;Тапочки стоят у кровати.;1;7 – Одежда и цвета;Schuhe und Accessoires
+2efa1089-7d9c-4452-9b8a-e5b4bb41283c;шнурок;Schnürsenkel;У меня развязался шнурок.;1;7 – Одежда и цвета;Schuhe und Accessoires
+102b461a-0d8f-48cc-bed0-cb5110816dd2;молния;Reißverschluss;Молния на куртке сломалась.;1;7 – Одежда и цвета;Schuhe und Accessoires
+c8505b25-cf72-4f09-94c3-f07b91e9cb56;пуговица;Knopf;На пальто не хватает пуговицы.;1;7 – Одежда и цвета;Schuhe und Accessoires
+d30fec16-d43e-43fb-9745-c0b1ad9b0bbc;карман;Tasche (Kleidungsstück);Ключ лежит в кармане.;1;7 – Одежда и цвета;Schuhe und Accessoires
+9f74d70c-0ced-4e58-8c53-4afce6b1fc46;воротник;Kragen;У рубашки синий воротник.;1;7 – Одежда и цвета;Schuhe und Accessoires
+7154e402-59ec-4b4a-8702-59955ca47f2b;рукав;Ärmel;Рукав слишком длинный.;1;7 – Одежда и цвета;Schuhe und Accessoires
+689753bc-28db-48fa-a23b-aaa00a4b50a9;подкладка;Futter;У пальто тёплая подкладка.;1;7 – Одежда и цвета;Schuhe und Accessoires
+4d6525fc-a21b-4e18-91a9-54de89b20255;узор;Muster;На ткани красивый узор.;1;7 – Одежда и цвета;Muster und Materialien
+cce03f0a-be12-48cb-9354-17e21033b050;полоска;Streifen;На футболке одна белая полоска.;1;7 – Одежда и цвета;Muster und Materialien
+20a97c87-3d8e-4d54-99cb-77fd0d25dbd2;клетка;Karomuster;Рубашка в мелкую клетку.;1;7 – Одежда и цвета;Muster und Materialien
+5ebdaf29-1445-474d-94d5-a20222ab9298;горох;"Punkte; Tupfenmuster";Платье в белый горох.;1;7 – Одежда и цвета;Muster und Materialien
+84388281-ac9d-4f57-b173-0d19267b2f25;однотонный;einfarbig;Мне нравится однотонный свитер.;1;7 – Одежда и цвета;Muster und Materialien
+d4b14e1c-f4f2-4d51-9a3f-9199122e4854;цветочный;geblümt;У неё цветочный платок.;1;7 – Одежда и цвета;Muster und Materialien
+04d861dd-7b0e-4001-8bb6-700c437c492e;шерсть;Wolle;Шерсть хорошо сохраняет тепло.;1;7 – Одежда и цвета;Muster und Materialien
+746eeaf7-0781-4f7c-bb85-5e08552cc51e;хлопок;Baumwolle;Эта рубашка сделана из хлопка.;1;7 – Одежда и цвета;Muster und Materialien
+2c58fa8d-5848-46c4-a24e-f579c61b0d9f;шёлк;Seide;Шёлк гладкий и лёгкий.;1;7 – Одежда и цвета;Muster und Materialien
+6cb501f6-00cb-4a2a-abb0-1a9dae8cc12c;замша;Wildleder;Эта замша мягкая.;1;7 – Одежда и цвета;Muster und Materialien
+a3941162-5883-44f3-afd3-3aa7ca8d2e35;джинсовый;"Jeans-; aus Denim";У него джинсовая куртка.;1;7 – Одежда и цвета;Muster und Materialien
+10908376-da2f-4cfd-bb7c-21051c2534ef;размер;Größe;Какой у тебя размер?;1;7 – Одежда и цвета;Anziehen und Beschreiben
+d03e5562-79a8-4468-ae97-242a41db9df0;примерять;anprobieren;Можно примерять эту куртку?;1;7 – Одежда и цвета;Anziehen und Beschreiben
+71733e9c-2b49-469a-bc2b-aaf2c1ac3df1;надевать;"anziehen; aufsetzen";Я буду надевать шапку зимой.;1;7 – Одежда и цвета;Anziehen und Beschreiben
+57ed0a84-3af1-4f58-91ef-3acff88b1113;снимать;"ausziehen; abnehmen";В комнате можно снимать куртку.;1;7 – Одежда и цвета;Anziehen und Beschreiben
+f140a30f-4537-4317-8c6e-97056d5bd5fa;подходить;"passen; stehen";Этот цвет тебе подходит.;1;7 – Одежда и цвета;Anziehen und Beschreiben
+8e54f254-3280-49d2-8170-74893335ce23;свободный;"locker; weit";Мне нужна свободная рубашка.;1;7 – Одежда и цвета;Anziehen und Beschreiben
+45758fa6-44ad-4041-a9f4-21566cdd9ffb;тесный;eng;Эти ботинки мне тесны.;1;7 – Одежда и цвета;Anziehen und Beschreiben
+a4f61a53-dee8-491e-8ba0-6037f19172b6;модный;modisch;Это модный шарф.;1;7 – Одежда и цвета;Anziehen und Beschreiben
+1c598789-d58a-4c6b-83c0-eb6a5d3004b2;нарядный;"festlich; schick";У неё нарядное платье.;1;7 – Одежда и цвета;Anziehen und Beschreiben
+f74f2136-8b9b-42ad-a049-5ce7856fc656;удобный;bequem;Эти кроссовки удобные.;1;7 – Одежда и цвета;Anziehen und Beschreiben
+7b1369c5-484c-43dd-852c-90036b3777e4;понедельник;Montag;В понедельник у нас экскурсия.;1;8 – Мой день;Wochentage und Kalender
+90b86902-683a-4cbe-9417-61f94decfa15;вторник;Dienstag;Во вторник я иду к врачу.;1;8 – Мой день;Wochentage und Kalender
+c45f6ee1-c234-4623-a205-5aea7f79d91c;среда;Mittwoch;В среду мы готовим проект.;1;8 – Мой день;Wochentage und Kalender
+449bd69f-351e-4263-a3d4-d923252fe8b5;четверг;Donnerstag;В четверг будет концерт.;1;8 – Мой день;Wochentage und Kalender
+4fa70ad6-d7b5-4a39-ae0a-31dd745e7a48;пятница;Freitag;В пятницу мы смотрим фильм.;1;8 – Мой день;Wochentage und Kalender
+53738cc1-1bdf-4f8f-a831-48d48f884cd0;суббота;Samstag;В субботу я сплю дольше.;1;8 – Мой день;Wochentage und Kalender
+7e90b66b-22b2-4da8-96e0-22bc67f0c428;воскресенье;Sonntag;В воскресенье семья отдыхает.;1;8 – Мой день;Wochentage und Kalender
+e7724990-06ee-426e-8ac0-450ab1332146;январь;Januar;В январе часто холодно.;1;8 – Мой день;Wochentage und Kalender
+47a65eb9-fb65-40e1-ac3a-9896391dcf8f;февраль;Februar;В феврале мало дней.;1;8 – Мой день;Wochentage und Kalender
+eaff59e8-fa42-4ff3-a436-923f7639cebf;март;März;В марте начинается весна.;1;8 – Мой день;Wochentage und Kalender
+f3b37f78-5b1b-4501-b9ae-ac39ebd542d0;апрель;April;В апреле бывают дожди.;1;8 – Мой день;Wochentage und Kalender
+8e4d1455-bbfd-4cd5-8da5-92d55b81005b;май;Mai;В мае распускаются цветы.;1;8 – Мой день;Wochentage und Kalender
+5aed3e4f-aa8a-4ede-a96c-a08e7d6513b3;июнь;Juni;В июне заканчивается учебный год.;1;8 – Мой день;Wochentage und Kalender
+233ff4d8-796b-4277-b8d9-431850363dad;июль;Juli;В июле мы едем в отпуск.;1;8 – Мой день;Wochentage und Kalender
+d9be4734-e35d-42a6-9b59-017a4a607600;август;August;В августе ночи становятся прохладнее.;1;8 – Мой день;Wochentage und Kalender
+234064ff-d9a9-41db-b8e8-7e46ab0dca9f;сентябрь;September;В сентябре начинается новый учебный год.;1;8 – Мой день;Wochentage und Kalender
+609f2ff5-d850-463f-a3e2-e83291685af5;октябрь;Oktober;В октябре часто ветрено.;1;8 – Мой день;Wochentage und Kalender
+4e79bd84-ed9f-48bb-bd71-5e9b6b879136;ноябрь;November;В ноябре рано темнеет.;1;8 – Мой день;Wochentage und Kalender
+a406fac6-bcde-4cab-8cba-efc10c6453e6;декабрь;Dezember;В декабре мы украшаем дом.;1;8 – Мой день;Wochentage und Kalender
+213a144f-bfbb-45d6-b456-4422be2de801;календарь;Kalender;Календарь висит на стене.;1;8 – Мой день;Wochentage und Kalender
+bdaece31-5315-4f90-b088-a6b038a155dc;дата;Datum;Какая сегодня дата?;1;8 – Мой день;Wochentage und Kalender
+15e6d2c4-2350-4ea3-a41a-36de05be18da;число;"Kalendertag; Zahl";Какое сегодня число?;1;8 – Мой день;Wochentage und Kalender
+6526638f-4191-4a18-90bf-c508f764061a;неделя;Woche;Через неделю начнутся каникулы.;1;8 – Мой день;Wochentage und Kalender
+33fdc92d-1db6-441b-95e1-061d20c6b7af;месяц;Monat;Этот месяц очень длинный.;1;8 – Мой день;Wochentage und Kalender
+5467b41c-4471-416a-8450-589edef76920;год;Jahr;В этом году я много путешествую.;1;8 – Мой день;Wochentage und Kalender
+18422dda-2c2f-402e-8ad3-01f6facac8e3;век;Jahrhundert;Мы живём в двадцать первом веке.;1;8 – Мой день;Wochentage und Kalender
+61df792a-b6cb-44ae-b28e-bf017f19b3dc;сегодня;heute;Сегодня у меня много дел.;1;8 – Мой день;Tagesablauf
+358fd12b-e609-4144-a639-46619814be5c;вчера;gestern;Вчера я рано вернулся.;1;8 – Мой день;Tagesablauf
+aa5f4e97-dc77-44f4-bba3-e95a03ed898c;завтра;morgen;Завтра мы начнём новый проект.;1;8 – Мой день;Tagesablauf
+fd58a406-d732-4602-b65d-83adf62a3ea6;позавчера;vorgestern;Позавчера шёл сильный дождь.;1;8 – Мой день;Tagesablauf
+51cafcb9-cf9c-4fcb-a8a4-24d3b2801919;послезавтра;übermorgen;Послезавтра мы поедем за город.;1;8 – Мой день;Tagesablauf
+094b0d80-f9f7-49e3-80af-0ef0d0e87c80;рано;früh;Я проснулся рано.;1;8 – Мой день;Tagesablauf
+b0e6e0f0-d45d-4801-96ef-49db1ee68d99;поздно;spät;Сегодня я лёг поздно.;1;8 – Мой день;Tagesablauf
+eb49ffb9-0c98-459e-99ea-0f3a69704b86;просыпаться;aufwachen;Я стараюсь просыпаться без будильника.;1;8 – Мой день;Tagesablauf
+4b682abe-13d7-4452-b490-45fc50c57379;вставать;aufstehen;Мне нужно вставать в семь.;1;8 – Мой день;Tagesablauf
+7b83e1df-a37b-411f-a26e-c2a20e0be8ed;умывать;waschen (Gesicht/Hände);Утром я умываю лицо.;1;8 – Мой день;Tagesablauf
+f8b14b50-5437-4c98-9308-0052791bc11f;одеваться;sich anziehen;Я быстро одеваюсь утром.;1;8 – Мой день;Tagesablauf
+692b97fc-8ac0-4740-8a3a-6f5b4b88544a;завершать;beenden;Я завершаю работу до обеда.;1;8 – Мой день;Tagesablauf
+61c5f71d-ef3e-4f10-b95e-b3bb5d55ef64;начинать;beginnen;Мы начинаем день с зарядки.;1;8 – Мой день;Tagesablauf
+37820c1c-3749-4637-99fd-66488c8ca09c;заканчивать;beenden;Занятие заканчивается в три.;1;8 – Мой день;Tagesablauf
+de7ae45b-e92f-4dce-8f90-76fefe795b33;возвращаться;zurückkehren;Я возвращаюсь домой вечером.;1;8 – Мой день;Tagesablauf
+18c1ba95-d557-48b6-a4eb-886c86956123;ложиться;"sich hinlegen; zu Bett gehen";Я ложусь спать в десять.;1;8 – Мой день;Tagesablauf
+bf222500-ce31-4b2c-ad39-7d72936b1d1e;засыпать;einschlafen;Ребёнок быстро засыпает.;1;8 – Мой день;Tagesablauf
+91c29015-ca84-477f-8df2-c88c45fe28b1;будильник;Wecker;Будильник звонит в семь.;1;8 – Мой день;Uhrzeit und Zeitangaben
+9f693cff-8b4b-4f5e-8245-7e6f8af4a7bc;час;"Stunde; Uhr";До встречи остался час.;1;8 – Мой день;Uhrzeit und Zeitangaben
+a6783c5f-4ce7-4e5a-b53e-848ec82e6364;минута;Minute;Подожди одну минуту.;1;8 – Мой день;Uhrzeit und Zeitangaben
+1adf60b6-e857-43c6-a947-3e6373d1bbb2;секунда;Sekunde;Одна секунда — и я готов.;1;8 – Мой день;Uhrzeit und Zeitangaben
+2b0b0bbd-79e2-4c84-b7ae-e50bb2910d2f;полдень;Mittag (12 Uhr);В полдень солнце высоко.;1;8 – Мой день;Uhrzeit und Zeitangaben
+0625bf41-82ea-4e98-97ea-407c7f41a95e;полночь;Mitternacht;В полночь город тихий.;1;8 – Мой день;Uhrzeit und Zeitangaben
+30e0ed27-3570-42b0-825e-58c227f8d783;распорядок;"Tagesordnung; Ablauf";У меня простой распорядок дня.;1;8 – Мой день;Uhrzeit und Zeitangaben
+9d69149c-95ad-492e-9c52-a80307860178;перерыв;"Unterbrechung; Pause";После работы нужен короткий перерыв.;1;8 – Мой день;Uhrzeit und Zeitangaben
+75b61bb1-115e-457a-bfed-0f04cbc8257a;длиться;dauern;Урок будет длиться сорок минут.;1;8 – Мой день;Uhrzeit und Zeitangaben
+37de05b6-01f4-48e1-b0f1-21b19b10b06f;продолжаться;"andauern; weitergehen";Праздник будет продолжаться до вечера.;1;8 – Мой день;Uhrzeit und Zeitangaben
+b45cb609-f6d5-43e4-b06f-091b3a503b9d;ежедневно;täglich;Я ежедневно читаю перед сном.;1;8 – Мой день;Häufigkeit und Reihenfolge
+1a0cd437-e402-410a-9a09-06436e806006;обычно;"gewöhnlich; normalerweise";Обычно я завтракаю дома.;1;8 – Мой день;Häufigkeit und Reihenfolge
+59cbd393-0398-4414-9755-9f2f3a52301d;иногда;manchmal;Иногда мы гуляем после ужина.;1;8 – Мой день;Häufigkeit und Reihenfolge
+950605f2-8832-414f-aca0-57f8d05e025a;редко;selten;Я редко опаздываю.;1;8 – Мой день;Häufigkeit und Reihenfolge
+e7d8fc02-345d-4a74-9201-b796a2c95c77;часто;oft;Она часто звонит бабушке.;1;8 – Мой день;Häufigkeit und Reihenfolge
+146a8c8b-8e2d-46e7-a20f-3c723c1d26cb;никогда;nie;Я никогда не забываю ключи.;1;8 – Мой день;Häufigkeit und Reihenfolge
+a4d77e81-eea6-4c07-b6fa-1a892dd2278b;сразу;sofort;Я отвечу сразу после урока.;1;8 – Мой день;Häufigkeit und Reihenfolge
+184d68ae-9e55-4bd6-b90c-7bef8b7042e2;вначале;"am Anfang; zuerst";Вначале мы планируем день.;1;8 – Мой день;Häufigkeit und Reihenfolge
+dbebc767-103c-44a2-a7ae-221470adad73;наконец;"endlich; schließlich";Наконец наступили выходные.;1;8 – Мой день;Häufigkeit und Reihenfolge
+24926de7-6f5c-409e-8674-5126e212f1b0;одновременно;gleichzeitig;Мы начали одновременно.;1;8 – Мой день;Häufigkeit und Reihenfolge
+74b186e8-f1ba-4fc0-87b6-efd222aac836;заранее;im Voraus;Я приготовил одежду заранее.;1;8 – Мой день;Häufigkeit und Reihenfolge
+154cdbc6-d39a-4c79-917e-5358f808e6a0;вовремя;"pünktlich; rechtzeitig";Мы пришли вовремя.;1;8 – Мой день;Häufigkeit und Reihenfolge
+b62e7951-0b90-49bb-a0a3-f33bc9038ba1;определённый;"bestimmt; festgelegt";У нас определённый план.;1;8 – Мой день;Häufigkeit und Reihenfolge
+98068d6a-0352-4d55-b420-f9b9abcf8374;свободное время;Freizeit;В свободное время я читаю.;1;8 – Мой день;Häufigkeit und Reihenfolge
+b1de6544-5652-415b-bf4e-01c242b4443a;расписание дня;Tagesplan;Моё расписание дня висит на двери.;1;8 – Мой день;Häufigkeit und Reihenfolge
+c7ea3b69-833a-4c4c-a37a-a152ed217d23;улица;Straße;Наша улица тихая.;1;9 – В городе;Orte in der Stadt
+8ca1640f-fde7-459d-b957-668c6f27a831;площадь;Platz;На площади стоит фонтан.;1;9 – В городе;Orte in der Stadt
+826c7dcd-5fe0-4d99-af7f-9b0758a73aed;перекрёсток;Kreuzung;На перекрёстке есть светофор.;1;9 – В городе;Orte in der Stadt
+c4f20cf6-2ea6-4948-aa58-e3c226028f43;тротуар;Gehweg;Иди по тротуару.;1;9 – В городе;Orte in der Stadt
+df718f03-18f2-4689-898d-39cec8063038;переход;"Übergang; Fußgängerüberweg";Переход находится рядом.;1;9 – В городе;Orte in der Stadt
+76bba86c-b7fd-41c8-a674-572622c74dab;светофор;Ampel;На красный свет стой.;1;9 – В городе;Orte in der Stadt
+5854d8f6-1174-41c4-83bd-97533ce77084;здание;Gebäude;Это старое здание.;1;9 – В городе;Orte in der Stadt
+74eb6b60-4386-4be3-a2c1-e7a0689b4a8d;библиотека;Bibliothek;Библиотека закрывается в шесть.;1;9 – В городе;Orte in der Stadt
+8ac1a6a7-3479-4091-b20a-4a076fb4e18b;музей;Museum;В музее новая выставка.;1;9 – В городе;Orte in der Stadt
+bcfb5d73-e889-4929-91dd-fc9e5766c180;театр;Theater;Сегодня мы идём в театр.;1;9 – В городе;Orte in der Stadt
+979ce372-c7ea-484b-9cce-56af634a7359;кинотеатр;Kino;Кинотеатр находится в центре.;1;9 – В городе;Orte in der Stadt
+dc86652c-b8fa-4b95-944f-50c5c1a23e5d;больница;Krankenhaus;Больница недалеко отсюда.;1;9 – В городе;Orte in der Stadt
+4bc18aae-4e26-487f-a124-1a73ff4de77a;поликлиника;"Poliklinik; Arztzentrum";Поликлиника открывается утром.;1;9 – В городе;Orte in der Stadt
+f99aaf30-caeb-463a-97ee-d66151502494;почта;Post;Почта рядом с банком.;1;9 – В городе;Orte in der Stadt
+f85cfc6c-48e1-4cba-9647-e4305705d754;банк;Bank;Банк находится на углу.;1;9 – В городе;Orte in der Stadt
+06076aa9-3ff1-4f8a-8dd9-c3ad7e40afc5;почтальон;Briefträger;Почтальон принёс письмо.;1;9 – В городе;Orte in der Stadt
+0d6d4d57-2869-46fa-89b8-a81aac08869e;полиция;Polizei;Полиция помогает людям.;1;9 – В городе;Orte in der Stadt
+5289283e-80d8-4f5c-a6df-8c2791576a4a;пожарная часть;Feuerwache;Пожарная часть рядом с мостом.;1;9 – В городе;Orte in der Stadt
+cca79c2b-bc67-4b07-9648-b62eb28b6e97;пекарня;Bäckerei;Пекарня открывается рано.;1;9 – В городе;Orte in der Stadt
+d2a92aed-3b1f-41b6-91a0-30d582913d7f;парикмахерская;Friseursalon;Парикмахерская за аптекой.;1;9 – В городе;Orte in der Stadt
+db66c62e-575c-4437-a9e5-552e29649515;гостиница;Hotel;Гостиница стоит у вокзала.;1;9 – В городе;Orte in der Stadt
+85b12642-ae38-4d90-bf15-c02cf2c18602;ресторан;Restaurant;Ресторан уже открыт.;1;9 – В городе;Orte in der Stadt
+8b5785f3-a5ed-430d-b6cb-85eb585758de;кафе;Café;Мы встретимся в кафе.;1;9 – В городе;Orte in der Stadt
+d3417c40-013b-412b-b3e8-2b72bd19e0b3;столовая;"Kantine; Speisesaal";В столовой есть горячий обед.;1;9 – В городе;Orte in der Stadt
+d62b551d-a9f6-4c2b-b2fe-d5f44f465dc7;университет;Universität;Университет находится в центре.;1;9 – В городе;Orte in der Stadt
+b1fc0ff7-0e4f-4a91-8211-086bdb79f480;почтовый ящик;Briefkasten;Письмо лежит в почтовом ящике.;1;9 – В городе;Orte in der Stadt
+0b5f95da-5f15-4546-94c6-d017cf8f36f7;вокзал;Bahnhof;Вокзал очень большой.;1;9 – В городе;Verkehrsmittel
+1b76c81a-7e7b-476c-986e-81f8e76fdd52;станция;Station;Следующая станция — Центральная.;1;9 – В городе;Verkehrsmittel
+3e0abbc7-63d7-4273-89c7-b0c08fd1d908;остановка;Haltestelle;Остановка напротив парка.;1;9 – В городе;Verkehrsmittel
+d0a116db-bd20-4e66-ad98-b41d432136f2;автобус;Bus;Автобус скоро приедет.;1;9 – В городе;Verkehrsmittel
+253cef57-27b0-480e-af5a-a37f9e43e4e0;трамвай;Straßenbahn;Трамвай едет через центр.;1;9 – В городе;Verkehrsmittel
+28f3d761-6418-4c66-b5d5-3a7a916f83d8;троллейбус;Oberleitungsbus;Троллейбус остановился у площади.;1;9 – В городе;Verkehrsmittel
+5b506b5e-bf04-4ffc-8efb-6fbaaa82180b;метро;U-Bahn;Метро быстрое и удобное.;1;9 – В городе;Verkehrsmittel
+2e573fd2-8b12-40a0-854b-5ec314dc40c5;поезд;Zug;Поезд отправляется в восемь.;1;9 – В городе;Verkehrsmittel
+7c6a49dd-6b27-43a5-a915-fe0dd49a2654;электричка;"S-Bahn; Nahverkehrszug";Электричка идёт до соседнего города.;1;9 – В городе;Verkehrsmittel
+bd94eb58-f3e0-46dc-83b8-71766ff4515e;такси;Taxi;Мы вызвали такси.;1;9 – В городе;Verkehrsmittel
+96cb15ad-2f1e-4f56-acc4-c52a00a22920;машина;Auto;Машина стоит у дома.;1;9 – В городе;Verkehrsmittel
+541a83f1-3124-499e-affd-be716eca0a6a;грузовик;Lastwagen;Грузовик везёт мебель.;1;9 – В городе;Verkehrsmittel
+1d48392a-e4f4-44ea-9d87-3e7cb9c466f6;мотоцикл;Motorrad;Мотоцикл громко едет.;1;9 – В городе;Verkehrsmittel
+db82b519-5b2c-48bf-bf90-43834ca24bac;самолёт;Flugzeug;Самолёт летит над облаками.;1;9 – В городе;Verkehrsmittel
+2745e6d5-595d-4fa8-a598-c10a63fd2c6d;корабль;Schiff;Корабль пришёл в порт.;1;9 – В городе;Verkehrsmittel
+ac64e4f9-dd47-443c-93aa-21f4a38d5f04;водитель;Fahrer;Водитель открыл дверь автобуса.;1;9 – В городе;Verkehrsmittel
+9ebf8d0d-8dee-445e-b211-0580a17d21e2;пассажир;Fahrgast;Пассажир уступил место.;1;9 – В городе;Verkehrsmittel
+53720dd8-bec0-40e0-8130-bbea3dca14ea;билет;"Fahrkarte; Ticket";Мне нужен билет до центра.;1;9 – В городе;Verkehrsmittel
+3033dea4-7530-4541-a10f-ad6d95f9168e;проездной;"Monatskarte; Fahrschein";Я забыл проездной дома.;1;9 – В городе;Verkehrsmittel
+43e6ffb0-823a-480a-8ae3-4c359aacfd3e;маршрут;"Route; Strecke";Этот маршрут короче.;1;9 – В городе;Verkehrsmittel
+559e69d4-c499-494f-9a70-8d48c377fde0;двигатель;Motor;Двигатель работает тихо.;1;9 – В городе;Verkehrsmittel
+b5140858-7574-4a96-97f4-36f565da2f8e;тормоз;Bremse;Велосипедный тормоз не работает.;1;9 – В городе;Verkehrsmittel
+f5699ccb-0ac5-401f-ac36-2f83a9bb9c0c;ехать;fahren (mit Verkehrsmittel);Мы будем ехать на автобусе.;1;9 – В городе;Verkehrsmittel
+30cb9ca5-f356-4cb2-a18f-045cea1b51b4;пересаживаться;umsteigen;На этой станции нужно пересаживаться.;1;9 – В городе;Verkehrsmittel
+c4e81443-b574-44a8-b1e0-5401d0ec1c0a;переходить;"überqueren; hinübergehen";Переходи улицу только на зелёный свет.;1;9 – В городе;Wegbeschreibung
+5ba04152-d0b3-4a9d-a409-ea1cba244191;свернуть;abbiegen;На следующей улице нужно свернуть направо.;1;9 – В городе;Wegbeschreibung
+0a01b875-c4b1-45e9-b860-815c1bf3b084;прямо;geradeaus;Иди прямо до площади.;1;9 – В городе;Wegbeschreibung
+6d4bad10-3ce6-475b-8258-abbe71a67d8b;налево;nach links;Поверни налево у банка.;1;9 – В городе;Wegbeschreibung
+e38ffc5c-f836-4245-ae1f-444bb4c0fcc8;направо;nach rechts;Поверни направо после моста.;1;9 – В городе;Wegbeschreibung
+81b07cb5-6d57-4de1-b172-b0fa0e9dcbae;рядом;in der Nähe;Музей находится рядом.;1;9 – В городе;Wegbeschreibung
+0bea9d08-4da5-4ef9-a0c6-93d545ac3043;напротив;gegenüber;Аптека напротив почты.;1;9 – В городе;Wegbeschreibung
+55ab5c9d-7306-428c-b8eb-0ed2bb29a06e;между;zwischen;Кафе между банком и театром.;1;9 – В городе;Wegbeschreibung
+ccb89dd4-2504-40b6-ac0f-a0c6def1b923;впереди;"vorne; voraus";Впереди виден вокзал.;1;9 – В городе;Wegbeschreibung
+c3e7b802-5774-472e-8488-f77848dac40b;позади;"hinter; dahinter";Позади нас большой парк.;1;9 – В городе;Wegbeschreibung
+f40c50cf-a2b4-4487-9c8a-fd5d29a1d2c4;далеко;"weit; weit entfernt";Мой дом далеко отсюда.;1;9 – В городе;Richtungen und Entfernungen
+e356b09f-9e63-45cc-8fb1-a7af839ccba2;близко;nah;Школа близко к дому.;1;9 – В городе;Richtungen und Entfernungen
+4066a214-857a-4b6d-9f0b-4966c3a86ab9;центр;Zentrum;Мы живём недалеко от центра.;1;9 – В городе;Richtungen und Entfernungen
+63f1d740-1586-457c-99f7-d74388d9f467;окраина;Stadtrand;Они живут на окраине.;1;9 – В городе;Richtungen und Entfernungen
+31d60eb1-81bc-47b1-bd9f-c6f8e888449d;север;Norden;Ветер дует с севера.;1;9 – В городе;Richtungen und Entfernungen
+917655e5-f701-4415-be70-7bc388dd9388;юг;Süden;На юге теплее.;1;9 – В городе;Richtungen und Entfernungen
+a23147e0-cdcb-44cf-8144-e59969fdc769;восток;Osten;Солнце встаёт на востоке.;1;9 – В городе;Richtungen und Entfernungen
+6799f1dc-be37-4f21-b9ed-f422b8b35399;запад;Westen;На западе небо темнеет.;1;9 – В городе;Richtungen und Entfernungen
+4d829de3-bc08-4766-b1ba-c95f658e071c;адрес;Adresse;Запиши мой адрес.;1;9 – В городе;Richtungen und Entfernungen
+03c11847-b8d3-4817-b5fa-f7943c9a3d10;расстояние;Entfernung;Расстояние до станции небольшое.;1;9 – В городе;Richtungen und Entfernungen
+1ec86df6-7f34-4a82-a5b1-5e52728a1800;находиться;sich befinden;Музей находится в старом здании.;1;9 – В городе;Richtungen und Entfernungen
+13adb0da-039c-48c2-b423-440d94a86c96;искать дорогу;den Weg suchen;Мы ищем дорогу к театру.;1;9 – В городе;Richtungen und Entfernungen
+aefa8034-9789-46e5-a8ad-6adf69174644;отпуск;Urlaub;Летом у папы отпуск.;1;10 – Путешествия и каникулы;Reisevorbereitung
+b833a0d4-c061-4a02-a08f-c52bc800f751;каникулы;Ferien;Зимние каникулы скоро начнутся.;1;10 – Путешествия и каникулы;Reisevorbereitung
+1e71658e-407e-4f99-bad1-56c04432c08a;турист;Tourist;Турист фотографирует старый замок.;1;10 – Путешествия и каникулы;Reisevorbereitung
+ac80c033-def7-41eb-a709-674d5ff200cc;туризм;Tourismus;Туризм важен для этого города.;1;10 – Путешествия и каникулы;Reisevorbereitung
+25fe3584-f8c5-405c-8cf4-5022bb6c946e;путешественник;Reisender;Путешественник рассказывает о горах.;1;10 – Путешествия и каникулы;Reisevorbereitung
+d0150ef8-921e-4da2-9eb2-02325f92d4a8;путёвка;"Reisegutschein; Urlaubsschein";У нас путёвка на десять дней.;1;10 – Путешествия и каникулы;Reisevorbereitung
+29b93c5f-6fc5-4f43-adfc-0b2091ed2ff5;бронирование;"Reservierung; Buchung";Бронирование уже подтверждено.;1;10 – Путешествия и каникулы;Reisevorbereitung
+3b50f478-d819-47ff-a45d-13173f23f8ba;паспорт;Reisepass;Паспорт лежит в папке.;1;10 – Путешествия и каникулы;Reisevorbereitung
+860d986f-bead-4290-8a6b-79b12dcf6359;виза;Visum;Для поездки нужна виза.;1;10 – Путешествия и каникулы;Reisevorbereitung
+3b3e3039-8ed5-4149-bf6b-f6273633d19c;документ;Dokument;Проверь каждый документ.;1;10 – Путешествия и каникулы;Reisevorbereitung
+2557c6d3-e237-4797-b213-155653b53512;страховка;Versicherung;Перед поездкой мы оформили страховку.;1;10 – Путешествия и каникулы;Reisevorbereitung
+9765bc18-d107-4408-94b6-3fbe82012e35;чемодан;Koffer;Чемодан почти готов.;1;10 – Путешествия и каникулы;Reisevorbereitung
+4ef8d178-1ac0-44a5-90b8-7a67eda51110;багаж;Gepäck;Багаж нужно взвесить.;1;10 – Путешествия и каникулы;Reisevorbereitung
+4dffcfaa-deb9-4a92-9336-9ab3bffe44df;бирка;"Anhänger; Etikett";На чемодане есть бирка.;1;10 – Путешествия и каникулы;Reisevorbereitung
+f24e4725-496a-4b5f-87ce-bebd8a2d373c;упаковывать;einpacken;Я начинаю упаковывать вещи.;1;10 – Путешествия и каникулы;Reisevorbereitung
+e8ae7470-fe17-4c4c-a02c-cf059d76c66c;распаковывать;auspacken;В отеле мы будем распаковывать чемодан.;1;10 – Путешествия и каникулы;Reisevorbereitung
+01512445-5a7d-4ef2-8962-62fb0f04816e;собираться;"sich fertig machen; packen";Мы собираемся в поездку.;1;10 – Путешествия и каникулы;Reisevorbereitung
+adf2bce1-b4b2-448c-8faa-7f0e349ac485;план;Plan;У нас хороший план на выходные.;1;10 – Путешествия и каникулы;Reisevorbereitung
+80f9ee48-be8d-4499-bf22-cf04c57bfd08;планировать;planen;Мы планируем летнее путешествие.;1;10 – Путешествия и каникулы;Reisevorbereitung
+c8827a8c-260f-4030-a5f9-9c0ad8b4d432;путешествовать;reisen;Я хочу путешествовать по миру.;1;10 – Путешествия и каникулы;Reisevorbereitung
+fedaab54-ef86-4790-80ad-251eaddf8dfc;экскурсия;"Ausflug; Führung";Завтра у нас экскурсия по городу.;1;10 – Путешествия и каникулы;Reisevorbereitung
+f476063e-85c5-48d3-a2a4-7e27fc1e6ae4;гид;"Reiseführer; Guide";Гид рассказывает интересные истории.;1;10 – Путешествия и каникулы;Reisevorbereitung
+45562ef6-5a83-4115-9f46-f7128c89ff5a;туристический;touristisch;Это туристический маршрут.;1;10 – Путешествия и каникулы;Reisevorbereitung
+7ed2b886-36bd-477b-be2b-311d91b9acee;багажное отделение;Gepäckraum;Чемодан положили в багажное отделение.;1;10 – Путешествия и каникулы;Unterwegs
+070489a4-61f1-4bbf-8815-0e14b8e46c34;аэропорт;Flughafen;Мы приехали в аэропорт заранее.;1;10 – Путешествия и каникулы;Unterwegs
+3c049b06-bb66-4d72-8ae8-355bcc42e9e0;рейс;"Flug; Flugverbindung";Наш рейс задерживается.;1;10 – Путешествия и каникулы;Unterwegs
+b1450c52-7193-4c99-83f7-eef537ad3b99;вылет;Abflug;Вылет назначен на утро.;1;10 – Путешествия и каникулы;Unterwegs
+9f9f516d-7568-475a-bd95-da07ab8b7ef7;прилёт;Ankunft (Flugzeug);Прилёт будет после обеда.;1;10 – Путешествия и каникулы;Unterwegs
+dbb7fbe8-d06d-4a1a-9a4c-b44e34eccb81;посадка;"Boarding; Landung";Посадка начинается через десять минут.;1;10 – Путешествия и каникулы;Unterwegs
+38d64ce4-2a70-4196-b8bc-40ee1f83995d;взлёт;Start (Flugzeug);Взлёт был плавным.;1;10 – Путешествия и каникулы;Unterwegs
+ea0a2199-d9ef-44af-9a30-675572701a13;полёт;Flug;Полёт длится три часа.;1;10 – Путешествия и каникулы;Unterwegs
+532bdd49-334f-4a1c-ac8f-8ec679a32fcf;пилот;Pilot;Пилот приветствует пассажиров.;1;10 – Путешествия и каникулы;Unterwegs
+f24e9183-cb00-49ca-bb73-c270a8a0bbc1;стюардесса;Flugbegleiterin;Стюардесса показала выход.;1;10 – Путешествия и каникулы;Unterwegs
+f373283a-72fb-4a57-876a-b279d5b1d7c1;таможня;Zoll;На таможне проверили багаж.;1;10 – Путешествия и каникулы;Unterwegs
+415351cc-31df-445f-afc7-a2d824de4b1d;граница;Grenze;Мы пересекли границу утром.;1;10 – Путешествия и каникулы;Unterwegs
+f0d43fcd-c6fc-4527-86ba-9571f076c101;пограничник;Grenzbeamter;Пограничник проверил паспорт.;1;10 – Путешествия и каникулы;Unterwegs
+c123aae5-5ca0-4fd0-97c8-02c6dd6af4b6;платформа;Bahnsteig;Поезд ждёт на третьей платформе.;1;10 – Путешествия и каникулы;Unterwegs
+aab1c4fb-0569-4a5b-9247-6c0dcb81823a;купе;Zugabteil;В нашем купе четыре места.;1;10 – Путешествия и каникулы;Unterwegs
+740db0af-9480-4eb2-9728-41ed8f11086c;полка для багажа;Gepäckablage;Сумку положи на полку для багажа.;1;10 – Путешествия и каникулы;Unterwegs
+bd6bdde9-fc93-48a9-bcc7-62f4a4068bb9;расписание движения;Fahrplan;Посмотри расписание движения поездов.;1;10 – Путешествия и каникулы;Unterwegs
+ac6b4d12-27ac-4037-b03e-f5ab268f9820;задержка;Verspätung;Из-за снега возникла задержка.;1;10 – Путешествия и каникулы;Unterwegs
+f4f99a00-73ff-4052-b80c-06b8aaddd2f5;отправляться;"abfahren; sich auf den Weg machen";Автобус отправляется через пять минут.;1;10 – Путешествия и каникулы;Unterwegs
+d85e4d2b-a539-4afe-852a-f85ae66b8c37;прибывать;ankommen;Мы будем прибывать вечером.;1;10 – Путешествия и каникулы;Unterwegs
+64f864af-de9a-483c-b181-cd4c57df87c8;переводчик;"Dolmetscher; Übersetzer";Переводчик помогает гостям.;1;10 – Путешествия и каникулы;Unterwegs
+8626e77b-7d6c-4dce-91ac-76235f4e3fa2;разговорник;Sprachführer;Разговорник лежит в кармане куртки.;1;10 – Путешествия и каникулы;Unterwegs
+d6b4b7a1-5b3f-4a3b-a1e0-517c5380813e;иностранец;"Ausländer; ausländischer Gast";Иностранец спросил дорогу.;1;10 – Путешествия и каникулы;Unterwegs
+fc2706a9-a22e-40bd-b8ac-e5cd46e3efca;местный;"einheimisch; örtlich";Местный житель посоветовал кафе.;1;10 – Путешествия и каникулы;Unterwegs
+851ca42f-4c93-447f-bb6d-0a95499126fd;приезжать;"ankommen; zu Besuch kommen";Мы приезжаем в город утром.;1;10 – Путешествия и каникулы;Unterwegs
+12204415-253f-441e-ad96-deb73f92dabe;уезжать;"abreisen; wegfahren";Завтра мы уезжаем домой.;1;10 – Путешествия и каникулы;Unterwegs
+b4e4a29f-0ddc-4a6c-a9eb-ea8f46e10166;останавливаться;"übernachten; anhalten";Мы остановимся в маленьком отеле.;1;10 – Путешествия и каникулы;Unterkunft
+a0121854-d9fd-44f5-a5b4-91c85dbcd301;номер;"Hotelzimmer; Nummer";Наш номер на втором этаже.;1;10 – Путешествия и каникулы;Unterkunft
+5a15e634-96e1-45c1-9358-7c1bf96e8b2a;ресепшен;Rezeption;Спроси ключ на ресепшене.;1;10 – Путешествия и каникулы;Unterkunft
+ecd68037-12a3-4d25-bd87-e924ce3ce0b1;администратор;"Rezeptionist; Verwalter";Администратор вызвал такси.;1;10 – Путешествия и каникулы;Unterkunft
+2a68ee52-9648-42ba-8122-ff5ef854fad9;гость;Gast;Гость оставил чемодан в номере.;1;10 – Путешествия и каникулы;Unterkunft
+3d640c5a-eb35-4c4a-9096-36957a64dc15;хозяин;"Gastgeber; Besitzer";Хозяин встретил нас у двери.;1;10 – Путешествия и каникулы;Unterkunft
+de42688d-e5a0-4fa4-a4d5-3ad9ec34e350;арендовать;mieten;Мы хотим арендовать квартиру.;1;10 – Путешествия и каникулы;Unterkunft
+ed42f10f-6fb8-4d42-80ec-b581bd92c486;аренда;Miete;Аренда включена в цену.;1;10 – Путешествия и каникулы;Unterkunft
+308d8f35-8f1b-4ac9-be85-f666c63bcaf5;ключ-карта;Schlüsselkarte;Ключ-карта открывает номер.;1;10 – Путешествия и каникулы;Unterkunft
+34a80f59-9179-459c-9576-c89720dfb5ae;завтрак включён;Frühstück inklusive;В нашей гостинице завтрак включён.;1;10 – Путешествия и каникулы;Unterkunft
+a047148f-f986-4794-b4f7-ac885b36b28c;удобства;"Einrichtungen; Komfort";В номере есть все удобства.;1;10 – Путешествия и каникулы;Unterkunft
+573bfdd3-3606-4147-ba2b-36aafe50f92f;балкон;Balkon;С балкона видно море.;1;10 – Путешествия и каникулы;Unterkunft
+2de0dad7-a7cb-4b90-a14c-9d01bbdbcac0;вид;Aussicht;Из окна красивый вид.;1;10 – Путешествия и каникулы;Unterkunft
+3a8bd919-65ee-4f11-ab87-27f3cf6c2404;постельное бельё;Bettwäsche;Постельное бельё чистое.;1;10 – Путешествия и каникулы;Unterkunft
+a76be81f-8735-4f93-aa24-538e2c27e34b;прачечная;Wäscherei;Прачечная находится в подвале.;1;10 – Путешествия и каникулы;Unterkunft
+67a07c3e-fcfa-4620-b8ea-dad9636da83c;сувенир;Souvenir;Я купил сувенир для друга.;1;10 – Путешествия и каникулы;Ferien und Erlebnisse
+9bacbfec-4878-40ed-a7de-867e8529e3fd;открытка;Postkarte;Я отправлю открытку домой.;1;10 – Путешествия и каникулы;Ferien und Erlebnisse
+f33f05f2-f6c3-4afb-b206-5893e38fbae3;памятник;Denkmal;Мы увидели памятник на площади.;1;10 – Путешествия и каникулы;Ferien und Erlebnisse
+56a510d5-289a-4b78-8f85-b4b40e2f6bfa;достопримечательность;Sehenswürdigkeit;Эта достопримечательность очень известна.;1;10 – Путешествия и каникулы;Ferien und Erlebnisse
+55e84a6d-7acf-4137-ab20-a1864567eb30;впечатление;"Eindruck; Erlebnis";Поездка оставила хорошее впечатление.;1;10 – Путешествия и каникулы;Ferien und Erlebnisse
+4ba770a2-4ccb-4395-8240-c28011757064;воспоминание;Erinnerung;Это моё любимое воспоминание о лете.;1;10 – Путешествия и каникулы;Ferien und Erlebnisse
+72dd7f76-d60b-4b9d-82b8-dd4179befdd4;возвращение;Rückkehr;Наше возвращение запланировано на воскресенье.;1;10 – Путешествия и каникулы;Ferien und Erlebnisse
+f9af5923-26e6-40ba-b6d1-be3ebc4f6589;незабываемый;unvergesslich;Это было незабываемое путешествие.;1;10 – Путешествия и каникулы;Ferien und Erlebnisse
+d01b97cb-38d4-4e8b-9818-06e008131061;удивительный;erstaunlich;Мы увидели удивительный дворец.;1;10 – Путешествия и каникулы;Ferien und Erlebnisse
+9dfc0f7b-f924-41f9-8bf6-b6b5335cdbdd;знакомиться;kennenlernen;В поездке легко знакомиться с людьми.;1;10 – Путешествия и каникулы;Ferien und Erlebnisse
+95aaaf36-3142-403a-a647-3ab3f65c84c9;будни;Werktage;В будни я встаю рано.;1;8 – Мой день;Wochentage und Kalender
+fae67288-3f9e-469d-9d21-8c5f7f5fef21;выходной;"freier Tag; Ruhetag";В воскресенье у меня выходной.;1;8 – Мой день;Wochentage und Kalender

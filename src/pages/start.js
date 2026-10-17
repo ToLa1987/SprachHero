@@ -25,7 +25,8 @@ function updateHeaderLanguage() {
     es: "🇪🇸 ES",
     it: "🇮🇹 IT",
     la: "🏛️ LA",
-    pt: "🇵🇹 PT"   // <‑‑ NEU
+    pt: "🇵🇹 PT",
+    ru: "🇷🇺 RU"
   };
 
   const g = getGlobal();
@@ -49,15 +50,16 @@ function showLanguagePopup(onSelect) {
   box.innerHTML = `<h3>Welche Sprache möchtest du lernen?</h3>`;
   popup.appendChild(box);
 
-  const langs = [
+const langs = [
     { code: "en", label: "🇬🇧 EN – Englisch" },
     { code: "fr", label: "🇫🇷 FR – Französisch" },
     { code: "es", label: "🇪🇸 ES – Spanisch" },
     { code: "it", label: "🇮🇹 IT – Italienisch" },
     { code: "la", label: "🏛️ LA – Latein" },
-    { code: "pt", label: "🇵🇹 PT – Portugiesisch" }
+    { code: "pt", label: "🇵🇹 PT – Portugiesisch" },
+    { code: "ru", label: "🇷🇺 RU – Russisch" }
   ];
-
+  
   const btnRow = document.createElement("div");
   btnRow.className = "btn-row";
   box.appendChild(btnRow);

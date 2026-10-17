@@ -50,6 +50,9 @@ export function getLangCodeForLanguage(lang) {
         case "it":
             return "it-IT";
 
+        case "ru":
+            return "ru-RU";
+
         case "de":
             return "de-DE";
 
@@ -131,6 +134,12 @@ function getBestVoice(langCode) {
         "es-ES": [
             "Microsoft Helena Online",
             "Microsoft Helena"
+        ],
+
+        "ru-RU": [
+            "Microsoft Svetlana Online",
+            "Microsoft Svetlana",
+            "Google русский"
         ],
 
         "it-IT": [

@@ -60,6 +60,7 @@ const FILES_TO_CACHE = [
   "data/sprachhero_it.csv",
   "data/sprachhero_la.csv",
   "data/sprachhero_pt.csv",
+  "data/sprachhero_ru.csv",
   ...Array.from({ length: 10 }, (_, i) => `src/story/magic/magic${i + 1}.png`),
   ...Array.from({ length: 10 }, (_, i) => `src/story/comic/comic${i + 1}.png`),
   ...Array.from({ length: 10 }, (_, i) => `src/story/school/school${i + 1}.png`),
