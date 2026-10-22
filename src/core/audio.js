@@ -2,94 +2,7 @@
 import { getGlobal } from "./storage.js";
 
 let voices = [];
-
-// =========================================================
-// AUDIO-DIAGNOSE
-// =========================================================
-
-function showAudioDiagnostics(langCode, selectedVoice, rate, pitch) {
-    if (!document.body) return;
-
-    let panel = document.getElementById("sprachhero-audio-debug");
-
-    if (!panel) {
-        panel = document.createElement("div");
-        panel.id = "sprachhero-audio-debug";
-
-        Object.assign(panel.style, {
-            position: "fixed",
-            bottom: "12px",
-            left: "12px",
-            right: "12px",
-            maxHeight: "45vh",
-            overflowY: "auto",
-            zIndex: "2147483647",
-            background: "#ffffff",
-            color: "#111111",
-            border: "3px solid #005086",
-            borderRadius: "10px",
-            padding: "12px",
-            fontSize: "14px",
-            fontFamily: "Arial, sans-serif",
-            boxShadow: "0 2px 12px #0004",
-            overflowWrap: "anywhere",
-            boxSizing: "border-box"
-        });
-
-        document.body.appendChild(panel);
-    }
-
-    const availableVoices =
-        window.speechSynthesis
-            .getVoices()
-            .filter(v =>
-                v.lang.toLowerCase().startsWith(
-                    langCode.split("-")[0].toLowerCase()
-                )
-            )
-            .map(v => `${v.name} (${v.lang})`);
-
-    panel.replaceChildren();
-
-    const title = document.createElement("strong");
-    title.textContent = "SprachHero – Audio-Diagnose";
-    panel.appendChild(title);
-
-    const details = document.createElement("pre");
-    details.style.whiteSpace = "pre-wrap";
-    details.style.fontSize = "13px";
-    details.style.margin = "8px 0";
-
-    details.textContent =
-        `Sprache: ${langCode}\n` +
-        `Ausgewählte Stimme: ${selectedVoice?.name || "Systemstandard"}\n` +
-        `Sprachcode der Stimme: ${selectedVoice?.lang || "unbekannt"}\n` +
-        `Rate: ${rate}\n` +
-        `Pitch: ${pitch}\n\n` +
-        `Verfügbare Stimmen:\n` +
-        (availableVoices.join("\n") || "Keine Stimmen gefunden");
-
-    panel.appendChild(details);
-
-    const closeButton = document.createElement("button");
-    closeButton.textContent = "Anzeige schließen";
-    closeButton.style.padding = "8px 12px";
-    closeButton.style.fontSize = "14px";
-    closeButton.onclick = () => panel.remove();
-
-    panel.appendChild(closeButton);
-}
-
-// =========================================================
-// DIAGNOSE MANUELL TESTEN
-// =========================================================
-
-export function testAudioDiagnostics() {
-    const langCode = "en-GB";
-    const voice = getBestVoice(langCode);
-
-    showAudioDiagnostics(langCode, voice, 1.0, 1.0);
-}
+let voicesInitialized = false;
 
 // =========================================================
 // LATEIN – VOKALLÄNGEN OPTIMIEREN
@@ -130,102 +43,125 @@ export function getLangCodeForGlobalLanguage() {
 }
 
 // =========================================================
-// STIMMEN INITIALISIEREN
+// STIMMEN LADEN
 // =========================================================
 
-export function initVoices() {
-    const loadVoices = () => {
-        voices = window.speechSynthesis.getVoices();
+function loadVoices() {
+    if (!("speechSynthesis" in window)) {
+        voices = [];
+        return voices;
+    }
 
-        console.table(
-            voices.map(v => ({
-                name: v.name,
-                lang: v.lang,
-                default: v.default
-            }))
-        );
-    };
+    voices = window.speechSynthesis.getVoices();
+    return voices;
+}
+
+export function initVoices() {
+    if (!("speechSynthesis" in window)) return;
 
     loadVoices();
 
-    window.speechSynthesis.addEventListener(
-        "voiceschanged",
-        loadVoices
-    );
+    if (!voicesInitialized) {
+        window.speechSynthesis.addEventListener(
+            "voiceschanged",
+            loadVoices
+        );
+
+        voicesInitialized = true;
+    }
 }
 
 // =========================================================
-// BESTE STIMME FINDEN
+// BEVORZUGTE STIMMEN
+// =========================================================
+
+const preferredVoices = {
+    "de-DE": [
+        "Microsoft Katja Online",
+        "Microsoft Katja"
+    ],
+    "en-GB": [
+        "Katrin",
+        "Microsoft Libby Online",
+        "Microsoft Libby",
+        "Google UK English Female"
+    ],
+    "fr-FR": [
+        "Microsoft Denise Online",
+        "Microsoft Denise"
+    ],
+    "pt-PT": [
+        "Microsoft Raquel Online",
+        "Microsoft Raquel"
+    ],
+    "es-ES": [
+        "Microsoft Helena Online",
+        "Microsoft Helena"
+    ],
+    "ru-RU": [
+        "Microsoft Svetlana Online",
+        "Microsoft Svetlana"
+    ],
+    "it-IT": [
+        "Microsoft Elsa Online",
+        "Microsoft Elsa"
+    ]
+};
+
+// =========================================================
+// PASSENDE STIMME FINDEN
 // =========================================================
 
 function getBestVoice(langCode) {
     if (!voices.length) {
-        voices = window.speechSynthesis.getVoices();
+        loadVoices();
     }
 
-    const preferredVoices = {
-        "de-DE": [
-            "Microsoft Katja Online",
-            "Microsoft Katja"
-        ],
-        "en-GB": [
-            "Katrin",
-            "Microsoft Libby Online",
-            "Microsoft Libby",
-            "Google UK English Female"
-        ],
-        "fr-FR": [
-            "Microsoft Denise Online",
-            "Microsoft Denise"
-        ],
-        "pt-PT": [
-            "Microsoft Raquel Online",
-            "Microsoft Raquel",
-            "Google Portuguese Female"
-        ],
-        "es-ES": [
-            "Microsoft Helena Online",
-            "Microsoft Helena"
-        ],
-        "ru-RU": [
-            "Microsoft Svetlana Online",
-            "Microsoft Svetlana",
-            "Google русский"
-        ],
-        "it-IT": [
-            "Microsoft Elsa Online",
-            "Microsoft Elsa"
-        ]
-    };
+    const normalizedCode = langCode.toLowerCase();
+    const baseLanguage = normalizedCode.split("-")[0];
 
-    const preferred = preferredVoices[langCode];
+    const exactMatches = voices.filter(
+        voice => voice.lang.toLowerCase() === normalizedCode
+    );
 
-    if (preferred) {
-        for (const name of preferred) {
-            const found = voices.find(v =>
-                v.name.toLowerCase().includes(name.toLowerCase()) &&
-                v.lang.toLowerCase().startsWith(
-                    langCode.split("-")[0].toLowerCase()
-                )
-            );
+    const languageMatches = voices.filter(
+        voice => voice.lang.toLowerCase().startsWith(baseLanguage + "-")
+    );
 
-            if (found) return found;
-        }
+    // 1. Bevorzugte Stimme suchen, aber nur in der richtigen Sprache.
+    const preferred = preferredVoices[langCode] || [];
+
+    for (const preferredName of preferred) {
+        const match = exactMatches.find(
+            voice => voice.name.toLowerCase().includes(
+                preferredName.toLowerCase()
+            )
+        );
+
+        if (match) return match;
     }
 
-    let match = voices.find(v =>
-        v.lang.toLowerCase() === langCode.toLowerCase()
-    );
+    // 2. Für Englisch zuerst exakt britisches Englisch bevorzugen.
+    if (exactMatches.length > 0) {
+        const defaultVoice = exactMatches.find(voice => voice.default);
+        return defaultVoice || exactMatches[0];
+    }
 
-    if (match) return match;
+    // 3. Falls kein en-GB verfügbar ist, andere englische Stimme nutzen.
+    if (baseLanguage === "en" && languageMatches.length > 0) {
+        const defaultVoice = languageMatches.find(voice => voice.default);
+        return defaultVoice || languageMatches[0];
+    }
 
-    match = voices.find(v =>
-        v.lang.toLowerCase().startsWith(
-            langCode.split("-")[0].toLowerCase()
-        )
-    );
+    // 4. Für andere Sprachen auf eine Stimme derselben Sprache ausweichen.
+    if (languageMatches.length > 0) {
+        const defaultVoice = languageMatches.find(voice => voice.default);
+        return defaultVoice || languageMatches[0];
+    }
 
-    return match || null;
+    // 5. Keine passende Stimme vorhanden: null zurückgeben.
+    // Der Browser verwendet dann seine Systemstandardstimme.
+    return null;
 }
 
 // =========================================================
@@ -236,7 +172,8 @@ export function speakAsync(text, lang, options = {}) {
     return new Promise(resolve => {
         if (
             !("speechSynthesis" in window) ||
-            !text
+            typeof text !== "string" ||
+            !text.trim()
         ) {
             resolve();
             return;
@@ -253,6 +190,7 @@ export function speakAsync(text, lang, options = {}) {
             utter.text = text;
         }
 
+        // Nullish Coalescing erhält auch absichtlich gesetzte 0-Werte.
         utter.rate = options.rate ?? 1.0;
         utter.pitch = options.pitch ?? 1.0;
         utter.volume = options.volume ?? 1.0;
@@ -264,25 +202,6 @@ export function speakAsync(text, lang, options = {}) {
 
         const voice = getBestVoice(utter.lang);
 
-
-        alert("TEST: SprachHero audio.js wird ausgeführt!");
-        
-        // Diagnoseanzeige bei jedem Sprechaufruf
-        showAudioDiagnostics(
-            utter.lang,
-            voice,
-            utter.rate,
-            utter.pitch
-        );
-
-        console.log("SprachHero – Audio-Diagnose", {
-            language: utter.lang,
-            selectedVoice: voice?.name ?? "Systemstandard",
-            voiceLanguage: voice?.lang ?? "unbekannt",
-            rate: utter.rate,
-            pitch: utter.pitch
-        });
-
         if (voice) {
             utter.voice = voice;
         }
@@ -291,8 +210,16 @@ export function speakAsync(text, lang, options = {}) {
             utter.onboundary = options.onBoundary;
         }
 
-        utter.onend = () => resolve();
-        utter.onerror = () => resolve();
+        let finished = false;
+
+        const finish = () => {
+            if (finished) return;
+            finished = true;
+            resolve();
+        };
+
+        utter.onend = finish;
+        utter.onerror = finish;
 
         window.speechSynthesis.speak(utter);
     });
@@ -317,7 +244,7 @@ export function stopSpeaking() {
 }
 
 // =========================================================
-// SFX
+// SOUND-EFFEKTE
 // =========================================================
 
 export function playSfx(name) {
@@ -327,12 +254,15 @@ export function playSfx(name) {
         );
 
         audio.volume = 0.7;
-        audio.play();
-    } catch (e) {
-        console.warn(
-            "SFX konnte nicht abgespielt werden:",
-            name,
-            e
-        );
+
+        const playback = audio.play();
+
+        if (playback && typeof playback.catch === "function") {
+            playback.catch(error => {
+                console.warn("SFX konnte nicht abgespielt werden:", name, error);
+            });
+        }
+    } catch (error) {
+        console.warn("SFX konnte nicht abgespielt werden:", name, error);
     }
 }
