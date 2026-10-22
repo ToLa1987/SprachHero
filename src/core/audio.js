@@ -115,6 +115,7 @@ function getBestVoice(langCode) {
         ],
 
         "en-GB": [
+            "Katrin",
             "Microsoft Libby Online",
             "Microsoft Libby",
             "Google UK English Female"
