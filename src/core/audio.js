@@ -1,19 +1,102 @@
-// =========================================================
-// /src/core/audio.js – SprachHero V10
-// Zentrale Audio-Engine
-// Offlinefähig + intelligente Voice-Auswahl
-// =========================================================
 
 import { getGlobal } from "./storage.js";
 
 let voices = [];
 
 // =========================================================
-// Latein – Vokallängen optimieren
+// AUDIO-DIAGNOSE
+// =========================================================
+
+function showAudioDiagnostics(langCode, selectedVoice, rate, pitch) {
+    if (!document.body) return;
+
+    let panel = document.getElementById("sprachhero-audio-debug");
+
+    if (!panel) {
+        panel = document.createElement("div");
+        panel.id = "sprachhero-audio-debug";
+
+        Object.assign(panel.style, {
+            position: "fixed",
+            bottom: "12px",
+            left: "12px",
+            right: "12px",
+            maxHeight: "45vh",
+            overflowY: "auto",
+            zIndex: "2147483647",
+            background: "#ffffff",
+            color: "#111111",
+            border: "3px solid #005086",
+            borderRadius: "10px",
+            padding: "12px",
+            fontSize: "14px",
+            fontFamily: "Arial, sans-serif",
+            boxShadow: "0 2px 12px #0004",
+            overflowWrap: "anywhere",
+            boxSizing: "border-box"
+        });
+
+        document.body.appendChild(panel);
+    }
+
+    const availableVoices =
+        window.speechSynthesis
+            .getVoices()
+            .filter(v =>
+                v.lang.toLowerCase().startsWith(
+                    langCode.split("-")[0].toLowerCase()
+                )
+            )
+            .map(v => `${v.name} (${v.lang})`);
+
+    panel.replaceChildren();
+
+    const title = document.createElement("strong");
+    title.textContent = "SprachHero – Audio-Diagnose";
+    panel.appendChild(title);
+
+    const details = document.createElement("pre");
+    details.style.whiteSpace = "pre-wrap";
+    details.style.fontSize = "13px";
+    details.style.margin = "8px 0";
+
+    details.textContent =
+        `Sprache: ${langCode}\n` +
+        `Ausgewählte Stimme: ${selectedVoice?.name || "Systemstandard"}\n` +
+        `Sprachcode der Stimme: ${selectedVoice?.lang || "unbekannt"}\n` +
+        `Rate: ${rate}\n` +
+        `Pitch: ${pitch}\n\n` +
+        `Verfügbare Stimmen:\n` +
+        (availableVoices.join("\n") || "Keine Stimmen gefunden");
+
+    panel.appendChild(details);
+
+    const closeButton = document.createElement("button");
+    closeButton.textContent = "Anzeige schließen";
+    closeButton.style.padding = "8px 12px";
+    closeButton.style.fontSize = "14px";
+    closeButton.onclick = () => panel.remove();
+
+    panel.appendChild(closeButton);
+}
+
+// =========================================================
+// DIAGNOSE MANUELL TESTEN
+// =========================================================
+
+export function testAudioDiagnostics() {
+    const langCode = "en-GB";
+    const voice = getBestVoice(langCode);
+
+    showAudioDiagnostics(langCode, voice, 1.0, 1.0);
+}
+
+// =========================================================
+// LATEIN – VOKALLÄNGEN OPTIMIEREN
 // =========================================================
 
 function latinLengthFix(text) {
-    const ZWJ = "\u200D"; // Zero-Width-Joiner
+    const ZWJ = "\u200D";
 
     return text
         .replace(/ā/g, "a" + ZWJ + "aaa")
@@ -24,210 +107,144 @@ function latinLengthFix(text) {
 }
 
 // =========================================================
-// Sprachcodes
+// SPRACHCODES
 // =========================================================
 
 export function getLangCodeForLanguage(lang) {
-
     switch (lang) {
-
-        case "en":
-            return "en-GB";
-
-        case "pt":
-            return "pt-PT";
-
-        case "fr":
-            return "fr-FR";
-
-        // Latein -> Deutsch (bessere Aussprache)
-        case "la":
-            return "de-DE";
-
-        case "es":
-            return "es-ES";
-
-        case "it":
-            return "it-IT";
-
-        case "ru":
-            return "ru-RU";
-
-        case "de":
-            return "de-DE";
-
-        default:
-            return "en-GB";
+        case "en": return "en-GB";
+        case "pt": return "pt-PT";
+        case "fr": return "fr-FR";
+        case "la": return "de-DE";
+        case "es": return "es-ES";
+        case "it": return "it-IT";
+        case "ru": return "ru-RU";
+        case "de": return "de-DE";
+        default: return "en-GB";
     }
 }
 
 export function getLangCodeForGlobalLanguage() {
-
     const g = getGlobal();
-
-    return getLangCodeForLanguage(
-        g.language || "en"
-    );
+    return getLangCodeForLanguage(g.language || "en");
 }
 
 // =========================================================
-// Voices initialisieren
+// STIMMEN INITIALISIEREN
 // =========================================================
 
 export function initVoices() {
-
     const loadVoices = () => {
-
-        voices =
-            window.speechSynthesis.getVoices();
+        voices = window.speechSynthesis.getVoices();
 
         console.table(
             voices.map(v => ({
                 name: v.name,
-                lang: v.lang
+                lang: v.lang,
+                default: v.default
             }))
         );
     };
 
     loadVoices();
 
-    window.speechSynthesis.onvoiceschanged =
-        loadVoices;
+    window.speechSynthesis.addEventListener(
+        "voiceschanged",
+        loadVoices
+    );
 }
 
 // =========================================================
-// Beste Stimme finden
+// BESTE STIMME FINDEN
 // =========================================================
 
 function getBestVoice(langCode) {
-
     if (!voices.length) {
-
-        voices =
-            speechSynthesis.getVoices();
+        voices = window.speechSynthesis.getVoices();
     }
 
     const preferredVoices = {
-
         "de-DE": [
             "Microsoft Katja Online",
             "Microsoft Katja"
         ],
-
         "en-GB": [
             "Katrin",
             "Microsoft Libby Online",
             "Microsoft Libby",
             "Google UK English Female"
         ],
-
         "fr-FR": [
             "Microsoft Denise Online",
             "Microsoft Denise"
         ],
-
         "pt-PT": [
             "Microsoft Raquel Online",
             "Microsoft Raquel",
             "Google Portuguese Female"
         ],
-
         "es-ES": [
             "Microsoft Helena Online",
             "Microsoft Helena"
         ],
-
         "ru-RU": [
             "Microsoft Svetlana Online",
             "Microsoft Svetlana",
             "Google русский"
         ],
-
         "it-IT": [
             "Microsoft Elsa Online",
             "Microsoft Elsa"
         ]
     };
 
-    const preferred =
-        preferredVoices[langCode];
+    const preferred = preferredVoices[langCode];
 
     if (preferred) {
-
         for (const name of preferred) {
-
             const found = voices.find(v =>
-                v.name.includes(name)
+                v.name.toLowerCase().includes(name.toLowerCase()) &&
+                v.lang.toLowerCase().startsWith(
+                    langCode.split("-")[0].toLowerCase()
+                )
             );
 
-            if (found) {
-                return found;
-            }
+            if (found) return found;
         }
     }
 
     let match = voices.find(v =>
-        v.lang.toLowerCase() ===
-        langCode.toLowerCase()
+        v.lang.toLowerCase() === langCode.toLowerCase()
     );
 
-    if (match) {
-        return match;
-    }
+    if (match) return match;
 
     match = voices.find(v =>
-        v.lang
-            .toLowerCase()
-            .startsWith(
-                langCode
-                    .split("-")[0]
-                    .toLowerCase()
-            )
+        v.lang.toLowerCase().startsWith(
+            langCode.split("-")[0].toLowerCase()
+        )
     );
 
-    if (match) {
-        return match;
-    }
-
-    return null;
+    return match || null;
 }
 
 // =========================================================
-// Async Speak
+// ASYNC SPEAK
 // =========================================================
 
-export function speakAsync(
-    text,
-    lang,
-    options = {}
-) {
-
+export function speakAsync(text, lang, options = {}) {
     return new Promise(resolve => {
-
         if (
-            !window.speechSynthesis ||
+            !("speechSynthesis" in window) ||
             !text
         ) {
             resolve();
             return;
         }
 
-        const utter =
-            new SpeechSynthesisUtterance(
-                text
-            );
+        const utter = new SpeechSynthesisUtterance(text);
 
-        // =====================================
-        // Sprache
-        // =====================================
-
-        utter.lang =
-            lang ||
-            getLangCodeForGlobalLanguage();
-
-        // =====================================
-        // Latein – Vokallängen optimieren
-        // =====================================
+        utter.lang = lang || getLangCodeForGlobalLanguage();
 
         const g = getGlobal();
 
@@ -236,99 +253,64 @@ export function speakAsync(
             utter.text = text;
         }
 
-        // =====================================
-        // Standardwerte
-        // =====================================
-
-        utter.rate =
-            options.rate || 1.0;
-
-        utter.pitch =
-            options.pitch || 1.0;
-
-        utter.volume =
-            options.volume || 1.0;
-
-        // =====================================
-        // Latein optimieren (Tempo & Pitch)
-        // =====================================
+        utter.rate = options.rate ?? 1.0;
+        utter.pitch = options.pitch ?? 1.0;
+        utter.volume = options.volume ?? 1.0;
 
         if (utter.lang === "de-DE" && g.language === "la") {
             utter.rate *= 0.92;
             utter.pitch *= 0.95;
         }
 
-        // =====================================
-        // Beste Stimme wählen
-        // =====================================
+        const voice = getBestVoice(utter.lang);
 
-const voice = getBestVoice(utter.lang);
+        // Diagnoseanzeige bei jedem Sprechaufruf
+        showAudioDiagnostics(
+            utter.lang,
+            voice,
+            utter.rate,
+            utter.pitch
+        );
 
-console.log("SprachHero – Audio-Diagnose", {
-    language: utter.lang,
-    selectedVoice: voice?.name ?? "Systemstandard",
-    voiceLanguage: voice?.lang ?? "unbekannt",
-    rate: utter.rate,
-    pitch: utter.pitch
-});
+        console.log("SprachHero – Audio-Diagnose", {
+            language: utter.lang,
+            selectedVoice: voice?.name ?? "Systemstandard",
+            voiceLanguage: voice?.lang ?? "unbekannt",
+            rate: utter.rate,
+            pitch: utter.pitch
+        });
 
-if (voice) {
-    utter.voice = voice;
-}
-
-        // =====================================
-        // Karaoke / Word Highlighting
-        // =====================================
-
-        if (options.onBoundary) {
-            utter.onboundary =
-                options.onBoundary;
+        if (voice) {
+            utter.voice = voice;
         }
 
-        // =====================================
-        // Ende
-        // =====================================
+        if (options.onBoundary) {
+            utter.onboundary = options.onBoundary;
+        }
 
-        utter.onend = () => {
-            resolve();
-        };
+        utter.onend = () => resolve();
+        utter.onerror = () => resolve();
 
-        utter.onerror = () => {
-            resolve();
-        };
-
-        // =====================================
-        // Abspielen
-        // =====================================
-
-        speechSynthesis.speak(utter);
+        window.speechSynthesis.speak(utter);
     });
 }
 
 // =========================================================
-// Einfaches speak()
+// EINFACHES SPEAK()
 // =========================================================
 
-export function speak(
-    text,
-    lang,
-    options = {}
-) {
-
-    return speakAsync(
-        text,
-        lang,
-        options
-    );
+export function speak(text, lang, options = {}) {
+    return speakAsync(text, lang, options);
 }
 
 // =========================================================
-// Audio stoppen
+// AUDIO STOPPEN
 // =========================================================
 
 export function stopSpeaking() {
-
-    speechSynthesis.cancel();
+    if ("speechSynthesis" in window) {
+        window.speechSynthesis.cancel();
+    }
 }
 
 // =========================================================
@@ -336,19 +318,14 @@ export function stopSpeaking() {
 // =========================================================
 
 export function playSfx(name) {
-
     try {
-
         const audio = new Audio(
             new URL(`./assets/sfx/${name}.wav`, document.baseURI).href
         );
 
         audio.volume = 0.7;
-
         audio.play();
-
     } catch (e) {
-
         console.warn(
             "SFX konnte nicht abgespielt werden:",
             name,
