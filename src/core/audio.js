@@ -264,6 +264,9 @@ export function speakAsync(text, lang, options = {}) {
 
         const voice = getBestVoice(utter.lang);
 
+
+        alert("TEST: SprachHero audio.js wird ausgeführt!");
+        
         // Diagnoseanzeige bei jedem Sprechaufruf
         showAudioDiagnostics(
             utter.lang,
