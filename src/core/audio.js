@@ -262,12 +262,19 @@ export function speakAsync(
         // Beste Stimme wählen
         // =====================================
 
-        const voice =
-            getBestVoice(utter.lang);
+const voice = getBestVoice(utter.lang);
 
-        if (voice) {
-            utter.voice = voice;
-        }
+console.log("SprachHero – Audio-Diagnose", {
+    language: utter.lang,
+    selectedVoice: voice?.name ?? "Systemstandard",
+    voiceLanguage: voice?.lang ?? "unbekannt",
+    rate: utter.rate,
+    pitch: utter.pitch
+});
+
+if (voice) {
+    utter.voice = voice;
+}
 
         // =====================================
         // Karaoke / Word Highlighting
