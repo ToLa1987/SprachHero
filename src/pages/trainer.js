@@ -920,8 +920,15 @@ export async function render() {
 
     // Linke Spalte: Frage
     const questionWord = direction === "de-fw"
-      ? (w.translation || "")
+         ? (w.translation || "")
       : (w.word || "");
+
+
+      console.log("[Trainer-Test]", {
+  direction,
+  questionWord,
+  questionLang
+});
 
     const questionLang = direction === "de-fw"
       ? "de-DE"
