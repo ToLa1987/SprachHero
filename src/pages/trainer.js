@@ -880,18 +880,48 @@ export async function render() {
     };
   }
 
-  function speakWordAndExample(w) {
-    const langCode = getLangCodeForLanguage(lang);
-    const text = w.word || "";
-    const wordCell = cellWord.textContent.includes(text) ? cellWord : cellTranslation;
-    const wordSpans = renderSpeechWords(wordCell, text);
-    const exampleSpans = renderSpeechWords(cellExample, w.example || "");
 
-    speakAsync(text, langCode, { onBoundary: makeSpeechBoundaryHandler(wordSpans) })
-      .then(() => {
-        if (w.example) return speakAsync(w.example, langCode, { onBoundary: makeSpeechBoundaryHandler(exampleSpans) });
+function speakWordAndExample(w) {
+  if (!w) return;
+
+  const direction = directionSelectEl.value;
+
+  // Sprache der Lösung abhängig von der Abfragerichtung
+  const solutionWord =
+    direction === "de-fw"
+      ? (w.word || "")
+      : (w.translation || "");
+
+  const solutionLangCode =
+    direction === "de-fw"
+      ? getLangCodeForLanguage(lang)
+      : getLangCodeForLanguage("de");
+
+  const exampleLangCode = getLangCodeForLanguage(lang);
+
+  // Lösung und Beispiel für die Hervorhebung vorbereiten
+  const wordSpans = renderSpeechWords(
+    cellTranslation,
+    solutionWord
+  );
+
+  const exampleSpans = renderSpeechWords(
+    cellExample,
+    w.example || ""
+  );
+
+  // Lösung vorlesen und markieren
+  speakAsync(solutionWord, solutionLangCode, {
+    onBoundary: makeSpeechBoundaryHandler(wordSpans)
+  }).then(() => {
+    if (w.example) {
+      return speakAsync(w.example, exampleLangCode, {
+        onBoundary: makeSpeechBoundaryHandler(exampleSpans)
       });
-  }
+    }
+  });
+}
+
 
   audioBtn.onclick = () => {
     if (!solutionShown || !currentWordId) return;
