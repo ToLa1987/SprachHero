@@ -1,4 +1,5 @@
-const CACHE_NAME = "sprachhero-cache-v14";
+
+const CACHE_NAME = "sprachhero-cache-v15";
 const APP_BASE_URL = new URL("./", self.registration.scope);
 
 const FILES_TO_CACHE = [
@@ -61,54 +62,115 @@ const FILES_TO_CACHE = [
   "data/sprachhero_la.csv",
   "data/sprachhero_pt.csv",
   "data/sprachhero_ru.csv",
-  ...Array.from({ length: 10 }, (_, i) => `src/story/magic/magic${i + 1}.png`),
-  ...Array.from({ length: 10 }, (_, i) => `src/story/comic/comic${i + 1}.png`),
-  ...Array.from({ length: 10 }, (_, i) => `src/story/school/school${i + 1}.png`),
-  ...Array.from({ length: 10 }, (_, i) => `src/story/magic/magic2-${i + 1}.jpg`),
-  ...Array.from({ length: 10 }, (_, i) => `src/story/comic/comic2-${i + 1}.jpg`),
-  ...Array.from({ length: 10 }, (_, i) => `src/story/school/school2-${i + 1}.jpg`)
+  ...Array.from(
+    { length: 10 },
+    (_, i) => `src/story/magic/magic${i + 1}.png`
+  ),
+  ...Array.from(
+    { length: 10 },
+    (_, i) => `src/story/comic/comic${i + 1}.png`
+  ),
+  ...Array.from(
+    { length: 10 },
+    (_, i) => `src/story/school/school${i + 1}.png`
+  ),
+  ...Array.from(
+    { length: 10 },
+    (_, i) => `src/story/magic/magic2-${i + 1}.jpg`
+  ),
+  ...Array.from(
+    { length: 10 },
+    (_, i) => `src/story/comic/comic2-${i + 1}.jpg`
+  ),
+  ...Array.from(
+    { length: 10 },
+    (_, i) => `src/story/school/school2-${i + 1}.jpg`
+  )
 ].map(path => new URL(path, APP_BASE_URL).href);
 
+// Neue Version sofort aktivieren
 self.addEventListener("install", event => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => cache.addAll(FILES_TO_CACHE))
+    caches.open(CACHE_NAME)
+      .then(cache => cache.addAll(FILES_TO_CACHE))
   );
+
   self.skipWaiting();
 });
 
+// Alte Cache-Versionen löschen
 self.addEventListener("activate", event => {
   event.waitUntil(
-    caches.keys().then(keys => Promise.all(
-      keys
-        .filter(key => key.startsWith("sprachhero-cache") && key !== CACHE_NAME)
-        .map(key => caches.delete(key))
-    ))
+    caches.keys().then(keys =>
+      Promise.all(
+        keys
+          .filter(
+            key =>
+              key.startsWith("sprachhero-cache") &&
+              key !== CACHE_NAME
+          )
+          .map(key => caches.delete(key))
+      )
+    ).then(() => self.clients.claim())
   );
-  self.clients.claim();
 });
 
+// Dateien aktuell laden; Cache nur als Rückfall verwenden
 self.addEventListener("fetch", event => {
-  if (event.request.method !== "GET") return;
+  const request = event.request;
 
-  const requestUrl = new URL(event.request.url);
-  if (requestUrl.origin !== APP_BASE_URL.origin || !requestUrl.pathname.startsWith(APP_BASE_URL.pathname)) return;
+  if (request.method !== "GET") return;
 
-  if (requestUrl.pathname.endsWith(".csv")) {
-    const cacheUrl = new URL(requestUrl.pathname, APP_BASE_URL).href;
+  const requestUrl = new URL(request.url);
+
+  if (
+    requestUrl.origin !== APP_BASE_URL.origin ||
+    !requestUrl.pathname.startsWith(APP_BASE_URL.pathname)
+  ) {
+    return;
+  }
+
+  // Andere Dateien außerhalb der App nicht behandeln
+  const isAppFile =
+    request.mode === "navigate" ||
+    /\.(html|js|css|json|csv)$/i.test(requestUrl.pathname);
+
+  if (!isAppFile) {
+    // Bilder und andere statische Dateien aus dem Cache,
+    // wenn vorhanden; sonst aus dem Netzwerk laden.
     event.respondWith(
-      fetch(event.request).then(response => {
-        if (response.ok) {
-          return caches.open(CACHE_NAME)
-            .then(cache => cache.put(cacheUrl, response.clone()))
-            .then(() => response);
-        }
-        return response;
-      }).catch(async () => (await caches.match(cacheUrl)) || Response.error())
+      caches.match(request).then(cached => {
+        return cached || fetch(request);
+      })
     );
     return;
   }
 
   event.respondWith(
-    caches.match(event.request).then(cached => cached || fetch(event.request))
+    (async () => {
+      const cache = await caches.open(CACHE_NAME);
+
+      try {
+        // HTTP-Cache umgehen, damit veröffentlichte
+        // Änderungen möglichst sofort erkannt werden.
+        const networkResponse = await fetch(
+          new Request(request, { cache: "no-store" })
+        );
+
+        if (networkResponse.ok) {
+          await cache.put(request, networkResponse.clone());
+        }
+
+        return networkResponse;
+      } catch (error) {
+        const cachedResponse = await caches.match(request);
+
+        if (cachedResponse) {
+          return cachedResponse;
+        }
+
+        return Response.error();
+      }
+    })()
   );
 });
