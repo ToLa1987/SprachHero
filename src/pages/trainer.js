@@ -881,26 +881,29 @@ export async function render() {
   }
 
 
+
 function speakWordAndExample(w) {
   if (!w) return;
 
   const direction = directionSelectEl.value;
 
-  // Sprache der Lösung abhängig von der Abfragerichtung
+  // Die richtige Lösung abhängig von der Abfragerichtung bestimmen
   const solutionWord =
     direction === "de-fw"
       ? (w.word || "")
       : (w.translation || "");
 
-  const solutionLangCode =
+  // Sprache der Lösung festlegen
+  const solutionLang =
     direction === "de-fw"
       ? getLangCodeForLanguage(lang)
-      : getLangCodeForLanguage("de");
+      : "de-DE";
 
-  const exampleLangCode = getLangCodeForLanguage(lang);
+  // Beispiel bleibt in der Fremdsprache
+  const exampleLang = getLangCodeForLanguage(lang);
 
-  // Lösung und Beispiel für die Hervorhebung vorbereiten
-  const wordSpans = renderSpeechWords(
+  // Markierung direkt auf die angezeigte Lösung setzen
+  const solutionSpans = renderSpeechWords(
     cellTranslation,
     solutionWord
   );
@@ -910,17 +913,22 @@ function speakWordAndExample(w) {
     w.example || ""
   );
 
-  // Lösung vorlesen und markieren
-  speakAsync(solutionWord, solutionLangCode, {
-    onBoundary: makeSpeechBoundaryHandler(wordSpans)
-  }).then(() => {
-    if (w.example) {
-      return speakAsync(w.example, exampleLangCode, {
-        onBoundary: makeSpeechBoundaryHandler(exampleSpans)
-      });
-    }
-  });
+  // Zuerst die Lösung sprechen, danach das Beispiel
+  speakAsync(solutionWord, solutionLang, {
+    onBoundary: makeSpeechBoundaryHandler(solutionSpans)
+  })
+    .then(() => {
+      if (w.example) {
+        return speakAsync(w.example, exampleLang, {
+          onBoundary: makeSpeechBoundaryHandler(exampleSpans)
+        });
+      }
+    })
+    .catch(error => {
+      console.error("Fehler beim Vorlesen im Trainer:", error);
+    });
 }
+
 
 
   audioBtn.onclick = () => {
