@@ -905,92 +905,111 @@ export async function render() {
   
   let trainerSpeechRunId = 0;
 
-  async function speakWordAndExample(w) {
-    if (!w) return;
+async function speakWordAndExample(w) {
+  if (!w) return;
 
-    const runId = ++trainerSpeechRunId;
+  const runId = ++trainerSpeechRunId;
 
-    // Vorherige Wiedergabe beenden
-    if ("speechSynthesis" in window) {
-      window.speechSynthesis.cancel();
-      await new Promise(resolve => setTimeout(resolve, 100));
+  // Vorherige Wiedergabe beenden
+  if ("speechSynthesis" in window) {
+    window.speechSynthesis.cancel();
 
-      if (runId !== trainerSpeechRunId) return;
-    }
+    // Safari auf dem iPhone etwas Zeit zum Beenden geben
+    await new Promise(resolve => setTimeout(resolve, 200));
 
-    const direction = directionSelectEl.value;
+    if (runId !== trainerSpeechRunId) return;
+  }
 
-    // Linke Spalte: Frage
-    const questionWord = direction === "de-fw"
-      ? (w.translation || "")
-      : (w.word || "");
+  const direction = directionSelectEl.value;
 
-    const questionLang = direction === "de-fw"
-      ? "de-DE"
-      : getLangCodeForLanguage(lang);
+  // 1. Linke Spalte: Frage
+  const questionWord = direction === "de-fw"
+    ? (w.translation || "")
+    : (w.word || "");
 
-    // Mittlere Spalte: Lösung
-    const solutionWord = direction === "de-fw"
-      ? (w.word || "")
-      : (w.translation || "");
+  const questionLang = direction === "de-fw"
+    ? "de-DE"
+    : getLangCodeForLanguage(lang);
 
-    const solutionLang = direction === "de-fw"
-      ? getLangCodeForLanguage(lang)
-      : "de-DE";
+  // 2. Mittlere Spalte: Lösung
+  const solutionWord = direction === "de-fw"
+    ? (w.word || "")
+    : (w.translation || "");
 
-    // Rechter Bereich: Beispielsatz
-    const exampleText = w.example || "";
-    const exampleLang = getLangCodeForLanguage(lang);
+  const solutionLang = direction === "de-fw"
+    ? getLangCodeForLanguage(lang)
+    : "de-DE";
 
-    // Texte in einzelne Wörter aufteilen
-    const questionSpans = renderSpeechWords(cellWord, questionWord);
-    const solutionSpans = renderSpeechWords(cellTranslation, solutionWord);
-    const exampleSpans = renderSpeechWords(cellExample, exampleText);
+  // 3. Rechter Bereich: Beispielsatz
+  const exampleText = w.example || "";
+  const exampleLang = getLangCodeForLanguage(lang);
 
-    function highlightFirst(spans) {
-      spans.forEach((span, index) => {
-        span.classList.toggle("highlight-blue", index === 0);
+  // Texte in einzelne Wörter aufteilen
+  const questionSpans = renderSpeechWords(cellWord, questionWord);
+  const solutionSpans = renderSpeechWords(cellTranslation, solutionWord);
+  const exampleSpans = renderSpeechWords(cellExample, exampleText);
+
+  // Markierung einer Textspalte setzen
+  function highlightFirst(spans) {
+    spans.forEach((span, index) => {
+      span.classList.toggle("highlight-blue", index === 0);
+    });
+  }
+
+  // Alle Markierungen entfernen
+  function clearHighlights() {
+    [questionSpans, solutionSpans, exampleSpans].forEach(spans => {
+      spans.forEach(span => {
+        span.classList.remove("highlight-blue");
+      });
+    });
+  }
+
+  try {
+    // 1. Linke Vokabel / Frage
+    if (questionWord.trim()) {
+      highlightFirst(questionSpans);
+
+      await speakAsync(questionWord, questionLang, {
+        onBoundary: makeSpeechBoundaryHandler(questionSpans)
       });
     }
 
-    try {
-      // 1. Linke Vokabel / Frage
-      highlightFirst(questionSpans);
+    if (runId !== trainerSpeechRunId) return;
 
-      if (questionWord.trim()) {
-        await speakAsync(questionWord, questionLang, {
-          onBoundary: makeSpeechBoundaryHandler(questionSpans)
-        });
-      }
-
-      if (runId !== trainerSpeechRunId) return;
-
-      // 2. Übersetzung / Lösung
+    // 2. Übersetzung / Lösung
+    if (solutionWord.trim()) {
       highlightFirst(solutionSpans);
 
-      if (solutionWord.trim()) {
-        await speakAsync(solutionWord, solutionLang, {
-          onBoundary: makeSpeechBoundaryHandler(solutionSpans)
-        });
-      }
+      await speakAsync(solutionWord, solutionLang, {
+        onBoundary: makeSpeechBoundaryHandler(solutionSpans)
+      });
+    }
 
-      if (runId !== trainerSpeechRunId) return;
+    if (runId !== trainerSpeechRunId) return;
 
-      // 3. Beispielsatz
+    // 3. Beispielsatz
+    if (exampleText.trim()) {
       highlightFirst(exampleSpans);
 
-      if (exampleText.trim()) {
-        await speakAsync(exampleText, exampleLang, {
-          onBoundary: makeSpeechBoundaryHandler(exampleSpans)
-        });
-      }
-    } catch (error) {
-      console.error(
-        "[Trainer] Fehler beim Vorlesen:",
-        error
-      );
+      await speakAsync(exampleText, exampleLang, {
+        onBoundary: makeSpeechBoundaryHandler(exampleSpans)
+      });
+    }
+
+  } catch (error) {
+    console.error(
+      "[Trainer] Fehler beim Vorlesen:",
+      error
+    );
+
+  } finally {
+    // Nur der aktuelle Durchlauf darf seine Markierungen entfernen
+    if (runId === trainerSpeechRunId) {
+      clearHighlights();
     }
   }
+}
 
 
   audioBtn.onclick = () => {
