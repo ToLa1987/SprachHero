@@ -918,7 +918,7 @@ export async function render() {
 
     const direction = directionSelectEl.value;
 
-    // Linke Spalte: die aktuelle Frage
+    // Linke Spalte: Frage
     const questionWord = direction === "de-fw"
       ? (w.translation || "")
       : (w.word || "");
@@ -927,7 +927,7 @@ export async function render() {
       ? "de-DE"
       : getLangCodeForLanguage(lang);
 
-    // Lösung: jeweils die andere Sprache
+    // Mittlere Spalte: Lösung
     const solutionWord = direction === "de-fw"
       ? (w.word || "")
       : (w.translation || "");
@@ -939,7 +939,7 @@ export async function render() {
     const exampleText = w.example || "";
     const exampleLang = getLangCodeForLanguage(lang);
 
-    // Alle drei Textbereiche in einzelne Wörter aufteilen
+    // Alle drei Bereiche in einzelne Wörter aufteilen
     const questionSpans = renderSpeechWords(cellWord, questionWord);
     const solutionSpans = renderSpeechWords(cellTranslation, solutionWord);
     const exampleSpans = renderSpeechWords(cellExample, exampleText);
@@ -951,7 +951,7 @@ export async function render() {
     }
 
     try {
-      // 1. Linke Spalte vorlesen und markieren
+      // 1. Linke Vokabel vorlesen
       highlightFirst(questionSpans);
 
       if (questionWord.trim()) {
@@ -962,7 +962,7 @@ export async function render() {
 
       if (runId !== trainerSpeechRunId) return;
 
-      // 2. Übersetzung vorlesen und markieren
+      // 2. Übersetzung vorlesen
       highlightFirst(solutionSpans);
 
       if (solutionWord.trim()) {
@@ -973,7 +973,7 @@ export async function render() {
 
       if (runId !== trainerSpeechRunId) return;
 
-      // 3. Beispielsatz vorlesen und markieren
+      // 3. Beispielsatz vorlesen
       highlightFirst(exampleSpans);
 
       if (exampleText.trim()) {
