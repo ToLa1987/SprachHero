@@ -904,6 +904,7 @@ export async function render() {
 
   let trainerSpeechRunId = 0;
 
+  
   async function speakWordAndExample(w) {
     if (!w) return;
 
@@ -917,6 +918,16 @@ export async function render() {
 
     const direction = directionSelectEl.value;
 
+    // Linke Spalte: die aktuelle Frage
+    const questionWord = direction === "de-fw"
+      ? (w.translation || "")
+      : (w.word || "");
+
+    const questionLang = direction === "de-fw"
+      ? "de-DE"
+      : getLangCodeForLanguage(lang);
+
+    // Lösung: jeweils die andere Sprache
     const solutionWord = direction === "de-fw"
       ? (w.word || "")
       : (w.translation || "");
@@ -928,17 +939,32 @@ export async function render() {
     const exampleText = w.example || "";
     const exampleLang = getLangCodeForLanguage(lang);
 
+    // Alle drei Textbereiche in einzelne Wörter aufteilen
+    const questionSpans = renderSpeechWords(cellWord, questionWord);
     const solutionSpans = renderSpeechWords(cellTranslation, solutionWord);
     const exampleSpans = renderSpeechWords(cellExample, exampleText);
 
-    solutionSpans.forEach(span => span.classList.remove("highlight-blue"));
-    exampleSpans.forEach(span => span.classList.remove("highlight-blue"));
-
-    if (solutionSpans.length) {
-      solutionSpans[0].classList.add("highlight-blue");
+    function highlightFirst(spans) {
+      spans.forEach((span, index) => {
+        span.classList.toggle("highlight-blue", index === 0);
+      });
     }
 
     try {
+      // 1. Linke Spalte vorlesen und markieren
+      highlightFirst(questionSpans);
+
+      if (questionWord.trim()) {
+        await speakAsync(questionWord, questionLang, {
+          onBoundary: makeSpeechBoundaryHandler(questionSpans)
+        });
+      }
+
+      if (runId !== trainerSpeechRunId) return;
+
+      // 2. Übersetzung vorlesen und markieren
+      highlightFirst(solutionSpans);
+
       if (solutionWord.trim()) {
         await speakAsync(solutionWord, solutionLang, {
           onBoundary: makeSpeechBoundaryHandler(solutionSpans)
@@ -947,11 +973,10 @@ export async function render() {
 
       if (runId !== trainerSpeechRunId) return;
 
-      if (exampleText.trim()) {
-        if (exampleSpans.length) {
-          exampleSpans[0].classList.add("highlight-blue");
-        }
+      // 3. Beispielsatz vorlesen und markieren
+      highlightFirst(exampleSpans);
 
+      if (exampleText.trim()) {
         await speakAsync(exampleText, exampleLang, {
           onBoundary: makeSpeechBoundaryHandler(exampleSpans)
         });
@@ -960,6 +985,7 @@ export async function render() {
       console.error("Fehler beim Vorlesen im Trainer:", error);
     }
   }
+
 
   audioBtn.onclick = () => {
     if (!solutionShown || !currentWordId) return;
