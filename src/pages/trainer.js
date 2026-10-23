@@ -966,49 +966,56 @@ async function speakWordAndExample(w) {
   }
 
   try {
-    // 1. Linke Vokabel / Frage
-    if (questionWord.trim()) {
-      highlightFirst(questionSpans);
+  // 1. Linke Vokabel / Frage
+  if (questionWord.trim()) {
+    clearHighlights();
+    highlightFirst(questionSpans);
 
-      await speakAsync(questionWord, questionLang, {
-        onBoundary: makeSpeechBoundaryHandler(questionSpans)
-      });
-    }
-
-    if (runId !== trainerSpeechRunId) return;
-
-    // 2. Übersetzung / Lösung
-    if (solutionWord.trim()) {
-      highlightFirst(solutionSpans);
-
-      await speakAsync(solutionWord, solutionLang, {
-        onBoundary: makeSpeechBoundaryHandler(solutionSpans)
-      });
-    }
-
-    if (runId !== trainerSpeechRunId) return;
-
-    // 3. Beispielsatz
-    if (exampleText.trim()) {
-      highlightFirst(exampleSpans);
-
-      await speakAsync(exampleText, exampleLang, {
-        onBoundary: makeSpeechBoundaryHandler(exampleSpans)
-      });
-    }
-
-  } catch (error) {
-    console.error(
-      "[Trainer] Fehler beim Vorlesen:",
-      error
-    );
-
-  } finally {
-    // Nur der aktuelle Durchlauf darf seine Markierungen entfernen
-    if (runId === trainerSpeechRunId) {
-      clearHighlights();
-    }
+    await speakAsync(questionWord, questionLang, {
+      onBoundary: makeSpeechBoundaryHandler(questionSpans)
+    });
   }
+
+  if (runId !== trainerSpeechRunId) return;
+
+  // Linke Markierung entfernen, zur Übersetzung wechseln
+  clearHighlights();
+
+  // 2. Übersetzung / Lösung
+  if (solutionWord.trim()) {
+    highlightFirst(solutionSpans);
+
+    await speakAsync(solutionWord, solutionLang, {
+      onBoundary: makeSpeechBoundaryHandler(solutionSpans)
+    });
+  }
+
+  if (runId !== trainerSpeechRunId) return;
+
+  // Übersetzungsmarkierung entfernen, zum Beispiel wechseln
+  clearHighlights();
+
+  // 3. Beispielsatz
+  if (exampleText.trim()) {
+    highlightFirst(exampleSpans);
+
+    await speakAsync(exampleText, exampleLang, {
+      onBoundary: makeSpeechBoundaryHandler(exampleSpans)
+    });
+  }
+
+} catch (error) {
+  console.error(
+    "[Trainer] Fehler beim Vorlesen:",
+    error
+  );
+
+} finally {
+  // Nach dem letzten Abschnitt alles bereinigen
+  if (runId === trainerSpeechRunId) {
+    clearHighlights();
+  }
+}
 }
 
 
