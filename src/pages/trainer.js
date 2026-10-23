@@ -934,7 +934,16 @@ export async function render() {
       ? "de-DE"
       : getLangCodeForLanguage(lang);
 
-    // Mittlere Spalte: Lösung
+    console.log("[Trainer-Test] Linke Vokabel:", {
+  direction,
+  questionWord,
+  questionLang,
+  word: w.word,
+  translation: w.translation
+});
+
+    
+      // Mittlere Spalte: Lösung
     const solutionWord = direction === "de-fw"
       ? (w.word || "")
       : (w.translation || "");
@@ -961,11 +970,17 @@ export async function render() {
       // 1. Linke Vokabel vorlesen
       highlightFirst(questionSpans);
 
-      if (questionWord.trim()) {
-        await speakAsync(questionWord, questionLang, {
-          onBoundary: makeSpeechBoundaryHandler(questionSpans)
-        });
-      }
+console.log("[Trainer-Test] Starte linke Sprachausgabe:", questionWord, questionLang);
+
+if (questionWord.trim()) {
+  await speakAsync(questionWord, questionLang, {
+    onBoundary: makeSpeechBoundaryHandler(questionSpans)
+  });
+
+  console.log("[Trainer-Test] Linke Sprachausgabe beendet");
+} else {
+  console.error("[Trainer-Test] Linke Vokabel ist leer!");
+}
 
       if (runId !== trainerSpeechRunId) return;
 
