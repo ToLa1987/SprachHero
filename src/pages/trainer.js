@@ -902,17 +902,19 @@ export async function render() {
     };
   }
 
+  
   let trainerSpeechRunId = 0;
 
-  
   async function speakWordAndExample(w) {
     if (!w) return;
 
     const runId = ++trainerSpeechRunId;
 
+    // Vorherige Wiedergabe beenden
     if ("speechSynthesis" in window) {
       window.speechSynthesis.cancel();
       await new Promise(resolve => setTimeout(resolve, 100));
+
       if (runId !== trainerSpeechRunId) return;
     }
 
@@ -920,30 +922,14 @@ export async function render() {
 
     // Linke Spalte: Frage
     const questionWord = direction === "de-fw"
-         ? (w.translation || "")
+      ? (w.translation || "")
       : (w.word || "");
-
-
-      console.log("[Trainer-Test]", {
-  direction,
-  questionWord,
-  questionLang
-});
 
     const questionLang = direction === "de-fw"
       ? "de-DE"
       : getLangCodeForLanguage(lang);
 
-    console.log("[Trainer-Test] Linke Vokabel:", {
-  direction,
-  questionWord,
-  questionLang,
-  word: w.word,
-  translation: w.translation
-});
-
-    
-      // Mittlere Spalte: Lösung
+    // Mittlere Spalte: Lösung
     const solutionWord = direction === "de-fw"
       ? (w.word || "")
       : (w.translation || "");
@@ -952,10 +938,11 @@ export async function render() {
       ? getLangCodeForLanguage(lang)
       : "de-DE";
 
+    // Rechter Bereich: Beispielsatz
     const exampleText = w.example || "";
     const exampleLang = getLangCodeForLanguage(lang);
 
-    // Alle drei Bereiche in einzelne Wörter aufteilen
+    // Texte in einzelne Wörter aufteilen
     const questionSpans = renderSpeechWords(cellWord, questionWord);
     const solutionSpans = renderSpeechWords(cellTranslation, solutionWord);
     const exampleSpans = renderSpeechWords(cellExample, exampleText);
@@ -967,24 +954,18 @@ export async function render() {
     }
 
     try {
-      // 1. Linke Vokabel vorlesen
+      // 1. Linke Vokabel / Frage
       highlightFirst(questionSpans);
 
-console.log("[Trainer-Test] Starte linke Sprachausgabe:", questionWord, questionLang);
-
-if (questionWord.trim()) {
-  await speakAsync(questionWord, questionLang, {
-    onBoundary: makeSpeechBoundaryHandler(questionSpans)
-  });
-
-  console.log("[Trainer-Test] Linke Sprachausgabe beendet");
-} else {
-  console.error("[Trainer-Test] Linke Vokabel ist leer!");
-}
+      if (questionWord.trim()) {
+        await speakAsync(questionWord, questionLang, {
+          onBoundary: makeSpeechBoundaryHandler(questionSpans)
+        });
+      }
 
       if (runId !== trainerSpeechRunId) return;
 
-      // 2. Übersetzung vorlesen
+      // 2. Übersetzung / Lösung
       highlightFirst(solutionSpans);
 
       if (solutionWord.trim()) {
@@ -995,7 +976,7 @@ if (questionWord.trim()) {
 
       if (runId !== trainerSpeechRunId) return;
 
-      // 3. Beispielsatz vorlesen
+      // 3. Beispielsatz
       highlightFirst(exampleSpans);
 
       if (exampleText.trim()) {
@@ -1004,7 +985,10 @@ if (questionWord.trim()) {
         });
       }
     } catch (error) {
-      console.error("Fehler beim Vorlesen im Trainer:", error);
+      console.error(
+        "[Trainer] Fehler beim Vorlesen:",
+        error
+      );
     }
   }
 
